@@ -6,8 +6,8 @@ Converted from https://docs.google.com/document/d/1N-3-RkFUFxLl0QozKQ7afhQHs4rKP
 
 Authors:
 
-1. Stian Soiland-Reyes, The University of Manchester [https://orcid.org/0000-0001-9842-9718](https://orcid.org/0000-0001-9842-9718) 
-2. Stuart Wheater
+1. Stian Soiland-Reyes, The University of Manchester <https://orcid.org/0000-0001-9842-9718>
+2. Stuart Wheater <https://orcid.org/0009-0003-2419-1964>
 
 * Version: 0.3-DRAFT
 * Status: TRE-FX draft in development 
