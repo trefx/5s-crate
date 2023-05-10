@@ -515,7 +515,7 @@ Example:
   "object": [
       {"@id": "./"}, 
       {"@id": "https://workflowhub.eu/workflows/289?version=1"},
-      {"#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70}
+      {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70}
   ],
   "instrument": {"@id": "https://tre72.example.com/agreement-policy/81"},
   "agent": {"@id": "https://orcid.org/0000-0002-1825-0097"},
@@ -698,7 +698,7 @@ HTML landing pages that reference a Five Safes Crate SHOULD include [Signposting
 ```http
 Link: <https://example.com/query-12389.zip>; rel="item", type="application/zip"
 Link: <https://w3id.org/ro/crate>; rel="profile"; type="application/zip";
-   anchor="https://example.com/query-12389.zip"`
+   anchor="https://example.com/query-12389.zip"
 ```
 
 Implementations MAY also provide direct public access to the RO-Crate metadata file, in which case they SHOULD follow the [RO-Crate media type recommendations](https://www.researchobject.org/ro-crate/1.2-DRAFT/appendix/jsonld.html#ro-crate-json-ld-media-type) for JSON-LD, in which case it is RECOMMENDED to convert the metadata file to [Detached RO-Crate](https://www.researchobject.org/ro-crate/1.2-DRAFT/appendix/relative-uris.html#converting-from-attached-to-detached-ro-crate) by establishing a [base URI](https://www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html#establishing-a-base-uri-inside-a-zip-file) based on the BagIt `External-Identifier` UUID (e.g. `arcp://uuid,9796155a-fe44-4614-89b8-71945f718ffb/`).
