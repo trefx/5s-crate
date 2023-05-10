@@ -21,7 +21,7 @@ This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate)
 _The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [[RFC2119](https://doi.org/10.17487/RFC2119)] [[RFC8174](https://doi.org/10.17487/RFC8174)] when, and only when, they appear in all capitals, as shown here._
 
 
-    Note that all references to schema.org types/properties/instances use the prefix `http://schema.org/` (not https) to correspond with their official JSON-LD context.
+**Note**: All references to schema.org types/properties/instances use the prefix `http://schema.org/` (not https) to correspond with their official JSON-LD context.
 
 
 ## Overview
@@ -74,7 +74,19 @@ The ZIP archive MUST only contain a single top-level entry for the bag directory
 
 ## Metadata file expectations
 
-The RO-Crate Metadata File MUST conform to [RO-Crate 1.2](https://www.google.com/url?q=https://www.researchobject.org/ro-crate/1.2-DRAFT/) (or later minor version). The compliant version MUST be declared in the [metadata file descriptor](https://www.researchobject.org/ro-crate/1.2-DRAFT/root-data-entity.html#ro-crate-metadata-file-descriptor):
+The RO-Crate Metadata File MUST conform to [RO-Crate 1.2](https://www.researchobject.org/ro-crate/1.2-DRAFT/) (or later minor version). 
+
+For the purpose of this specification, this [Metadata file](https://www.researchobject.org/ro-crate/1.2-DRAFT/structure.html#ro-crate-metadata-file-ro-crate-metadatajson) skeleton is assumed, with all subsequent JSON elements shown added to the `@graph` array:
+
+```json
+{ "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+  "@graph": [
+
+  ]
+}
+```
+
+The compliant RO-Crate version MUST be declared in the [metadata file descriptor](https://www.researchobject.org/ro-crate/1.2-DRAFT/root-data-entity.html#ro-crate-metadata-file-descriptor):
 
 ```json
 {
@@ -90,8 +102,7 @@ The [root data entity](https://www.researchobject.org/ro-crate/1.2-DRAFT/root-da
 
 ### Profile conformance
 
-Crates conforming to this profile specification SHOULD indicate this on the Root Data Entity using _conformsTo_:
-
+Crates conforming to this profile specification SHOULD indicate this on the Root Data Entity dataset, using its' own `conformsTo`:
 
 ```json
 {
