@@ -9,10 +9,10 @@ Authors:
 1. Stian Soiland-Reyes, The University of Manchester [https://orcid.org/0000-0001-9842-9718](https://orcid.org/0000-0001-9842-9718) 
 2. Stuart Wheater
 
-* Version: 0.2-DRAFT
+* Version: 0.3-DRAFT
 * Status: TRE-FX draft in development 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
-* Permalink: <https://w3id.org/ro/five-safes/0.2-DRAFT> (TODO)
+* Permalink: <https://w3id.org/ro/five-safes/0.3-DRAFT> (TODO)
 
 This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
@@ -29,11 +29,11 @@ A Five Safes Crate represents a unit of computational access to sensitive inform
 
 ## Archive serialisation
 
-A compliant Five Safes Crate SHOULD be stored and transferred as an [ZIP archive](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) containing a single [BagIt directory](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) (_bag_) of an arbitrary name,_ _which payload _data/_ contains the RO-Crate Metadata File _ro-crate-metadata.json_ and any required data files (e.g. inputs). 
+A compliant Five Safes Crate SHOULD be stored and transferred as an [ZIP archive](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) containing a single [BagIt directory](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) (_bag_) of an arbitrary name, which payload folder `data/ contains the RO-Crate Metadata File `ro-crate-metadata.json` and any required data files (e.g. inputs). 
 
 Internally a processing TRE MAY choose to unpack a ZIP file to a local file store, taking necessary security and performance precautions (see [Security considerations](#security-considerations)).
 
-The BagIt [payload manifest](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.1.3) [[RFC8493](https://doi.org/10.17487/rfc8493)] MUST be present using sha-512 checksums, and the [tag manifest](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.2.1) SHOULD be included as sha-512 [[FIPS 180-4](https://doi.org/10.6028/NIST.FIPS.180-4)]. Payload and tag manifests using other checksums MAY be included, taking care to exclude _tagmanifest-*_ from their checksums.
+The BagIt [payload manifest](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.1.3) [[RFC8493](https://doi.org/10.17487/rfc8493)] MUST be present using sha-512 checksums, and the [tag manifest](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.2.1) SHOULD be included as sha-512 [[FIPS 180-4](https://doi.org/10.6028/NIST.FIPS.180-4)]. Payload and tag manifests using other checksums MAY be included, taking care to exclude `tagmanifest-*` files from their checksums.
 
 Example:
 
@@ -51,7 +51,7 @@ query-12389/
 
 ### BagIt expectations
 
-The [RO-Crate BagIt expectations](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) for _Adding RO-Crate to Bagit_ MUST be followed. The `bag-info.txt` file MUST include a generated _External-Identifier:_ field, which SHOULD be a UUID URN [[rfc4122](https://doi.org/10.17487/rfc4122)], e.g.:
+The [RO-Crate BagIt expectations](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) for _Adding RO-Crate to Bagit_ MUST be followed. The `bag-info.txt` file MUST include a generated `External-Identifier:` field, which SHOULD be a UUID URN [[rfc4122](https://doi.org/10.17487/rfc4122)], e.g.:
 
 ```
 External-Identifier: urn:uuid:9796155a-fe44-4614-89b8-71945f718ffb
@@ -136,12 +136,14 @@ See [security considerations](#security-considerations) for workflow referencing
 
 If the identifier is a URI, an URL to the downloadable Workflow RO-Crate ZIP archive SHOULD be included with `distribution`, otherwise clients SHOULD [use Signposting](https://signposting.org/adopters/#workflowhub) to find the link to the RO-Crate by looking for the link with `rel="item" type="application/zip" profile="https://w3id.org/ro/crate"` -- for instance:
 
-```http
+```bash
 curl -I "https://workflowhub.eu/workflows/289?version=1"
+```
 
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
-<https://workflowhub.eu/workflows/289/ro_crate?version=1> ;
+Link: <https://workflowhub.eu/workflows/289/ro_crate?version=1> ;
       rel="item" ;
       type="application/zip" ;
       profile="https://w3id.org/ro/crate" 
@@ -201,7 +203,7 @@ The [CreateAction’s actionStatus](#execution-states) will change during execut
 The individual person who is requesting the run MUST be indicated as an `agent` from the `CreateAction`, which SHOULD have an `affiliation` to the organisation they are representing for access control purposes.
 
 
-```
+```json
 {
   "@id": "https://orcid.org/0000-0001-9842-9718",
   "@type": "Person",
@@ -435,7 +437,7 @@ Example:
 }
 ```
 
-**Note** that subsequent modifications to the submitted crate by the TRE will necessarily mean checksums become out of date. It is RECOMMENDED to update the BagIt manifest following crate modifications if further TRE phases require checksum (e.g. after network transfer), however any subsequent internal checksum validations SHOULD NOT be recorded as an AssessAction. Checksums of the final crate MUST be updated by the _Publishing phase_ and recorded accordingly.
+**Note** that subsequent modifications to the submitted crate by the TRE will necessarily mean checksums become out of date. It is RECOMMENDED to update the BagIt manifest following crate modifications if further TRE phases require checksum (e.g. after network transfer), however any subsequent internal checksum validations SHOULD NOT be recorded as an AssessAction. Checksums of the final crate MUST be updated by the [Publishing phase](#publishing-phase) and recorded accordingly.
 
 The check phase MAY perform any additional file-level security checks required by the particular TRE, e.g. maximum file size of crate, valid characters in filenames or use of symbolic links.
 
@@ -513,7 +515,7 @@ Example:
   "object": [
       {"@id": "./"}, 
       {"@id": "https://workflowhub.eu/workflows/289?version=1"},
-      {"#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70},
+      {"#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70}
   ],
   "instrument": {"@id": "https://tre72.example.com/agreement-policy/81"},
   "agent": {"@id": "https://orcid.org/0000-0002-1825-0097"},
@@ -606,11 +608,11 @@ The _[licence](https://www.researchobject.org/ro-crate/1.1/contextual-entities.h
   "datePublisher": "2023-04-29T11:01:04+01:00",
   "publisher": {"@id": "https://tre72.example.com/"},
   "licence": {"@id": "http://spdx.org/licenses/CC-BY-4.0"},
-  "hasPart": […],
+  "hasPart": [{"…":""}],
   "mainEntity": {"@id": "https://workflowhub.eu/workflows/289?version=1"},
-  "mentions": […],
-  "sourceOrganization": 
-    {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"}
+  "mentions": [{"…":""}],
+  "sourceOrganization": {
+    "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"
   }
 },
 { 
@@ -688,14 +690,14 @@ When transferring a HTTP Five Safes Crate using HTTP, implementations SHOULD use
 
 ```http
 Content-Type: application/zip
-Link: &lt;https://w3id.org/ro/crate>; rel="profile"`
+Link: <https://w3id.org/ro/crate>; rel="profile"`
 ```
 
 HTML landing pages that reference a Five Safes Crate SHOULD include [Signposting](https://signposting.org/) using HTTP `Link` headers that refer to the Crate’s ZIP download and the RO-Crate profile:
 
 ```http
-Link: &lt;https://example.com/query-12389.zip>; rel="item", type="application/zip"
-Link: &lt;https://w3id.org/ro/crate>; rel="profile"; type="application/zip";
+Link: <https://example.com/query-12389.zip>; rel="item", type="application/zip"
+Link: <https://w3id.org/ro/crate>; rel="profile"; type="application/zip";
    anchor="https://example.com/query-12389.zip"`
 ```
 
