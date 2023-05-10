@@ -9,12 +9,10 @@ Authors:
 1. Stian Soiland-Reyes, The University of Manchester [https://orcid.org/0000-0001-9842-9718](https://orcid.org/0000-0001-9842-9718) 
 2. Stuart Wheater
 
-
-## TRE-FX draft in development 
-
-_(comments and suggestions welcome)_
-
-Permalink: <code>[https://w3id.org/ro/five-safes/0.2-DRAFT](https://w3id.org/ro/five-safes/0.1-DRAFT) (TODO)</code>
+* Version: 0.2-DRAFT
+* Status: TRE-FX draft in development 
+* Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
+* Permalink: <https://w3id.org/ro/five-safes/0.2-DRAFT> (TODO)
 
 This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
@@ -39,7 +37,6 @@ The BagIt [payload manifest](https://www.rfc-editor.org/rfc/rfc8493.html#section
 
 Example:
 
-
 ```
 query-12389/
   |   bagit.txt                 # MUST indicate BagIt 1.0 or later
@@ -52,24 +49,22 @@ query-12389/
       |   [payload files and directories]  # 1 or more SHOULD be present
 ```
 
-
-
 ### BagIt expectations
 
-The [RO-Crate BagIt expectations](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) for _Adding RO-Crate to Bagit _ MUST be followed. The _bag-info.txt_ MUST include a generated _External-Identifier:_ field which SHOULD be a UUID URN [[rfc4122](https://doi.org/10.17487/rfc4122)], e.g.:
+The [RO-Crate BagIt expectations](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) for _Adding RO-Crate to Bagit_ MUST be followed. The `bag-info.txt` file MUST include a generated _External-Identifier:_ field, which SHOULD be a UUID URN [[rfc4122](https://doi.org/10.17487/rfc4122)], e.g.:
 
 ```
 External-Identifier: urn:uuid:9796155a-fe44-4614-89b8-71945f718ffb
 ```
 
-The identifier of the _External-Identifier _represents this crate as a request and subsequent response, and SHOULD be freshly generated for each request. It is RECOMMENDED to _not_ modify this identifier as the Five Safes Crate progresses through the distributed TRE processing, unless it is recognized as an previous execution. 
+The identifier of the `External-Identifier` represents this crate as a request and subsequent response, and SHOULD be freshly generated for each request. It is RECOMMENDED to _not_ modify this identifier as the Five Safes Crate progresses through the distributed TRE processing, unless it is recognized as an previous execution. 
 
 Note that as the ro-crate-metadata.json establishes payload directory data/ as the RO-Crate Root it can only reference files and directories there within, the RO-Crate MUST NOT reference tag files like `../fetch.txt` or other relative paths outside the Bag (see [Security considerations](#security-considerations)).
 
 
 ### Zip expectations
 
-The ZIP archive MUST only contain a single top-level entry for the bag directory, identified by the _bagit.txt_ marker. For interoperability in terms of ZIP features, implementations SHOULD follow [guidance for an OSF ZIP Container](https://www.w3.org/publishing/epub32/epub-ocf.html#sec-zip-container-zipreqs) (ignoring _OCF Abstract Container _requirements).
+The ZIP archive MUST only contain a single top-level entry for the bag directory, identified by the _bagit.txt_ marker. For interoperability in terms of ZIP features, implementations SHOULD follow [guidance for an OSF ZIP Container](https://www.w3.org/publishing/epub32/epub-ocf.html#sec-zip-container-zipreqs) (ignoring _OCF Abstract Container_ requirements).
 
 
 ## Metadata file expectations
@@ -128,18 +123,18 @@ Note that `licence` and `datePublished` is not required in a submitted crate, bu
 
 ### Referencing a Workflow Crate
 
-The metadata file MUST reference a [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.0) _Dataset _as its _mainEntity_, indirectly indicating the workflow to execute. 
+The metadata file MUST reference a [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.0) `Dataset` as its `mainEntity`, indirectly indicating the workflow to execute. 
 
 The identifier SHOULD be a permalink or versioned URL (e.g. [https://workflowhub.eu/workflows/289?version=1](https://workflowhub.eu/workflows/289?version=1)) or MAY be a nested directory within the BagIt payload directory (e.g. `"workflow289.1/"`).
 
-**Note**: unlike in the [Workflow Run profile](https://www.researchobject.org/workflow-run-crate/profiles/0.1/workflow_run_crate), the programming language of the workflow and its other metadata are not expressed in this RO-Crate, but within the referenced Workflow RO-Crate. The _programmingLanguage_ inside the Workflow RO-Crate SHOULD be either [https://w3id.org/workflowhub/workflow-ro-crate#cwl](https://w3id.org/workflowhub/workflow-ro-crate#cwl) or [https://w3id.org/workflowhub/workflow-ro-crate#nextflow](https://w3id.org/workflowhub/workflow-ro-crate#nextflow).
+**Note**: unlike in the [Workflow Run profile](https://www.researchobject.org/workflow-run-crate/profiles/0.1/workflow_run_crate), the programming language of the workflow and its other metadata are not expressed in this RO-Crate, but within the referenced Workflow RO-Crate. The `programmingLanguage` inside the Workflow RO-Crate SHOULD be either [https://w3id.org/workflowhub/workflow-ro-crate#cwl](https://w3id.org/workflowhub/workflow-ro-crate#cwl) or [https://w3id.org/workflowhub/workflow-ro-crate#nextflow](https://w3id.org/workflowhub/workflow-ro-crate#nextflow).
 
 See [security considerations](#security-considerations) for workflow referencing and execution. 
 
 
 #### Finding the RO-Crate archive
 
-If the identifier is a URI, an URL to the downloadable Workflow RO-Crate ZIP archive SHOULD be included with _distribution_, otherwise clients SHOULD [use Signposting](https://signposting.org/adopters/#workflowhub) to find the link to the RO-Crate by looking for the link with `rel="item" type="application/zip" profile="https://w3id.org/ro/crate"` - for instance:
+If the identifier is a URI, an URL to the downloadable Workflow RO-Crate ZIP archive SHOULD be included with `distribution`, otherwise clients SHOULD [use Signposting](https://signposting.org/adopters/#workflowhub) to find the link to the RO-Crate by looking for the link with `rel="item" type="application/zip" profile="https://w3id.org/ro/crate"` -- for instance:
 
 ```http
 curl -I "https://workflowhub.eu/workflows/289?version=1"
@@ -178,7 +173,7 @@ In the above example, the `mainEntity` points to a `Dataset` that conforms to th
 
 ### Requested Workflow Run
 
-The metadata file MUST include a [CreateAction](http://schema.org/CreateAction), which MUST be referenced from _mentions_ of the root entity. The identifier SHOULD be based on a UUID (different from the BagIt External-Identifier).
+The metadata file MUST include a [CreateAction](http://schema.org/CreateAction), which MUST be referenced from `mentions` of the root entity. The identifier SHOULD be based on a UUID (different from the BagIt `External-Identifier`).
 
 The CreateAction MUST reference the Workflow Crate using `instrument`.
 
@@ -201,10 +196,9 @@ The CreateAction MUST reference the Workflow Crate using `instrument`.
 
 The [CreateAction’s actionStatus](#execution-states) will change during execution.
 
-
 ### Requesting Agent
 
-The individual person who is requesting the run MUST be indicated as an _agent_ from the _CreateAction_, which SHOULD have an _affiliation_ to the organisation they are representing for access control purposes.
+The individual person who is requesting the run MUST be indicated as an `agent` from the `CreateAction`, which SHOULD have an `affiliation` to the organisation they are representing for access control purposes.
 
 
 ```
@@ -224,18 +218,20 @@ The individual person who is requesting the run MUST be indicated as an _agent_ 
 }
 ```
 
-**Note**: The organisation under _affiliation_ is typically the employing organisation, e.g. a university or hospital. Virtual organisations such as research projects MAY additionally be listed using _memberOf_ (see also _Responsible Project_ below).
+**Note**: The organisation under `affiliation` is typically the employing organisation, e.g. a university or hospital. Virtual organisations such as research projects MAY additionally be listed using `memberOf` (see also [Responsible Project](#responsible-project) below).
 
 
 ### Responsible Project
 
-The project that the request is sent on behalf of, typically related to permission to use a TRE, MUST be indicated from the root dataset using _sourceOrganization_ to a _[Project](https://schema.org/Project)_. The responsible project SHOULD be referenced from the requesting agent’s _memberOf_. 
+The project that the request is sent on behalf of, typically related to permission to use a TRE, MUST be indicated from the root dataset using `sourceOrganization` to a [`Project`](https://schema.org/Project). The responsible project SHOULD be referenced from the requesting agent’s `memberOf`. 
 
-**Note**: The _responsible project_ is not necessarily a [ResearchProject](https://schema.org/ResearchProject) corresponding to a funded grant, but may be more specific studies within a funded project. Various TREs may have different granularity and identifiers for the responsible projects. A project _Grant_ MAY be referenced using [funding](https://schema.org/funding) from the responsible project.
+**Note**: The _responsible project_ is not necessarily a [ResearchProject](https://schema.org/ResearchProject) corresponding to a funded grant, but may be more specific studies within a funded project. Various TREs may have different granularity and identifiers for the responsible projects. A project `Grant` MAY be referenced using [funding](https://schema.org/funding) from the responsible project.
 
-It is RECOMMENDED to include TRE-specific ids under _identifier _(which MAY be an array).  If the identifier is not globally unique (e.g. an integer rather than an UUID or URI), it is RECOMMENDED to add a [repository-specific identifier](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#repository-specific-identifiers) and provide the local identifier as _value _of a _PropertyValue_ entity. Multiple repository-specific identifiers MAY be included for different TREs from a single Project entity.
+It is RECOMMENDED to include TRE-specific ids under `identifier` (which MAY be an array).  If the identifier is not globally unique (e.g. an integer rather than an UUID or URI), it is RECOMMENDED to add a [repository-specific identifier](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#repository-specific-identifiers) and provide the local identifier as `value` of a `PropertyValue` entity. Multiple repository-specific identifiers MAY be included for different TREs from a single Project entity.
 
-The project MAY indicate the _member_ organisations, in which case one of them SHOULD match the _affiliation_ of the _Requesting Agent _with a _memberOf_ to this project.
+The project MAY indicate the `member` organisations, in which case one of them SHOULD match the `affiliation` of the _Requesting Agent_ with a  `memberOf` to this project.
+
+#### Example
 
 ```json
 {
@@ -278,7 +274,7 @@ The Agreement data relevant to a Researcher will specify:
 
 ### Inputs
 
-Requested inputs SHOULD be set on the _CreateAction_ using the _object_ property: 
+Requested inputs SHOULD be set on the `CreateAction` using the `object` property: 
 
 ```json
 {
@@ -292,7 +288,7 @@ Requested inputs SHOULD be set on the _CreateAction_ using the _object_ property
 }
 ```
 
-Each input MUST have a corresponding data entity, which SHOULD have a _exampleOfWork _to a corresponding FormalParameter:
+Each input MUST have a corresponding data entity, which SHOULD have a `exampleOfWork` reference to a corresponding `FormalParameter`:
 
 ```json
 { 
@@ -320,19 +316,17 @@ Each input MUST have a corresponding data entity, which SHOULD have a _exampleOf
 }
 ```
 
-**Tip**: While the [FormalParameter](https://www.researchobject.org/ro-crate/1.1/workflows.html#describing-inputs-and-outputs) SHOULD match the definitions within the Workflow Crate referenced from _mainEntity_, the only requirement from this profile is that their _name_ is programmatically recognized by the workflow engine for binding input parameters of the particular workflow. 
+**Tip**: While the [FormalParameter](https://www.researchobject.org/ro-crate/1.1/workflows.html#describing-inputs-and-outputs) SHOULD match the definitions within the Workflow Crate referenced from `mainEntity`, the only requirement from this profile is that their `name` is programmatically recognized by the workflow engine for binding input parameters of the particular workflow. 
 
 
 ### Outputs
 
 
-If the workflow has successfully executed, that is the _CreateAction_ has _actionStatus_ set to _CompletedActionStatus_, the output data entities SHOULD be referenced from the _results _array.
+If the workflow has successfully executed, that is the `CreateAction` has `actionStatus` set to `http://schema.org/CompletedActionStatus`, the output data entities SHOULD be referenced from the `results` array.
 
+Output entities MUST be described as in the [Workflow Run Crate profile](https://w3id.org/ro/wfrun/workflow/0.1), with type SHOULD be either `File`, `Dataset`, `Collection`, `DigitalDocument` or `PropertyValue`.
 
-Output entities MUST be described as in the [Workflow Run Crate profile](https://w3id.org/ro/wfrun/workflow/0.1), with type SHOULD be _File_, _Dataset_, _Collection_, _DigitalDocument _or _PropertyValue_.
-
-
-Implementations MAY include the outputs within the Crate BagIt archive, in which case it is RECOMMENDED to use the folder _outputs/_ to avoid conflict with other files in the crate.
+Implementations MAY include the outputs within the Crate BagIt archive, in which case it is RECOMMENDED to use the folder `outputs/` to avoid conflict with other files in the crate.
 
 
 ```json
@@ -358,13 +352,13 @@ Implementations MAY include the outputs within the Crate BagIt archive, in which
 }
 ```
 
-**Tip**: Implementations may need to inspect the FormalParameter of the Workflow Crate to propagate a human readable _name_ and _encodingFormat_ file format of the inputs and output.
+**Tip**: Implementations may need to inspect the `FormalParameter` of the referenced Workflow Crate to propagate a human readable _name_ and _encodingFormat_ file format of the inputs and output in this crate.
 
 
 #### Sensitive data
 
 
-Outputs MAY include references to sensitive data that is only accessible from within the TRE or through URIs that require authentication. The requirement for permission SHOULD be indicated by typing the data entity as a [DigitalDocument](https://schema.org/DigitalDocument) that use _hasDigitalDocumentPermission_ to reference the [DigitalDocumentPermission](http://schema.org/DigitalDocumentPermission) entity, typically assigning <code>[http://schema.org/ReadPermission](http://schema.org/ReadPermission) </code>with <em>grantee</em> to only to the <em>Responsible Project</em>.
+Outputs MAY include references to sensitive data that is only accessible from within the TRE or through URIs that require authentication. The requirement for permission SHOULD be indicated by typing the data entity as a [DigitalDocument](https://schema.org/DigitalDocument) that use `hasDigitalDocumentPermission` to reference the [DigitalDocumentPermission](http://schema.org/DigitalDocumentPermission) entity, typically assigning `http://schema.org/ReadPermission` with `grantee` to only to the _Responsible Project_.
 
 
 ```json
@@ -386,7 +380,7 @@ Outputs MAY include references to sensitive data that is only accessible from wi
 
 ### Review process
 
-The Five Safes RO-Crate may face several reviews both before and after workflow execution, automated and manual. To record that such review will or has taken place, a series of additional _[Action](https://schema.org/docs/actions.html)_ contextual entities SHOULD be related to the root data entity using _mentions_.
+The Five Safes RO-Crate may face several reviews both before and after workflow execution, automated and manual. To record that such review will or has taken place, a series of additional [`Action`](https://schema.org/docs/actions.html) contextual entities SHOULD be related to the root data entity using `mentions`.
 
 It is RECOMMENDED that the first step after authentication is a syntactic validation step that verifies the RO-Crate validity according to this profile and system expectations. This step SHOULD remove `mentions` references to any end-user-provided [AssessAction](http://schema.org/AssessAction) (as defined in this profile) from the submitted crate, in order to ensure only assessment endorsements by the particular TRE are considered in the subsequent internal processing.
 
@@ -396,9 +390,9 @@ The phase of the review process is indicated using subclasses of `Action` and mo
 
 The `name` of the action MUST provide a human readable name of the type of check and its outcome, but SHOULD NOT be consulted by software for decision making (rather they should check `actionStatus` and `additionalType`).
 
-Each completed action SHOULD have a timestamp using `endTime` that follow the ISO-8601 syntax of [RFC 3339](https://doi.org/10.17487/RFC3339) (including timezone or Z). _startTime_ MAY be included for active, failed and completed actions.
+Each completed action SHOULD have a timestamp using `endTime` that follow the ISO-8601 syntax of [RFC 3339](https://doi.org/10.17487/RFC3339) (including timezone or Z). `startTime` MAY be included for active, failed and completed actions.
 
-The main actor performing the assessment SHOULD be listed under _agent_ and refer to either a _Organization_ (e.g. an TRE helpdesk), _Person_ (manual check) or a [SoftwareApplication](https://schema.org/SoftwareApplication) (automated check). A SoftwareApplication acting on behalf of a TRE MUST include a reference to the TRE _Organization_ using _provider_. There may be multiple actors appearing as _agent_ for different actions, each of which should be listed as contextual entities with at least _name_.
+The main actor performing the assessment SHOULD be listed under _agent_ and refer to either a `Organization` (e.g. an TRE helpdesk), `Person` (manual check) or a [SoftwareApplication](https://schema.org/SoftwareApplication) (automated check). A `SoftwareApplication` acting on behalf of a TRE MUST include a reference to the TRE `Organization` using `provider`. There may be multiple actors appearing as `agent` for different actions, each of which should be listed as contextual entities with at least `name`.
 
 
 ```json
@@ -441,14 +435,14 @@ Example:
 }
 ```
 
-**Note** that subsequent modifications to the submitted crate by the TRE will necessarily mean checksums become out of date. It is RECOMMENDED to update the BagIt manifest following crate modifications if further TRE phases require checksum (e.g. after network transfer), however any subsequent internal checksum validations SHOULD NOT be recorded as an AssessAction. Checksums of the final crate MUST be updated by the _Publishing phase _and recorded accordingly.
+**Note** that subsequent modifications to the submitted crate by the TRE will necessarily mean checksums become out of date. It is RECOMMENDED to update the BagIt manifest following crate modifications if further TRE phases require checksum (e.g. after network transfer), however any subsequent internal checksum validations SHOULD NOT be recorded as an AssessAction. Checksums of the final crate MUST be updated by the _Publishing phase_ and recorded accordingly.
 
 The check phase MAY perform any additional file-level security checks required by the particular TRE, e.g. maximum file size of crate, valid characters in filenames or use of symbolic links.
 
 
 #### Validation phase
 
-A crate that has been validated according to RO-Crate specifications and this profile SHOULD _mention_ an _AssessAction _which _instrument_ refers to the profile entity, and an _additionalType_ referring to `https://w3id.org/shp#ValidationCheck`
+A crate that has been validated according to RO-Crate specifications and this profile SHOULD _mention_ an _AssessAction _which _instrument_ refers to the profile entity, and an `additionalType` referring to `https://w3id.org/shp#ValidationCheck`
 
 Example:
 
@@ -467,14 +461,14 @@ Example:
 }
 ```
 
-The validation phase MAY perform any additional syntactic or semantic checks required by the particular TRE and workflow, e.g. correspondence between provided and expected input parameters, in which case this should be reflected by adding such entities to _object_ (checked) and _instrument_ (expected) as arrays.
+The validation phase MAY perform any additional syntactic or semantic checks required by the particular TRE and workflow, e.g. correspondence between provided and expected input parameters, in which case this should be reflected by adding such entities to `object` (checked) and `instrument` (expected) as arrays.
 
 
 #### Workflow retrieval phase
 
-The referenced workflow crate may be retrieved by the TRE before Sign-off or Workflow Execution, potentially using a local proxy (see [Finding the RO-Crate archive](#finding-the-ro-crate-archive) and [Security considerations](#security-considerations)). In this case, the retrieval SHOULD be indicated by a [DowloadAction](http://schema.org/DownloadAction) with the Workflow RO-Crate’s distribution as _object _(indicating the URL that was downloaded from, potentially following Signposting). 
+The referenced workflow crate may be retrieved by the TRE before Sign-off or Workflow Execution, potentially using a local proxy (see [Finding the RO-Crate archive](#finding-the-ro-crate-archive) and [Security considerations](#security-considerations)). In this case, the retrieval SHOULD be indicated by a [DownloadAction](http://schema.org/DownloadAction) with the Workflow RO-Crate’s distribution as `object` (indicating the URL that was downloaded from, potentially following Signposting). 
 
-Implementations MAY choose to unpack and add the Workflow Crate folder to the Bagit, in which case it SHOULD be indicated as an additional data entity referenced as _result_, which reference the _mainEntity_ from _sameAs_ and the download location in _distribution_. 
+Implementations MAY choose to unpack and add the Workflow Crate folder to the Bagit, in which case it SHOULD be indicated as an additional data entity referenced as _result_, which reference the `mainEntity` from `sameAs` and the download location in `distribution`. 
 
 Example:
 
@@ -505,7 +499,7 @@ Example:
 
 #### Sign-off phase
 
-Before executing a Five Safes Crate, the TRE SHOULD check if the requesting agent is permitted to execute the particular workflow on behalf of the responsible project. This SHOULD include checks against the Agreement policy data maintained by the TRE. This may be a manual and/or automated check, as indicated by _agent_. The _object_ SHOULD additionally reference the workflow and responsible project (unless these were not part of the sign-off checks).
+Before executing a Five Safes Crate, the TRE SHOULD check if the requesting agent is permitted to execute the particular workflow on behalf of the responsible project. This SHOULD include checks against the Agreement policy data maintained by the TRE. This may be a manual and/or automated check, as indicated by `agent`. The `object` SHOULD additionally reference the workflow and responsible project (unless these were not part of the sign-off checks).
 
 Example:
 
@@ -537,17 +531,17 @@ Example:
 
 In this phase, the approved workflow execution is performed within the TRE. The `CreateAction` of the workflow execution will its `actionStatus` and acquire a `startTime` and `endTime`.
 
-When the execution is in CompletedActionStatus or FailedActionStatus, the crate SHOULD also follow the [Provenance Crate](https://w3id.org/ro/wfrun/provenance/0.1) profile, e.g. the workflow outputs data entities will be listed as `result`.
+When the execution is in `http://schema.org/CompletedActionStatus` or `http://schema.org/FailedActionStatus`, the crate SHOULD also follow the [Provenance Crate](https://w3id.org/ro/wfrun/provenance/0.1) profile, e.g. the workflow outputs data entities will be listed as `result`.
 
 
 ##### Execution states
 
-The states of the Five Safes Crate is indicated by the _actionStatus_ of this main action:
+The states of the Five Safes Crate is indicated by the `actionStatus` of this main action being one of the following string values:
 
-* [http://schema.org/PotentialActionStatus](http://schema.org/PotentialActionStatus) – The request is queued to be executed
-* [http://schema.org/ActiveActionStatus](http://schema.org/ActiveActionStatus) – The request is currently executing
-* [http://schema.org/CompletedActionStatus](http://schema.org/CompletedActionStatus) – The request has finished successfully
-* [http://schema.org/FailedActionStatus](http://schema.org/FailedActionStatus) – The request failed, but may have partial results or logs.  
+* `http://schema.org/PotentialActionStatus` -– The request is queued to be executed
+* `http://schema.org/ActiveActionStatus` -– The request is currently executing
+* `http://schema.org/CompletedActionStatus` -– The request has finished successfully
+* `http://schema.org/FailedActionStatus` –- The request failed, but may have partial results or logs.  
 
 
 ##### Example
@@ -572,13 +566,13 @@ The states of the Five Safes Crate is indicated by the _actionStatus_ of this ma
 }
 ```
 
-Note that even if the workflow execution action is in CompletetedActionStatus, two additional phases are required to pass before the Five Safe Crate can be considered “finished”, see the following subsections.
+Note that even if the workflow execution action is in `http://schema.org/CompletedActionStatus`, two additional phases are required to pass before the Five Safe Crate can be considered “finished”, see the following subsections.
 
 #### Disclosure phase
 
-Before workflow results are returned from the TRE, a disclosure check SHOULD be performed, e.g. to verify the workflow execution has not revealed sensitive data. Depending on the workflow and TRE data this may be automated and/or manual as indicated by _agent_.
+Before workflow results are returned from the TRE, a disclosure check SHOULD be performed, e.g. to verify the workflow execution has not revealed sensitive data. Depending on the workflow and TRE data this may be automated and/or manual as indicated by `agent`.
 
-In the example below, a person has been assigned, while the _actionStatus_ indicates the disclosure check is pending (_startTime_ in this case indicating predicted waiting time into the future).
+In the example below, a person has been assigned, while the `actionStatus` indicates the disclosure check is pending (`startTime` in this case indicating predicted waiting time into the future).
 
 ```json
 {  
@@ -593,14 +587,14 @@ In the example below, a person has been assigned, while the _actionStatus_ indic
 }
 ```
 
-If a crate fails the disclosure phase, its content such as workflow results MUST NOT be included in the returned crate returned to the user. Likewise, its workflow execution _CreateAction_ and corresponding output data entities SHOULD be removed from the metadata file.
+If a crate fails the disclosure phase, its content such as workflow results MUST NOT be included in the returned crate returned to the user. Likewise, its workflow execution `CreateAction` and corresponding output data entities SHOULD be removed from the metadata file.
 
 
 #### Publishing phase
 
 Before a disclosure-approved Five Saves Crate is published to the requesting user (or archived in a repository), some housekeeping tasks are to be completed.
 
-The root data entity’s _datePublished_ SHOULD be updated to the time the manifest is last written. The _publisher_ SHOULD be updated to reflect the executing TRE. The _mentions_ MUST be expanded to include all the _AssessAction_s recorded by the TRE. _hasPart_ MUST include (possibly through intermediate folders as _Dataset) _any _result_ data entities now referred to from the workflow execution’s _CreateAction_. 
+The root data entity’s `datePublished` SHOULD be updated to the time the manifest is last written. The `publisher` SHOULD be updated to reflect the executing TRE. The `mentions` MUST be expanded to include all the `AssessAction`s recorded by the TRE. `hasPart` MUST include (possibly through intermediate folders as `Dataset`) any `result` data entities now referred to from the workflow execution’s `CreateAction`. 
 
 The _[licence](https://www.researchobject.org/ro-crate/1.1/contextual-entities.html#licensing-access-control-and-copyright)_ SHOULD be included to describe the licence of the workflow output data, either an open licence such as Creative Commons, or a restrictive (typically TRE-specific) conditions of access.
 
@@ -627,9 +621,9 @@ The _[licence](https://www.researchobject.org/ro-crate/1.1/contextual-entities.h
 }
 ```
 
-TRE implementations MAY additionally [record changes](https://www.researchobject.org/ro-crate/1.1/provenance.html#recording-changes-to-ro-crates) to the RO-Crate as it has progressed through the execution, by associating a _CreateAction_ and subsequent _UpdateAction_ to the root data entity as _object_.
+TRE implementations MAY additionally [record changes](https://www.researchobject.org/ro-crate/1.1/provenance.html#recording-changes-to-ro-crates) to the RO-Crate as it has progressed through the execution, by associating a `CreateAction` and subsequent `UpdateAction` to the root data entity as `object`.
 
-Following the final update of the RO-Crate Metadata file and content, the BagIt payload manifests and tag manifests MUST be updated (as a minimum because the _ro-crate-metadata.json_ has been modified). The _result_ entity is NOT recorded, as `../manifest-sha512.txt` would have escaped the RO-Crate root. The agent SHOULD delete manifest files it can’t re-generate. After the checksum calculation, the TRE SHOULD not do any further changes to the crate or BagIt files. 
+Following the final update of the RO-Crate Metadata file and content, the BagIt payload manifests and tag manifests MUST be updated (as a minimum because the _ro-crate-metadata.json_ has been modified). The `result` entity is NOT recorded, as `../manifest-sha512.txt` would have escaped the RO-Crate root. The agent SHOULD delete manifest files it can’t re-generate. After the checksum calculation, the TRE SHOULD not do any further changes to the crate or BagIt files. 
 
 
 ```json
@@ -652,12 +646,12 @@ Following the final update of the RO-Crate Metadata file and content, the BagIt 
 }
 ```
 
-**Note:** This action must be written to the_ _RO-Crate Metadata File _before _calculating the payload manifest, and therefore can’t include the correct _endTime_. The _actionStatus_ should nevertheless reflect the status as if it has already completed. Likewise, the payload manifest must be calculated before updating the tag manifest, as it includes the checksum of the payload manifest.
+**Note:** This action must be written to the _RO-Crate Metadata File_ **before** calculating the payload manifest, and therefore can’t include the correct `endTime`. The `actionStatus` should nevertheless reflect the status as if it has already completed. Likewise, the payload manifest must be calculated before updating the tag manifest, as it includes the checksum of the payload manifest.
 
 
 #### Receiving phase 
 
-Clients receiving a Five-Safe Crate SHOULD check the BagIt manifest checksums similar to the _Check phase_, as well as the status of all the actions specified in this profile before further processing. 
+Clients receiving a Five-Safe Crate SHOULD check the BagIt manifest checksums similar to the [Check phase](#check-phase), as well as the status of all the actions specified in this profile before further processing. 
 
 It is NOT sufficient for clients to check the publishing AssessAction, as TRE implementations are permitted to expose partial crates which have failed approval phases or which are in pending/execution state.
 
@@ -675,16 +669,17 @@ Clients parsing and unpacking ZIP files, JSON metadata, workflow definitions and
 
 Pre-approved workflows could be exploited by a malicious attacker if they, the workflow engine or their tools themselves have security vulnerabilities, e.g. by using hand-crafted input parameters that by-passes command line escapes. Workflow executions are not guaranteed to complete in a given timescale; sufficient timeouts and resource usage restrictions SHOULD therefore be applied by the workflow engine.
 
-It is currently out of scope for this specification how to verify that Five Saves Crate was requested by the given person, or how to verify if the person has access to a particular TRE according to their Agreement policies. It is therefore RECOMMENDED that implementers check authentication and authorization of a submitted query and use strong encryption. Implementers SHOULD check that the @id and affiliation of the _Requesting Agent_ and _Responsible Project c_orresponds to the authentication, and MAY inject/overwrite client-submitted data.
+It is currently out of scope for this specification how to verify that Five Saves Crate was requested by the given person, or how to verify if the person has access to a particular TRE according to their Agreement policies. It is therefore RECOMMENDED that implementers check authentication and authorization of a submitted query and use strong encryption. Implementers SHOULD check that the `@id` and `affiliation` of the _Requesting Agent_ and _Responsible Project_ corresponds to the authentication, and MAY inject/overwrite client-submitted data.
 
 Malicious clients submitting a Five Safes Crate may have included additional entities, properties and types, which may cause security concerns in an implementation. Implementers SHOULD sanity check inputs, including ensuring that all paths are relative within the bag or absolute URIs, and MUST remove references to any client-submitted _AssessAction_s, as these could be used to bypass the TRE compliance process.
 
-Malicious clients MAY attempt to reference URLs or IP addresses that are only accessible within a TRE. Implementers MUST perform any URL downloads (such as Workflow RO-Crates or container images) in a way that does not access the secured TRE network, e.g. from a _Demilitarized Zone _(DMZ) with a network firewall restricting access to the TRE, or through a proxying repository controlled by TRE administrators.
+Malicious clients MAY attempt to reference URLs or IP addresses that are only accessible within a TRE. Implementers MUST perform any URL downloads (such as Workflow RO-Crates or container images) in a way that does not access the secured TRE network, e.g. from a _Demilitarized Zone_ (DMZ) with a network firewall restricting access to the TRE, or through a proxying repository controlled by TRE administrators.
 
-As an executed Five Saves Crate may be intended for publishing (possibly following an embargo period), it SHOULD NOT include sensitive data or security tokens within the metadata file or the BagIt archive (e.g. in configuration or log files); TREs SHOULD verify this in the _Disclosure Phase._ It is RECOMMENDED to use keychain services or time-limited security access tokens that can be assured to be expired before the Crate is published.
+As an executed Five Saves Crate may be intended for publishing (possibly following an embargo period), it SHOULD NOT include sensitive data or security tokens within the metadata file or the BagIt archive (e.g. in configuration or log files); TREs SHOULD verify this in the [Disclosure Phase](#disclosure-phase). It is RECOMMENDED to use keychain services or time-limited security access tokens that can be assured to be expired before the Crate is published.
 
-The crate MAY include references (e.g. S3 URIs) to sensitive data, in which case the implementation and executed workflow SHOULD protect against divulging sensitive information (directly or indirectly) in the _File_ identifiers, use UUID v5 hashing [[RFC4122](https://doi.org/10.17487/rfc4122)]  to hide sensitive identifiers.<code> <strong>Note</strong></code>: predicable identifiers like <code>patient-456</code> would still be vulnerable in such hashing due to iteration attacks.<code> \
-</code>
+The crate MAY include references (e.g. S3 URIs) to sensitive data, in which case the implementation and executed workflow SHOULD protect against divulging sensitive information (directly or indirectly) in the _File_ identifiers, use UUID v5 hashing [[RFC4122](https://doi.org/10.17487/rfc4122)]  to hide sensitive identifiers.
+**Note:** predicable identifiers like `patient-456` would still be vulnerable in such hashing due to iteration attacks.
+
 
 
 ## Media type and profiles
@@ -696,7 +691,7 @@ Content-Type: application/zip
 Link: &lt;https://w3id.org/ro/crate>; rel="profile"`
 ```
 
-HTML landing pages that reference a Five Safes Crate SHOULD include [Signposting](https://signposting.org/) using HTTP `Link `headers that refer to the Crate’s ZIP download and the RO-Crate profile:
+HTML landing pages that reference a Five Safes Crate SHOULD include [Signposting](https://signposting.org/) using HTTP `Link` headers that refer to the Crate’s ZIP download and the RO-Crate profile:
 
 ```http
 Link: &lt;https://example.com/query-12389.zip>; rel="item", type="application/zip"
