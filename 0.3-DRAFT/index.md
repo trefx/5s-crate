@@ -605,7 +605,7 @@ The _[licence](https://www.researchobject.org/ro-crate/1.1/contextual-entities.h
   "@id": "./",
   "@type": "Dataset",
   "conformsTo": {"@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"},
-  "datePublisher": "2023-04-29T11:01:04+01:00",
+  "datePublished": "2023-04-29T11:01:04+01:00",
   "publisher": {"@id": "https://tre72.example.com/"},
   "licence": {"@id": "http://spdx.org/licenses/CC-BY-4.0"},
   "hasPart": [{"…":""}],
@@ -631,7 +631,7 @@ Following the final update of the RO-Crate Metadata file and content, the BagIt 
 ```json
 { 
   "@id": "#bagit-ce785c0b-c988-4043-8cbd-1489dcebc14f",
-  "type": "AssessAction",
+  "type": "UpdateAction",
   "startTime": "2023-04-29T12:12:25+01:00",
   "additionalType": {"@id": "https://w3id.org/shp#GenerateCheckValue"},
   "name": "BagIt manifests of Crate updated",
