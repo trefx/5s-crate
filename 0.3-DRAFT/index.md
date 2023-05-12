@@ -242,12 +242,12 @@ The project MAY indicate the `member` organisations, in which case one of them S
   "identifier": [
      {"@id": "_:localid:tre72:project81"}
   ],
-  "funding": [
-	"@id": "https://gtr.ukri.org/projects?ref=10038961",
-  ],
+  "funding": {
+      "@id": "https://gtr.ukri.org/projects?ref=10038961"
+  },
   "member": [
     {"@id": "https://ror.org/027m9bs27"},
-    {"@id": "https://ror.org/01ee9ar58"},
+    {"@id": "https://ror.org/01ee9ar58"}
   ]
 },
 { 
@@ -296,14 +296,14 @@ Each input MUST have a corresponding data entity, which SHOULD have a `exampleOf
   "@id": "input1.txt",
   "@type": "File",
   "name": "input1",
-  "exampleOfWork": {"#sequence"}
+  "exampleOfWork": { "@id": "#sequence"}
 },
 {
   "@id": "#enableFastMode",
   "@type": "PropertyValue",
   "name": "--fast-mode",
   "value": "True",
-  "exampleOfWork": {"#fast"}  
+  "exampleOfWork": {"@id": "#fast"}  
 },
 { 
   "@id": "#sequence",
