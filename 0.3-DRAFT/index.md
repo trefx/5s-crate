@@ -159,7 +159,8 @@ Link: <https://workflowhub.eu/workflows/289/ro_crate?version=1> ;
   "name": "CWL Protein MD Setup tutorial with mutations",
   "conformsTo": {"@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"},
   "distribution": {
-    "@id": "https://workflowhub.eu/workflows/289/ro_crate?version=1"}
+    "@id": "https://workflowhub.eu/workflows/289/ro_crate?version=1"
+  }
 },
 {
   "@id": "https://workflowhub.eu/workflows/289/ro_crate?version=1",
@@ -514,7 +515,7 @@ Example:
   "object": [
       {"@id": "./"}, 
       {"@id": "https://workflowhub.eu/workflows/289?version=1"},
-      {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70}
+      {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"}
   ],
   "instrument": {"@id": "https://tre72.example.com/agreement-policy/81"},
   "agent": {"@id": "https://orcid.org/0000-0002-1825-0097"},
@@ -688,6 +689,9 @@ The crate MAY include references (e.g. S3 URIs) to sensitive data, in which case
 When transferring a Trusted Workflow Run Crate using HTTP, implementations SHOULD use the following HTTP headers for content-type and profile:
 
 ```http
+GET http://example.com/crates/42.zip HTTP/1.1
+
+HTTP/1.1 200 OK
 Content-Type: application/zip
 Link: <https://w3id.org/ro/crate>; rel="profile"`
 ```
@@ -695,6 +699,10 @@ Link: <https://w3id.org/ro/crate>; rel="profile"`
 HTML landing pages that reference a Trusted Workflow Run Crate SHOULD include [Signposting](https://signposting.org/) using HTTP `Link` headers that refer to the Crate’s ZIP download and the RO-Crate profile:
 
 ```http
+HEAD http://example.com/crates/42.html HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Type: text/html
 Link: <https://example.com/query-12389.zip>; rel="item", type="application/zip"
 Link: <https://w3id.org/ro/crate>; rel="profile"; type="application/zip";
    anchor="https://example.com/query-12389.zip"
