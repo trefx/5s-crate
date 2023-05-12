@@ -2,7 +2,7 @@
 Converted from https://docs.google.com/document/d/1N-3-RkFUFxLl0QozKQ7afhQHs4rKPbHFAzexmgoEF3Y/edit?usp=sharing 
 -->
 
-# Five Safes Crate profile
+# Trusted Workflow Run Crate profile
 
 Authors:
 
@@ -12,7 +12,7 @@ Authors:
 * Version: 0.3-DRAFT
 * Status: TRE-FX draft in development 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
-* Permalink: <https://w3id.org/ro/five-safes/0.3-DRAFT> (TODO)
+* Permalink: <https://w3id.org/trusted-wfrun-crate/0.3-DRAFT> (TODO)
 
 This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
@@ -24,12 +24,11 @@ _The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "
 
 ## Overview
 
-A Five Safes Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the 5 safe framework.
-
+A Trusted Workflow Run Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the 5 safe framework. The aim is to enable trusted workflow execution in a Trusted Research Environment (TRE), from an authenticated workflow run request, through approval and review processes to a completed workflow execution.
 
 ## Archive serialisation
 
-A compliant Five Safes Crate SHOULD be stored and transferred as an [ZIP archive](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) containing a single [BagIt directory](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) (_bag_) of an arbitrary name, which payload folder `data/ contains the RO-Crate Metadata File `ro-crate-metadata.json` and any required data files (e.g. inputs). 
+A compliant Trusted Workflow Run Crate SHOULD be stored and transferred as an [ZIP archive](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) containing a single [BagIt directory](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) (_bag_) of an arbitrary name, which payload folder `data/ contains the RO-Crate Metadata File `ro-crate-metadata.json` and any required data files (e.g. inputs). 
 
 Internally a processing TRE MAY choose to unpack a ZIP file to a local file store, taking necessary security and performance precautions (see [Security considerations](#security-considerations)).
 
@@ -57,7 +56,7 @@ The [RO-Crate BagIt expectations](https://www.researchobject.org/ro-crate/1.1/ap
 External-Identifier: urn:uuid:9796155a-fe44-4614-89b8-71945f718ffb
 ```
 
-The identifier of the `External-Identifier` represents this crate as a request and subsequent response, and SHOULD be freshly generated for each request. It is RECOMMENDED to _not_ modify this identifier as the Five Safes Crate progresses through the distributed TRE processing, unless it is recognized as an previous execution. 
+The identifier of the `External-Identifier` represents this crate as a request and subsequent response, and SHOULD be freshly generated for each request. It is RECOMMENDED to _not_ modify this identifier as the Trusted Workflow Run Crate progresses through the distributed TRE processing, unless it is recognized as an previous execution. 
 
 Note that as the ro-crate-metadata.json establishes payload directory data/ as the RO-Crate Root it can only reference files and directories there within, the RO-Crate MUST NOT reference tag files like `../fetch.txt` or other relative paths outside the Bag (see [Security considerations](#security-considerations)).
 
@@ -97,13 +96,13 @@ The [root data entity](https://www.researchobject.org/ro-crate/1.2-DRAFT/root-da
 
 ### Profile conformance
 
-Crates conforming to this profile specification SHOULD indicate this on the Root Data Entity dataset, using its' own `conformsTo`:
+Crates conforming to this profile specification SHOULD indicate this on the Root Data Entity dataset, using its own `conformsTo`:
 
 ```json
 {
   "@id": "./",
   "@type": "Dataset",
-  "conformsTo": {"@id": "https://w3id.org/ro/five-safes/0.1-DRAFT"},
+  "conformsTo": {"@id": "[https://w3id.org/ro/five-safes/0.1-DRAFT](https://w3id.org/trusted-wfrun-crate/0.3-DRAFT)"},
   "hasPart": [
   ],
   "mainEntity": {"@id": "https://workflowhub.eu/workflows/289?version=1"},
@@ -112,7 +111,7 @@ Crates conforming to this profile specification SHOULD indicate this on the Root
     {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"}
 },
 {
-  "@id": "https://w3id.org/ro/five-safes/0.1-DRAFT",
+  "@id": "[https://w3id.org/ro/five-safes/0.1-DRAFT](https://w3id.org/trusted-wfrun-crate/0.3-DRAFT)",
   "@type": "Profile",
   "name": "Five Saves Crate profile"
 }
@@ -382,7 +381,7 @@ Outputs MAY include references to sensitive data that is only accessible from wi
 
 ### Review process
 
-The Five Safes RO-Crate may face several reviews both before and after workflow execution, automated and manual. To record that such review will or has taken place, a series of additional [`Action`](https://schema.org/docs/actions.html) contextual entities SHOULD be related to the root data entity using `mentions`.
+The Trusted Workflow Run Crate may face several reviews both before and after workflow execution, automated and manual. To record that such review will or has taken place, a series of additional [`Action`](https://schema.org/docs/actions.html) contextual entities SHOULD be related to the root data entity using `mentions`.
 
 It is RECOMMENDED that the first step after authentication is a syntactic validation step that verifies the RO-Crate validity according to this profile and system expectations. This step SHOULD remove `mentions` references to any end-user-provided [AssessAction](http://schema.org/AssessAction) (as defined in this profile) from the submitted crate, in order to ensure only assessment endorsements by the particular TRE are considered in the subsequent internal processing.
 
@@ -453,7 +452,7 @@ Example:
   "@id": "#validate-1146f640-819e-4c86-b029-b763a0040896",
   "type": "AssessAction",
   "additionalType": {"@id": "https://w3id.org/shp#ValidationCheck"},
-  "name": "Validation against Five Safes Crate profile: approved",
+  "name": "Validation against Trusted Workflow Run Crate profile: approved",
   "startTime": "2023-04-18T12:11:46+01:00",
   "endTime": "2023-04-18T12:11:49+01:00",
   "object": {"@id": "./"},
@@ -501,7 +500,7 @@ Example:
 
 #### Sign-off phase
 
-Before executing a Five Safes Crate, the TRE SHOULD check if the requesting agent is permitted to execute the particular workflow on behalf of the responsible project. This SHOULD include checks against the Agreement policy data maintained by the TRE. This may be a manual and/or automated check, as indicated by `agent`. The `object` SHOULD additionally reference the workflow and responsible project (unless these were not part of the sign-off checks).
+Before executing a Trusted Workflow Run Crate, the TRE SHOULD check if the requesting agent is permitted to execute the particular workflow on behalf of the responsible project. This SHOULD include checks against the Agreement policy data maintained by the TRE. This may be a manual and/or automated check, as indicated by `agent`. The `object` SHOULD additionally reference the workflow and responsible project (unless these were not part of the sign-off checks).
 
 Example:
 
@@ -538,7 +537,7 @@ When the execution is in `http://schema.org/CompletedActionStatus` or `http://sc
 
 ##### Execution states
 
-The states of the Five Safes Crate is indicated by the `actionStatus` of this main action being one of the following string values:
+The states of the Trusted Workflow Run Crate is indicated by the `actionStatus` of this main action being one of the following string values:
 
 * `http://schema.org/PotentialActionStatus` -– The request is queued to be executed
 * `http://schema.org/ActiveActionStatus` -– The request is currently executing
@@ -568,7 +567,7 @@ The states of the Five Safes Crate is indicated by the `actionStatus` of this ma
 }
 ```
 
-Note that even if the workflow execution action is in `http://schema.org/CompletedActionStatus`, two additional phases are required to pass before the Five Safe Crate can be considered “finished”, see the following subsections.
+Note that even if the workflow execution action is in `http://schema.org/CompletedActionStatus`, two additional phases are required to pass before the Trusted Workflow Run Crate can be considered “finished”, see the following subsections.
 
 #### Disclosure phase
 
@@ -604,7 +603,7 @@ The _[licence](https://www.researchobject.org/ro-crate/1.1/contextual-entities.h
 {
   "@id": "./",
   "@type": "Dataset",
-  "conformsTo": {"@id": "https://w3id.org/ro/five-safes/0.1-DRAFT"},
+  "conformsTo": {"@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"},
   "datePublisher": "2023-04-29T11:01:04+01:00",
   "publisher": {"@id": "https://tre72.example.com/"},
   "licence": {"@id": "http://spdx.org/licenses/CC-BY-4.0"},
@@ -662,7 +661,7 @@ Clients MAY add additional post-processing data and/or metadata not specified in
 
 ## Security considerations
 
-It is RECOMMENDED that implementers apply strong access control before accepting a Five Safes Crate. 
+It is RECOMMENDED that implementers apply strong access control before accepting a Trusted Workflow Run Crate. 
 
 Allowing execution of any Workflow Crate effectively allows execution of arbitrary code. It is RECOMMENDED to check against a list of pre-approved workflows (see 
 [Sign-off phase](#sign-off-phase)), e.g. using file checksums or cryptographic signatures. 
@@ -673,7 +672,7 @@ Pre-approved workflows could be exploited by a malicious attacker if they, the w
 
 It is currently out of scope for this specification how to verify that Five Saves Crate was requested by the given person, or how to verify if the person has access to a particular TRE according to their Agreement policies. It is therefore RECOMMENDED that implementers check authentication and authorization of a submitted query and use strong encryption. Implementers SHOULD check that the `@id` and `affiliation` of the _Requesting Agent_ and _Responsible Project_ corresponds to the authentication, and MAY inject/overwrite client-submitted data.
 
-Malicious clients submitting a Five Safes Crate may have included additional entities, properties and types, which may cause security concerns in an implementation. Implementers SHOULD sanity check inputs, including ensuring that all paths are relative within the bag or absolute URIs, and MUST remove references to any client-submitted _AssessAction_s, as these could be used to bypass the TRE compliance process.
+Malicious clients submitting a Trusted Workflow Run Crate may have included additional entities, properties and types, which may cause security concerns in an implementation. Implementers SHOULD sanity check inputs, including ensuring that all paths are relative within the bag or absolute URIs, and MUST remove references to any client-submitted _AssessAction_s, as these could be used to bypass the TRE compliance process.
 
 Malicious clients MAY attempt to reference URLs or IP addresses that are only accessible within a TRE. Implementers MUST perform any URL downloads (such as Workflow RO-Crates or container images) in a way that does not access the secured TRE network, e.g. from a _Demilitarized Zone_ (DMZ) with a network firewall restricting access to the TRE, or through a proxying repository controlled by TRE administrators.
 
@@ -686,14 +685,14 @@ The crate MAY include references (e.g. S3 URIs) to sensitive data, in which case
 
 ## Media type and profiles
 
-When transferring a HTTP Five Safes Crate using HTTP, implementations SHOULD use the following HTTP headers for content-type and profile:
+When transferring a Trusted Workflow Run Crate using HTTP, implementations SHOULD use the following HTTP headers for content-type and profile:
 
 ```http
 Content-Type: application/zip
 Link: <https://w3id.org/ro/crate>; rel="profile"`
 ```
 
-HTML landing pages that reference a Five Safes Crate SHOULD include [Signposting](https://signposting.org/) using HTTP `Link` headers that refer to the Crate’s ZIP download and the RO-Crate profile:
+HTML landing pages that reference a Trusted Workflow Run Crate SHOULD include [Signposting](https://signposting.org/) using HTTP `Link` headers that refer to the Crate’s ZIP download and the RO-Crate profile:
 
 ```http
 Link: <https://example.com/query-12389.zip>; rel="item", type="application/zip"
