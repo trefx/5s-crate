@@ -11,8 +11,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: RO Crate Preview for Profile Crate
+        uses: ResearchObject/ro-crate-preview-action@v1.3.0
+        with:
+          crate_path: 0.3-DRAFT
+
         
-      - name: Build RO Crate Preview
+      - name: RO Crate Preview for Example Request
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
           crate_path: 0.3-DRAFT/example-request
@@ -23,6 +28,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         with:
           files: |
+            0.3-DRAFT/ro-crate-preview.html
             0.3-DRAFT/example-request/ro-crate-preview.html
           commit-message: |
             Updated RO-Crate preview
