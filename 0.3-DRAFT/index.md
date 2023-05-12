@@ -102,7 +102,7 @@ Crates conforming to this profile specification SHOULD indicate this on the Root
 {
   "@id": "./",
   "@type": "Dataset",
-  "conformsTo": {"@id": "[https://w3id.org/ro/five-safes/0.1-DRAFT](https://w3id.org/trusted-wfrun-crate/0.3-DRAFT)"},
+  "conformsTo": {"@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"},
   "hasPart": [
   ],
   "mainEntity": {"@id": "https://workflowhub.eu/workflows/289?version=1"},
@@ -111,7 +111,7 @@ Crates conforming to this profile specification SHOULD indicate this on the Root
     {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"}
 },
 {
-  "@id": "[https://w3id.org/ro/five-safes/0.1-DRAFT](https://w3id.org/trusted-wfrun-crate/0.3-DRAFT)",
+  "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT",
   "@type": "Profile",
   "name": "Five Saves Crate profile"
 }
