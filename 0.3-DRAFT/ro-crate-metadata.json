@@ -64,16 +64,16 @@
                     "@id": "http://schema.org/grantee"
                 },
                 {
-                    "@id": "https://schema.org/DigitalDocument"
+                    "@id": "http://schema.org/DigitalDocument"
                 },
                 {
-                    "@id": "https://schema.org/DigitalDocumentPermission"
+                    "@id": "http://schema.org/DigitalDocumentPermission"
                 },
                 {
                     "@id": "http://schema.org/hasDigitalDocumentPermission"
                 },
                 {
-                    "@id": "https://schema.org/ReadPermission"
+                    "@id": "http://schema.org/ReadPermission"
                 },                
                 {
                     "@id": "https://bioschemas.org/FormalParameter"
@@ -120,6 +120,12 @@
                 }
             ]
         },
+        {
+            "@id": "index.html"
+        },
+        {
+            "@id": "example-request/"
+        },        
         {
             "@id": "https://w3id.org/shp",
             "@type": "DefinedTermSet",

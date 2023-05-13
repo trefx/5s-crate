@@ -225,9 +225,9 @@ The individual person who is requesting the run MUST be indicated as an `agent` 
 
 ### Responsible Project
 
-The project that the request is sent on behalf of, typically related to permission to use a TRE, MUST be indicated from the root dataset using `sourceOrganization` to a [`Project`](https://schema.org/Project). The responsible project SHOULD be referenced from the requesting agent’s `memberOf`. 
+The project that the request is sent on behalf of, typically related to permission to use a TRE, MUST be indicated from the root dataset using `sourceOrganization` to a [`Project`](http://schema.org/Project). The responsible project SHOULD be referenced from the requesting agent’s `memberOf`. 
 
-**Note**: The _responsible project_ is not necessarily a [ResearchProject](https://schema.org/ResearchProject) corresponding to a funded grant, but may be more specific studies within a funded project. Various TREs may have different granularity and identifiers for the responsible projects. A project `Grant` MAY be referenced using [funding](https://schema.org/funding) from the responsible project.
+**Note**: The _responsible project_ is not necessarily a [ResearchProject](http://schema.org/ResearchProject) corresponding to a funded grant, but may be more specific studies within a funded project. Various TREs may have different granularity and identifiers for the responsible projects. A project `Grant` MAY be referenced using [funding](http://schema.org/funding) from the responsible project.
 
 It is RECOMMENDED to include TRE-specific ids under `identifier` (which MAY be an array).  If the identifier is not globally unique (e.g. an integer rather than an UUID or URI), it is RECOMMENDED to add a [repository-specific identifier](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#repository-specific-identifiers) and provide the local identifier as `value` of a `PropertyValue` entity. Multiple repository-specific identifiers MAY be included for different TREs from a single Project entity.
 
@@ -360,7 +360,7 @@ Implementations MAY include the outputs within the Crate BagIt archive, in which
 #### Sensitive data
 
 
-Outputs MAY include references to sensitive data that is only accessible from within the TRE or through URIs that require authentication. The requirement for permission SHOULD be indicated by typing the data entity as a [DigitalDocument](https://schema.org/DigitalDocument) that use `hasDigitalDocumentPermission` to reference the [DigitalDocumentPermission](http://schema.org/DigitalDocumentPermission) entity, typically assigning `http://schema.org/ReadPermission` with `grantee` to only to the _Responsible Project_.
+Outputs MAY include references to sensitive data that is only accessible from within the TRE or through URIs that require authentication. The requirement for permission SHOULD be indicated by typing the data entity as a [DigitalDocument](http://schema.org/DigitalDocument) that use `hasDigitalDocumentPermission` to reference the [DigitalDocumentPermission](http://schema.org/DigitalDocumentPermission) entity, typically assigning `http://schema.org/ReadPermission` with `grantee` to only to the _Responsible Project_.
 
 
 ```json
@@ -382,7 +382,7 @@ Outputs MAY include references to sensitive data that is only accessible from wi
 
 ### Review process
 
-The Trusted Workflow Run Crate may face several reviews both before and after workflow execution, automated and manual. To record that such review will or has taken place, a series of additional [`Action`](https://schema.org/docs/actions.html) contextual entities SHOULD be related to the root data entity using `mentions`.
+The Trusted Workflow Run Crate may face several reviews both before and after workflow execution, automated and manual. To record that such review will or has taken place, a series of additional [`Action`](http://schema.org/docs/actions.html) contextual entities SHOULD be related to the root data entity using `mentions`.
 
 It is RECOMMENDED that the first step after authentication is a syntactic validation step that verifies the RO-Crate validity according to this profile and system expectations. This step SHOULD remove `mentions` references to any end-user-provided [AssessAction](http://schema.org/AssessAction) (as defined in this profile) from the submitted crate, in order to ensure only assessment endorsements by the particular TRE are considered in the subsequent internal processing.
 
@@ -394,7 +394,7 @@ The `name` of the action MUST provide a human readable name of the type of check
 
 Each completed action SHOULD have a timestamp using `endTime` that follow the ISO-8601 syntax of [RFC 3339](https://doi.org/10.17487/RFC3339) (including timezone or Z). `startTime` MAY be included for active, failed and completed actions.
 
-The main actor performing the assessment SHOULD be listed under _agent_ and refer to either a `Organization` (e.g. an TRE helpdesk), `Person` (manual check) or a [SoftwareApplication](https://schema.org/SoftwareApplication) (automated check). A `SoftwareApplication` acting on behalf of a TRE MUST include a reference to the TRE `Organization` using `provider`. There may be multiple actors appearing as `agent` for different actions, each of which should be listed as contextual entities with at least `name`.
+The main actor performing the assessment SHOULD be listed under _agent_ and refer to either a `Organization` (e.g. an TRE helpdesk), `Person` (manual check) or a [SoftwareApplication](http://schema.org/SoftwareApplication) (automated check). A `SoftwareApplication` acting on behalf of a TRE MUST include a reference to the TRE `Organization` using `provider`. There may be multiple actors appearing as `agent` for different actions, each of which should be listed as contextual entities with at least `name`.
 
 
 ```json
@@ -657,7 +657,7 @@ Clients receiving a Trusted Workflow Run Crate SHOULD check the BagIt manifest c
 
 It is NOT sufficient for clients to check the publishing AssessAction, as TRE implementations are permitted to expose partial crates which have failed approval phases or which are in pending/execution state.
 
-Clients MAY add additional post-processing data and/or metadata not specified in this profile to the crate (e.g. [ReceiveAction](https://schema.org/ReceiveAction)), in which case they SHOULD maintain the BagIt manifests accordingly. Manifest checksums can be used to detect accidental local changes in post-processing.
+Clients MAY add additional post-processing data and/or metadata not specified in this profile to the crate (e.g. [ReceiveAction](http://schema.org/ReceiveAction)), in which case they SHOULD maintain the BagIt manifests accordingly. Manifest checksums can be used to detect accidental local changes in post-processing.
 
 
 ## Security considerations
@@ -735,9 +735,9 @@ Implementations MAY also provide direct public access to the RO-Crate metadata f
 [RO-Crate] Research Object Crate (RO-Crate) \
 [https://w3id.org/ro/crate](https://w3id.org/ro/crate) 
 
-[schema] Schema.org vocabulary [https://schema.org/](https://schema.org/) 
+[schema] Schema.org vocabulary [http://schema.org/](http://schema.org/) 
 
-[schema Action] Schema.org potential action [https://schema.org/docs/actions.html](https://schema.org/docs/actions.html) 
+[schema Action] Schema.org potential action [http://schema.org/docs/actions.html](http://schema.org/docs/actions.html) 
 
 [Signposting] Signposting the Scholarly Web [https://signposting.org/](https://signposting.org/) 
 
