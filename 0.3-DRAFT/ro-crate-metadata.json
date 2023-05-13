@@ -143,6 +143,10 @@
             ]
         },
         {
+            "@id": "https://bioschemas.org/FormalParameter",
+            "@type": "DefinedTerm"
+        },
+        {
             "@id": "https://w3id.org/shp",
             "@type": "DefinedTermSet",
             "name": "The Safe Haven Provenance (SHP) Ontology",
