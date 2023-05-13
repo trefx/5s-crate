@@ -64,6 +64,18 @@
                     "@id": "http://schema.org/grantee"
                 },
                 {
+                    "@id": "https://schema.org/DigitalDocument"
+                },
+                {
+                    "@id": "https://schema.org/DigitalDocumentPermission"
+                },
+                {
+                    "@id": "http://schema.org/hasDigitalDocumentPermission"
+                },
+                {
+                    "@id": "https://schema.org/ReadPermission"
+                },                
+                {
                     "@id": "https://bioschemas.org/FormalParameter"
                 },
                 {
@@ -80,18 +92,6 @@
                 },
                 {
                     "@id": "https://w3id.org/shp#GenerateCheckValue"
-                },
-                {
-                    "@id": "https://schema.org/DigitalDocument"
-                },
-                {
-                    "@id": "https://schema.org/DigitalDocumentPermission"
-                },
-                {
-                    "@id": "http://schema.org/hasDigitalDocumentPermission"
-                },
-                {
-                    "@id": "https://schema.org/ReadPermission"
                 }
             ],
             "hasResource": [
