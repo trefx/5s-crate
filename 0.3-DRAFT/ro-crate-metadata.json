@@ -37,15 +37,6 @@
                     "@id": "example-request/"
                 },
                 {
-                    "@id": "https://schema.org/DigitalDocument"
-                },
-                {
-                    "@id": "https://schema.org/DigitalDocumentPermission"
-                },
-                {
-                    "@id": "https://schema.org/ReadPermission"
-                },
-                {
                     "@id": "http://schema.org/PotentialActionStatus"
                 },
                 {
@@ -70,13 +61,10 @@
                     "@id": "http://schema.org/UpdateAction"
                 },
                 {
-                    "@id": "http://schema.org/hasDigitalDocumentPermission"
-                },
-                {
                     "@id": "http://schema.org/grantee"
                 },
                 {
-                    "@id": "FormalParameter"
+                    "@id": "https://bioschemas.org/FormalParameter"
                 },
                 {
                     "@id": "https://w3id.org/shp#CheckValue"
@@ -92,6 +80,18 @@
                 },
                 {
                     "@id": "https://w3id.org/shp#GenerateCheckValue"
+                },
+                {
+                    "@id": "https://schema.org/DigitalDocument"
+                },
+                {
+                    "@id": "https://schema.org/DigitalDocumentPermission"
+                },
+                {
+                    "@id": "http://schema.org/hasDigitalDocumentPermission"
+                },
+                {
+                    "@id": "https://schema.org/ReadPermission"
                 }
             ],
             "hasResource": [
@@ -100,6 +100,9 @@
                 },
                 {
                     "@id": "#hasExampleRequest"
+                },
+                {
+                    "@id": "#usesSHP"
                 }
             ],
             "publisher": {
@@ -124,24 +127,89 @@
             "version": "0.1"
         },
         {
-            "@id": "https://w3id.org/shp#CheckValue"
+            "@id": "https://w3id.org/shp#CheckValue",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
         },
         {
-            "@id": "https://w3id.org/shp#ValidationCheck"
+            "@id": "https://w3id.org/shp#ValidationCheck",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
         },
         {
-            "@id": "https://w3id.org/shp#SignOff"
+            "@id": "https://w3id.org/shp#SignOff",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
         },
         {
-            "@id": "https://w3id.org/shp#DisclosureCheck"
+            "@id": "https://w3id.org/shp#DisclosureCheck",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
         },
         {
-            "@id": "https://w3id.org/shp#GenerateCheckValue"
+            "@id": "https://w3id.org/shp#GenerateCheckValue",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
+        },
+        {
+            "@id": "https://w3id.org/shp#CheckValue",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
+        },
+        {
+            "@id": "https://w3id.org/shp#ValidationCheck",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
+        },
+        {
+            "@id": "https://w3id.org/shp#SignOff",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
+        },
+        {
+            "@id": "https://w3id.org/shp#DisclosureCheck",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
+        },
+        {
+            "@id": "https://w3id.org/shp#GenerateCheckValue",
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": {
+                "@id": "https://w3id.org/shp"
+            }
         },
         {
             "@id": "https://www.iana.org/assignments/named-information#sha-512",
             "@type": "DefinedTerm",
             "name": "sha-512 algorithm"
+        },
+        {
+            "@id": "#usesSHP",
+            "@type": "ResourceDescriptor",
+            "hasRole": {
+                "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
+            },
+            "hasArtifact": {
+                "@id": "https://w3id.org/shp"
+            }
         },
         {
             "@id": "#hasSpecification",
@@ -180,6 +248,15 @@
             ],
             "name": "Specification",
             "description": "Defining the profile in human-readable form"
+        },
+        {
+            "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary",
+            "@type": [
+                "DefinedTerm",
+                "ResourceRole"
+            ],
+            "name": "Vocabulary",
+            "description": "Defines terms used in the profile specification"
         },
         {
             "@id": "http://spdx.org/licenses/CC0-1.0",
