@@ -44,15 +44,6 @@
           "@id": "example-request/"
         },
         {
-          "@id": "https://schema.org/DigitalDocument"
-        },
-        {
-          "@id": "https://schema.org/DigitalDocumentPermission"
-        },
-        {
-          "@id": "https://schema.org/ReadPermission"
-        },
-        {
           "@id": "http://schema.org/PotentialActionStatus"
         },
         {
@@ -77,13 +68,22 @@
           "@id": "http://schema.org/UpdateAction"
         },
         {
-          "@id": "http://schema.org/hasDigitalDocumentPermission"
-        },
-        {
           "@id": "http://schema.org/grantee"
         },
         {
-          "@id": "FormalParameter"
+          "@id": "https://schema.org/DigitalDocument"
+        },
+        {
+          "@id": "https://schema.org/DigitalDocumentPermission"
+        },
+        {
+          "@id": "http://schema.org/hasDigitalDocumentPermission"
+        },
+        {
+          "@id": "https://schema.org/ReadPermission"
+        },
+        {
+          "@id": "https://bioschemas.org/FormalParameter"
         },
         {
           "@id": "https://w3id.org/shp#CheckValue"
@@ -107,6 +107,9 @@
         },
         {
           "@id": "#hasExampleRequest"
+        },
+        {
+          "@id": "#usesSHP"
         }
       ],
       "publisher": {
@@ -145,23 +148,38 @@
     },
     {
       "@id": "https://w3id.org/shp#CheckValue",
-      "@type": "Thing"
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": {
+        "@id": "https://w3id.org/shp"
+      }
     },
     {
       "@id": "https://w3id.org/shp#ValidationCheck",
-      "@type": "Thing"
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": {
+        "@id": "https://w3id.org/shp"
+      }
     },
     {
       "@id": "https://w3id.org/shp#SignOff",
-      "@type": "Thing"
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": {
+        "@id": "https://w3id.org/shp"
+      }
     },
     {
       "@id": "https://w3id.org/shp#DisclosureCheck",
-      "@type": "Thing"
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": {
+        "@id": "https://w3id.org/shp"
+      }
     },
     {
       "@id": "https://w3id.org/shp#GenerateCheckValue",
-      "@type": "Thing"
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": {
+        "@id": "https://w3id.org/shp"
+      }
     },
     {
       "@id": "#hasSpecification",
@@ -181,6 +199,16 @@
       },
       "hasArtifact": {
         "@id": "example-request/"
+      }
+    },
+    {
+      "@id": "#usesSHP",
+      "@type": "ResourceDescriptor",
+      "hasRole": {
+        "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
+      },
+      "hasArtifact": {
+        "@id": "https://w3id.org/shp"
       }
     },
     {
@@ -234,6 +262,15 @@
       "@id": "https://www.iana.org/assignments/named-information#sha-512",
       "@type": "DefinedTerm",
       "name": "sha-512 algorithm"
+    },
+    {
+      "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary",
+      "@type": [
+        "DefinedTerm",
+        "ResourceRole"
+      ],
+      "name": "Vocabulary",
+      "description": "Defines terms used in the profile specification"
     },
     {
       "@id": "http://www.w3.org/ns/dx/prof/role/specification",
@@ -370,12 +407,6 @@ table.table {
                         
                         <li>example-request/</li>
                         
-                        <li><a href="https://schema.org/DigitalDocument">https://schema.org/DigitalDocument</a></li>
-                        
-                        <li><a href="https://schema.org/DigitalDocumentPermission">https://schema.org/DigitalDocumentPermission</a></li>
-                        
-                        <li><a href="https://schema.org/ReadPermission">https://schema.org/ReadPermission</a></li>
-                        
                         <li><a href="http://schema.org/PotentialActionStatus">http://schema.org/PotentialActionStatus</a></li>
                         
                         <li><a href="http://schema.org/CompletedActionStatus">http://schema.org/CompletedActionStatus</a></li>
@@ -392,11 +423,17 @@ table.table {
                         
                         <li><a href="http://schema.org/UpdateAction">http://schema.org/UpdateAction</a></li>
                         
-                        <li><a href="http://schema.org/hasDigitalDocumentPermission">http://schema.org/hasDigitalDocumentPermission</a></li>
-                        
                         <li><a href="http://schema.org/grantee">http://schema.org/grantee</a></li>
                         
-                        <li>FormalParameter</li>
+                        <li><a href="https://schema.org/DigitalDocument">https://schema.org/DigitalDocument</a></li>
+                        
+                        <li><a href="https://schema.org/DigitalDocumentPermission">https://schema.org/DigitalDocumentPermission</a></li>
+                        
+                        <li><a href="http://schema.org/hasDigitalDocumentPermission">http://schema.org/hasDigitalDocumentPermission</a></li>
+                        
+                        <li><a href="https://schema.org/ReadPermission">https://schema.org/ReadPermission</a></li>
+                        
+                        <li><a href="https://bioschemas.org/FormalParameter">https://bioschemas.org/FormalParameter</a></li>
                         
                         <li><a href="#https%3A//w3id.org/shp%23CheckValue">https://w3id.org/shp#CheckValue</a></li>
                         
@@ -414,6 +451,8 @@ table.table {
                         <li><a href="#%23hasSpecification">#hasSpecification</a></li>
                         
                         <li><a href="#%23hasExampleRequest">#hasExampleRequest</a></li>
+                        
+                        <li><a href="#%23usesSHP">#usesSHP</a></li>
                         </ul></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
@@ -570,7 +609,10 @@ table.table {
             <td style='text-align:left'><a href="https://w3id.org/shp#CheckValue">https://w3id.org/shp#CheckValue</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>Thing</span></td>
+            <td style='text-align:left'><span>DefinedTerm</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">inDefinedTermSet<span>&nbsp;</span><a href="http://schema.org/inDefinedTermSet">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
@@ -594,7 +636,10 @@ table.table {
             <td style='text-align:left'><a href="https://w3id.org/shp#ValidationCheck">https://w3id.org/shp#ValidationCheck</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>Thing</span></td>
+            <td style='text-align:left'><span>DefinedTerm</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">inDefinedTermSet<span>&nbsp;</span><a href="http://schema.org/inDefinedTermSet">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
@@ -618,7 +663,10 @@ table.table {
             <td style='text-align:left'><a href="https://w3id.org/shp#SignOff">https://w3id.org/shp#SignOff</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>Thing</span></td>
+            <td style='text-align:left'><span>DefinedTerm</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">inDefinedTermSet<span>&nbsp;</span><a href="http://schema.org/inDefinedTermSet">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
@@ -642,7 +690,10 @@ table.table {
             <td style='text-align:left'><a href="https://w3id.org/shp#DisclosureCheck">https://w3id.org/shp#DisclosureCheck</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>Thing</span></td>
+            <td style='text-align:left'><span>DefinedTerm</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">inDefinedTermSet<span>&nbsp;</span><a href="http://schema.org/inDefinedTermSet">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
@@ -666,7 +717,10 @@ table.table {
             <td style='text-align:left'><a href="https://w3id.org/shp#GenerateCheckValue">https://w3id.org/shp#GenerateCheckValue</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>Thing</span></td>
+            <td style='text-align:left'><span>DefinedTerm</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">inDefinedTermSet<span>&nbsp;</span><a href="http://schema.org/inDefinedTermSet">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
@@ -727,6 +781,36 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
             <td style='text-align:left'>example-request/</td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
+            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> #usesSHP</h3>
+            
+            
+            
+            
+        <div id="#usesSHP">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#usesSHP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>ResourceDescriptor</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasRole<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasRole">[?]</a></th>
+            <td style='text-align:left'><a href="#http%3A//www.w3.org/ns/dx/prof/role/vocabulary">Vocabulary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
             <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
