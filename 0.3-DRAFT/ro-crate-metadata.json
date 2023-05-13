@@ -15,12 +15,13 @@
             }
         },
         {
-            "@id": "./",
+            "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT",
             "@type": [
                 "Dataset",
                 "Profile"
             ],
             "name": "Trusted Workflow Run Crate profile",
+            "cite-as": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT",
             "version": "0.3-DRAFT",
             "licence": {
                 "@id": "http://spdx.org/licenses/MIT"
@@ -31,10 +32,10 @@
             "copyrightYear": 2023,
             "hasPart": [
                 {
-                    "@id": "index.html"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/index.html"
                 },
                 {
-                    "@id": "example-request/"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/"
                 },
                 {
                     "@id": "http://schema.org/PotentialActionStatus"
@@ -74,7 +75,7 @@
                 },
                 {
                     "@id": "http://schema.org/ReadPermission"
-                },                
+                },
                 {
                     "@id": "https://bioschemas.org/FormalParameter"
                 },
@@ -121,11 +122,26 @@
             ]
         },
         {
-            "@id": "index.html"
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/index.html",
+            "@type": "CreativeWork",
+            "name": "Trusted Workflow Run Crate profile (specification)"
         },
         {
-            "@id": "example-request/"
-        },        
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/",
+            "@type": "Dataset",
+            "name": "Example Crate in Request state",
+            "conformsTo": {
+                "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"
+            },
+            "subjectOf": [
+                {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/ro-crate-metadata.json"
+                },
+                {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/ro-crate-preview.html"
+                }
+            ]
+        },
         {
             "@id": "https://w3id.org/shp",
             "@type": "DefinedTermSet",
