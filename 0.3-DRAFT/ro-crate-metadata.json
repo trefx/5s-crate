@@ -244,7 +244,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/specification"
             },
             "hasArtifact": {
-                "@id": "index.html"
+                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/index.html"
             }
         },
         {
@@ -254,7 +254,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/example"
             },
             "hasArtifact": {
-                "@id": "example-request/"
+                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/"
             }
         },
         {
@@ -329,6 +329,8 @@
         {
             "@id": "https://trefx.uk/",
             "@type": "ResearchProject",
+            "name": "TRE-FX",
+            "description": "Delivering a federated network of TREs to enable safe analytics",
             "funding": {
                 "@id": "https://gtr.ukri.org/projects?ref=MC_PC_23007"
             }
