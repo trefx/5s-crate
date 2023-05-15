@@ -63,4 +63,14 @@ jobs:
             0.3-DRAFT/example-result.bagit.zip
           commit-message: |
             Updated BagIt manifests
+            
+      - name: Get new git commit
+        id: sha
+        run: |
+              sha_new=$(git rev-parse HEAD)
+              echo $sha_new
+              echo "::set-output name=SHA::$sha_new"
+      - name: New commit
+        run:
+          echo ${{ steps.sha.outputs.SHA }}            
       
