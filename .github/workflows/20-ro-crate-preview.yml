@@ -51,6 +51,7 @@ jobs:
             0.3-DRAFT/ro-crate-preview.html
             0.3-DRAFT/example-request/data/ro-crate-preview.html
             0.3-DRAFT/example-result/data/ro-crate-preview.html
+            0.3-DRAFT/example-hutch/data/ro-crate-preview.html
           commit-message: |
             Updated RO-Crate preview
       - name: Get new git commit
