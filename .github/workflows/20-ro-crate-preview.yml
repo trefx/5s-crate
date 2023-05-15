@@ -15,7 +15,6 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-22.04
-    concurrency: ci-${{github.ref}}
     steps:
       - name: Checkout
         uses: actions/checkout@v3

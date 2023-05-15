@@ -14,8 +14,7 @@ permissions:
 
 jobs:
   bagit:
-    runs-on: ubuntu-22.04    
-
+    runs-on: ubuntu-22.04
     steps:      
       - name: Checkout
         uses: actions/checkout@v3
