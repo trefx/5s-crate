@@ -4,7 +4,9 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
+    paths-ignore: # Ignore those triggering other workflows
+      - '**/ro-crate-metadata.json'
+      - '**/example*/**'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
