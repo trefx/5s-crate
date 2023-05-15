@@ -15,9 +15,12 @@ jobs:
     uses: ./.github/workflows/20-ro-crate-preview.yml
   bagit:
     name: BagIt checksums
+    needs: [rocrate]
     uses: ./.github/workflows/80-bagit.yml      
     secrets: inherit
   jekyll:
     name: Deploy using Jekyll
+    needs: [rocrate, bagit]
     uses: ./.github/workflows/90-jekyll.yml
     secrets: inherit
+    

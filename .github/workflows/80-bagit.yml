@@ -59,8 +59,8 @@ jobs:
             0.3-DRAFT/example-request/tagmanifest-sha512.txt
             0.3-DRAFT/example-result/manifest-sha512.txt
             0.3-DRAFT/example-result/tagmanifest-sha512.txt
-            example-request.bagit.zip
-            example-result.bagit.zip
+            0.3-DRAFT/example-request.bagit.zip
+            0.3-DRAFT/example-result.bagit.zip
           commit-message: |
             Updated BagIt manifests
       
