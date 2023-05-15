@@ -34,6 +34,12 @@ jobs:
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
           crate_path: 0.3-DRAFT/example-result/data
+
+          
+      - name: RO Crate Preview for Example Hutch
+        uses: ResearchObject/ro-crate-preview-action@v1.3.0
+        with:
+          crate_path: 0.3-DRAFT/example-hutch/data
           
       - name: Commit RO Crate Preview
         uses: swinton/commit@v2.0.0

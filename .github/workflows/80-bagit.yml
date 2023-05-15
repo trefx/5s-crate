@@ -34,12 +34,19 @@ jobs:
           sha512sum `find data -type f` > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest-sha512.txt
 
+      - name: Create BagIt manifest for Example Hutch
+        working-directory: 0.3-DRAFT/example-hutch 
+        run: |
+          rm -f manifest*txt tagmanifest*txt
+          sha512sum `find data -type f` > manifest-sha512.txt
+          sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest-sha512.txt  
+
       - name: Archive BagIts as ZIP
         working-directory: 0.3-DRAFT/
         run: |
           rm -f *.zip
           zip -r example-request.bagit.zip example-request/
-          zip -r example-result.bagit.zip example-result/
+          zip -r example-result.bagit.zip example-result/          
           
       - name: Commit manifests
         uses: swinton/commit@v2.0.0
