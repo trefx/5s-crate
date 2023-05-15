@@ -17,7 +17,12 @@
             "conformsTo": {
                 "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"
             },
-            "hasPart": [],
+            "hasPart": [
+                {"@id": "https://workflowhub.eu/workflows/289?version=1"},
+                {
+                    "@id": "input1.txt"
+                }         
+            ],
             "mainEntity": {
                 "@id": "https://workflowhub.eu/workflows/289?version=1"
             },
@@ -66,7 +71,10 @@
             "object": [
                 {
                     "@id": "input1.txt"
-                }
+                },
+                {
+                    "@id": "#enableFastMode"
+                }                
             ]
         },
         {
@@ -118,19 +126,6 @@
             "@id": "https://gtr.ukri.org/projects?ref=10038961",
             "@type": "Grant",
             "name": "EOSC4Cancer"
-        },
-        {
-            "@id": "#query-37252371-c937-43bd-a0a7-3680b48c0538",
-            "@type": "CreateAction",
-            "object": [
-                {
-                    "@id": "input1.txt"
-                },
-                {
-                    "@id": "#enableFastMode"
-                }
-            ],
-            "…": {}
         },
         {
             "@id": "input1.txt",
