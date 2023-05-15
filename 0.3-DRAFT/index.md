@@ -460,7 +460,7 @@ Example:
   "startTime": "2023-04-18T12:11:46+01:00",
   "endTime": "2023-04-18T12:11:49+01:00",
   "object": {"@id": "./"},
-  "instrument": {"@id": "https://w3id.org/ro/five-safes/0.1-DRAFT"},
+  "instrument": {"@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"},
   "agent": {"@id": "#validator-a4a66c63-2fe0-4c57-830d-268a40718313"},
   "actionStatus": "http://schema.org/CompletedActionStatus"
 }

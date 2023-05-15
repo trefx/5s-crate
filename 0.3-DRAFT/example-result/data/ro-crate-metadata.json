@@ -236,7 +236,7 @@
                 "@id": "./"
             },
             "instrument": {
-                "@id": "https://w3id.org/ro/five-safes/0.1-DRAFT"
+                "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"
             },
             "agent": {
                 "@id": "#validator-a4a66c63-2fe0-4c57-830d-268a40718313"
