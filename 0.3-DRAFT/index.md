@@ -14,8 +14,9 @@ Authors:
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
 * Permalink: <https://w3id.org/trusted-wfrun-crate/0.3-DRAFT> (TODO)
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
-* Example crate #1: [example-request.bagit.zip](example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
-* Example crate #2: [example-result.bagit.zip](example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
+* Example crate "Request": [example-request.bagit.zip](example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
+* Example crate "Result": [example-result.bagit.zip](example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
+* Example crate "Hutch": [GitHub LFS](https://github.com/trefx/trusted-wfrun-crate/tree/main/0.3-DRAFT/example-hutch) [ro-crate-metadata.json](example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](example-hutch/data/ro-crate-preview.html) 
 
 This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
