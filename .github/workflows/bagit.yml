@@ -1,0 +1,39 @@
+name: Regenerate BagIt checksums
+on:
+  push:
+    paths:
+      - '**/example*/'
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-22.04
+    concurrency: ci-${{github.ref}}
+    steps:      
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Create BagIt manifest for Example Request
+        working-directory: 0.3-DRAFT/example-request 
+        run: |
+          sha512sum data/* > manifest-sha512.txt
+          sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest=sha512.txt
+
+      - name: Create BagIt manifest for Example Response
+        working-directory: 0.3-DRAFT/example-response 
+        run: |
+          sha512sum data/* > manifest-sha512.txt
+          sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest=sha512.txt
+  
+      - name: Commit manifests
+        uses: swinton/commit@v2.0.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+        with:
+          files: |
+            0.3-DRAFT/example-request/manifest-sha512.txt
+            0.3-DRAFT/example-request/tagmanifest-sha512.txt
+            0.3-DRAFT/example-result/manifest-sha512.txt
+            0.3-DRAFT/example-result/tagmanifest-sha512.txt
+          commit-message: |
+            Updated BagIt manifests
