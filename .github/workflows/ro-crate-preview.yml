@@ -22,7 +22,12 @@ jobs:
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
           crate_path: 0.3-DRAFT/example-request
-      
+
+      - name: RO Crate Preview for Example Result
+          uses: ResearchObject/ro-crate-preview-action@v1.3.0
+          with:
+            crate_path: 0.3-DRAFT/example-result
+          
       - name: Commit RO Crate Preview
         uses: swinton/commit@v2.0.0
         env:
@@ -31,5 +36,6 @@ jobs:
           files: |
             0.3-DRAFT/ro-crate-preview.html
             0.3-DRAFT/example-request/ro-crate-preview.html
+            0.3-DRAFT/example-result/ro-crate-preview.htm
           commit-message: |
             Updated RO-Crate preview

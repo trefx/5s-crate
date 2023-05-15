@@ -39,6 +39,9 @@
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/"
                 },
                 {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/"
+                },
+                {
                     "@id": "http://schema.org/PotentialActionStatus"
                 },
                 {
@@ -136,13 +139,55 @@
             },
             "subjectOf": [
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/ro-crate-metadata.json"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-metadata.json"
                 },
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/ro-crate-preview.html"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-preview.html"
                 }
             ]
         },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/",
+            "@type": "Dataset",
+            "name": "Example Crate in Request state",
+            "conformsTo": {
+                "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"
+            },
+            "subjectOf": [
+                {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-metadata.json"
+                },
+                {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-preview.html"
+                }
+            ]
+        },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "encodingFormat": "application/ld+json",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+            }            
+        },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-preview.html",
+            "@type": "CreativeWork",
+            "encodingFormat": "text/html"
+        },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "encodingFormat": "application/ld+json",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+            }
+        },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-preview.html",
+            "@type": "CreativeWork",
+            "encodingFormat": "text/html"
+        },        
         {
             "@id": "https://bioschemas.org/FormalParameter",
             "@type": "DefinedTerm"
