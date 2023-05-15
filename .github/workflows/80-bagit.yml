@@ -38,8 +38,8 @@ jobs:
         working-directory: 0.3-DRAFT/
         run: |
           rm *.zip
-          zip -r example-request.zip example-request/
-          zip -r example-result.zip example-result/
+          zip -r example-request.bagit.zip example-request/
+          zip -r example-result.bagit.zip example-result/
           
       - name: Commit manifests
         uses: swinton/commit@v2.0.0
@@ -51,8 +51,8 @@ jobs:
             0.3-DRAFT/example-request/tagmanifest-sha512.txt
             0.3-DRAFT/example-result/manifest-sha512.txt
             0.3-DRAFT/example-result/tagmanifest-sha512.txt
-            example-request.zip
-            example-re.zip
+            example-request.bagit.zip
+            example-result.bagit.zip
           commit-message: |
             Updated BagIt manifests
       
