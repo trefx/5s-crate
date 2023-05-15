@@ -524,7 +524,7 @@ Example:
 { 
   "@id": "https://tre72.example.com/agreement-policy/81",
   "@type": "CreativeWork",
-  "name": "Agreement policy for TRE72 for project 81",
+  "name": "Agreement policy for TRE72 for project 81"
 }
 ```
 
