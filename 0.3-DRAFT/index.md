@@ -369,7 +369,7 @@ Outputs MAY include references to sensitive data that is only accessible from wi
   "@type": "DigitalDocument",
   "encodingFormat": "text/csv",
   "name": "Patient measurement 07b81e0f-7ac4-5428-9940-878b241e2397",
-  "hasDigitalDocumentPermission": {"@id": "#permissions-07b81e0f"},
+  "hasDigitalDocumentPermission": {"@id": "#permissions-07b81e0f"}
 },
 {
   "@id": "#permissions-07b81e0f",

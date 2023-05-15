@@ -62,7 +62,7 @@
             },
             "licence": {
                 "@id": "http://spdx.org/licenses/CC-BY-4.0"
-            },
+            }
         },
         {
             "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT",
@@ -214,7 +214,7 @@
             "name": "Patient measurement 07b81e0f-7ac4-5428-9940-878b241e2397",
             "hasDigitalDocumentPermission": {
                 "@id": "#permissions-07b81e0f"
-            },
+            }
         },
         {
             "@id": "#permissions-07b81e0f",
