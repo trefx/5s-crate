@@ -36,10 +36,10 @@
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/index.html"
                 },
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/"
                 },
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/"
                 },
                 {
                     "@id": "http://schema.org/PotentialActionStatus"
@@ -131,7 +131,7 @@
             "name": "Trusted Workflow Run Crate profile (specification)"
         },
         {
-            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/",
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/",
             "@type": "Dataset",
             "name": "Example Crate in Request state",
             "conformsTo": {
@@ -139,15 +139,15 @@
             },
             "subjectOf": [
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-metadata.json"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/ro-crate-metadata.json"
                 },
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-preview.html"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/ro-crate-preview.html"
                 }
             ]
         },
         {
-            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/",
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/",
             "@type": "Dataset",
             "name": "Example Crate in Request state",
             "conformsTo": {
@@ -155,30 +155,30 @@
             },
             "subjectOf": [
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-metadata.json"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/ro-crate-metadata.json"
                 },
                 {
-                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-preview.html"
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/ro-crate-preview.html"
                 }
             ]
         },
         {
-            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-metadata.json",
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/ro-crate-metadata.json",
             "@type": "CreativeWork",
             "encodingFormat": "application/ld+json"
         },
         {
-            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-preview.html",
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/ro-crate-preview.html",
             "@type": "CreativeWork",
             "encodingFormat": "text/html"
         },
         {
-            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-metadata.json",
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/ro-crate-metadata.json",
             "@type": "CreativeWork",
             "encodingFormat": "application/ld+json"
         },
         {
-            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-preview.html",
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/ro-crate-preview.html",
             "@type": "CreativeWork",
             "encodingFormat": "text/html"
         },
@@ -297,7 +297,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/example"
             },
             "hasArtifact": {
-                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/"
+                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/"
             }
         },
         {
