@@ -18,10 +18,12 @@
                 "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"
             },
             "hasPart": [
-                {"@id": "https://workflowhub.eu/workflows/289?version=1"},
+                {
+                    "@id": "https://workflowhub.eu/workflows/289?version=1"
+                },
                 {
                     "@id": "input1.txt"
-                }         
+                }
             ],
             "mainEntity": {
                 "@id": "https://workflowhub.eu/workflows/289?version=1"
@@ -74,7 +76,7 @@
                 },
                 {
                     "@id": "#enableFastMode"
-                }                
+                }
             ]
         },
         {

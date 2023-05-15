@@ -168,7 +168,7 @@
             "encodingFormat": "application/ld+json",
             "conformsTo": {
                 "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
-            }            
+            }
         },
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-preview.html",
@@ -187,7 +187,7 @@
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-preview.html",
             "@type": "CreativeWork",
             "encodingFormat": "text/html"
-        },        
+        },
         {
             "@id": "https://bioschemas.org/FormalParameter",
             "@type": "DefinedTerm"
