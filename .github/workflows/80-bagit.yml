@@ -5,10 +5,13 @@ on:
       - '**/example*/**'
     branches:
       - main
+concurrency:
+  group: "pages"
+  cancel-in-progress: false      
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-22.04
-    concurrency: ci-${{github.ref}}
+    runs-on: ubuntu-22.04    
+
     steps:      
       - name: Checkout
         uses: actions/checkout@v3
