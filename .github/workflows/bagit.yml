@@ -2,7 +2,7 @@ name: Regenerate BagIt checksums
 on:
   push:
     paths:
-      - '**/example*/'
+      - '**/example*/**'
     branches:
       - main
 jobs:
