@@ -24,9 +24,9 @@ jobs:
           crate_path: 0.3-DRAFT/example-request
 
       - name: RO Crate Preview for Example Result
-          uses: ResearchObject/ro-crate-preview-action@v1.3.0
-          with:
-            crate_path: 0.3-DRAFT/example-result
+        uses: ResearchObject/ro-crate-preview-action@v1.3.0
+        with:
+          crate_path: 0.3-DRAFT/example-result
           
       - name: Commit RO Crate Preview
         uses: swinton/commit@v2.0.0
