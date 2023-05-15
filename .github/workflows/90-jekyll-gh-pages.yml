@@ -15,5 +15,6 @@ permissions:
   id-token: write
 
 jobs:
-  - name: Deploy using Jekyll
+  deploy:
+    name: Deploy using Jekyll
     uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
