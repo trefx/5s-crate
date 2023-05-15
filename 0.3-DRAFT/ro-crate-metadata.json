@@ -165,10 +165,7 @@
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-metadata.json",
             "@type": "CreativeWork",
-            "encodingFormat": "application/ld+json",
-            "conformsTo": {
-                "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
-            }
+            "encodingFormat": "application/ld+json"
         },
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/ro-crate-preview.html",
@@ -178,10 +175,7 @@
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-metadata.json",
             "@type": "CreativeWork",
-            "encodingFormat": "application/ld+json",
-            "conformsTo": {
-                "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
-            }
+            "encodingFormat": "application/ld+json"
         },
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/ro-crate-preview.html",
