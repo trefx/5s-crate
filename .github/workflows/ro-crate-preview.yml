@@ -36,6 +36,6 @@ jobs:
           files: |
             0.3-DRAFT/ro-crate-preview.html
             0.3-DRAFT/example-request/ro-crate-preview.html
-            0.3-DRAFT/example-result/ro-crate-preview.htm
+            0.3-DRAFT/example-result/ro-crate-preview.html
           commit-message: |
             Updated RO-Crate preview
