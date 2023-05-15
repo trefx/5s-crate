@@ -1,13 +1,12 @@
 name: Regenerate BagIt checksums
+
 on:
   push:
     paths:
       - '**/example*/**'
     branches:
       - main
-concurrency:
-  group: "pages"
-  cancel-in-progress: false      
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-22.04    
@@ -42,3 +41,6 @@ jobs:
             0.3-DRAFT/example-result/tagmanifest-sha512.txt
           commit-message: |
             Updated BagIt manifests
+      
+      - name: Deploy using Jekyll
+        uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
