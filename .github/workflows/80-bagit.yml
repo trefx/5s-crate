@@ -33,7 +33,14 @@ jobs:
           rm manifest*txt tagmanifest*txt
           sha512sum data/* > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest=sha512.txt
-  
+
+      - name: Archive BagIts as ZIP
+        working-directory: 0.3-DRAFT/
+        run: |
+          rm *.zip
+          zip -r example-request.zip example-request/
+          zip -r example-result.zip example-result/
+          
       - name: Commit manifests
         uses: swinton/commit@v2.0.0
         env:
@@ -44,6 +51,8 @@ jobs:
             0.3-DRAFT/example-request/tagmanifest-sha512.txt
             0.3-DRAFT/example-result/manifest-sha512.txt
             0.3-DRAFT/example-result/tagmanifest-sha512.txt
+            example-request.zip
+            example-re.zip
           commit-message: |
             Updated BagIt manifests
       
