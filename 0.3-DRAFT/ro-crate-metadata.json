@@ -23,6 +23,7 @@
             "name": "Trusted Workflow Run Crate profile",
             "cite-as": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT",
             "version": "0.3-DRAFT",
+            "datePublished": "2023-05-15T10:32:00Z",
             "licence": {
                 "@id": "http://spdx.org/licenses/MIT"
             },
