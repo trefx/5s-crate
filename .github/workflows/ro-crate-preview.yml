@@ -1,9 +1,10 @@
 name: Generate RO-Crate preview
 on:
-  paths:
-    - '**/ro-crate-metadata.json'
-  branches:
-    - main
+  push:
+    paths:
+      - '**/ro-crate-metadata.json'
+    branches:
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-22.04
