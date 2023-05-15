@@ -1,0 +1,465 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "ro-crate-preview.html",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            }
+        },
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ],
+            "datePublished": "2023-05-11T09:10:56+00:00",
+            "hasPart": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl"
+                },
+                {
+                    "@id": "containers/pszdldocker_rquest-oneshot:latest.img"
+                },
+                {
+                    "@id": "containers/docker.io_node:slim.img"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/rquest-oneshot.cwl"
+                },
+                {
+                    "@id": "outputs/_1683122029/output.json"
+                }
+            ],
+            "mainEntity": {
+                "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl"
+            }
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/process/0.1",
+            "@type": "CreativeWork",
+            "name": "ProcessRun Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+            "@type": "CreativeWork",
+            "name": "Workflow Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/provenance/0.1",
+            "@type": "CreativeWork",
+            "name": "Provenance Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+            "@type": "CreativeWork",
+            "name": "Workflow RO-Crate",
+            "version": "1.0"
+        },
+        {
+            "@id": "https://github.com/inab/WfExS-backend",
+            "@type": "SoftwareApplication",
+            "name": "WfExS-backend",
+            "url": "https://github.com/inab/WfExS-backend",
+            "version": [
+                "0.9.0-66-g65f1eed",
+                "65f1eed413e1517eb25389cd7cc5ec6232ba5263"
+            ]
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "conformsTo": [
+                {
+                    "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
+                }
+            ],
+            "input": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:body"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:is_availability"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_host"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_name"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_user"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_password"
+                }
+            ],
+            "isBasedOn": {
+                "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+            },
+            "name": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow",
+            "output": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#output:output_file"
+                }
+            ],
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+            },
+            "runtimePlatform": "cwltool 3.1.20220913185150",
+            "softwareRequirements": [
+                {
+                    "@id": "https://pypi.org/project/cwltool/"
+                },
+                {
+                    "@id": "https://apptainer.org/"
+                },
+                {
+                    "@id": "containers/pszdldocker_rquest-oneshot:latest.img"
+                },
+                {
+                    "@id": "https://apptainer.org/"
+                }
+            ]
+        },
+        {
+            "@id": "https://pypi.org/project/cwltool/",
+            "@type": "SoftwareApplication",
+            "softwareRequirements": [
+                {
+                    "@id": "containers/docker.io_node:slim.img"
+                }
+            ],
+            "softwareVersion": "cwltool 3.1.20220913185150"
+        },
+        {
+            "@id": "https://apptainer.org/",
+            "@type": "SoftwareApplication",
+            "name": "singularity",
+            "softwareVersion": "singularity-ce version 3.10.2"
+        },
+        {
+            "@id": "containers/pszdldocker_rquest-oneshot:latest.img",
+            "@type": [
+                "File",
+                "SoftwareApplication"
+            ],
+            "contentSize": 340389888,
+            "encodingFormat": "application/octet-stream",
+            "identifier": "docker://pszdldocker/rquest-oneshot:latest",
+            "operatingSystem": "linux",
+            "processorRequirements": "aarch64",
+            "sha256": "bbf3f03f36facc8a147dee8dc00d218e6ee3467aa912ff05ecd675ac38a7efe2",
+            "softwareRequirements": {
+                "@id": "https://apptainer.org/"
+            },
+            "softwareVersion": "pszdldocker/rquest-oneshot@sha256:93902a2df407cbebe5853585c9644c6c1a370441dcbe91d4d379431ffb17b8b8"
+        },
+        {
+            "@id": "containers/docker.io_node:slim.img",
+            "@type": [
+                "File",
+                "SoftwareApplication"
+            ],
+            "contentSize": 68149248,
+            "encodingFormat": "application/octet-stream",
+            "identifier": "docker://docker.io/node:slim",
+            "operatingSystem": "linux",
+            "processorRequirements": "aarch64",
+            "sha256": "a668dae09826000e6b99c2150fa5b66ad89210a5c64df58f2687520209397dd8",
+            "softwareRequirements": {
+                "@id": "https://apptainer.org/"
+            },
+            "softwareVersion": "library/node@sha256:34211d15e360eff92c17587ff3c3d3bea3061ca3961f745fd59ab30bda954ff9"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "codeRepository": "https://github.com/HDRUK/hutch.git",
+            "conformsTo": [
+                {
+                    "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
+                }
+            ],
+            "contentSize": 853,
+            "encodingFormat": "text/plain",
+            "hasPart": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+                },
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/rquest-oneshot.cwl"
+                }
+            ],
+            "identifier": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl",
+            "name": "Unconsolidated Workflow Entrypoint",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+            },
+            "sha256": "09599970a8fd2970648547f06d9794171aec075c57f0ce3dbe1c0a7ff1ca9d15",
+            "url": "https://raw.githubusercontent.com/HDRUK/hutch/2b9771de43ba599bfefc632bf75bf6ba4b1fa609/workflows/sec-hutch.cwl",
+            "version": "2b9771de43ba599bfefc632bf75bf6ba4b1fa609"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/rquest-oneshot.cwl",
+            "@type": "File",
+            "contentSize": 1144,
+            "encodingFormat": "text/plain",
+            "identifier": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/rquest-oneshot.cwl",
+            "sha256": "9a13d80b0712e1abc1d4c9ad69a2492848c771f1e49709af2b3ed160d8e28da7"
+        },
+        {
+            "@id": "#7603dd2b-d83e-4615-8936-e079ac531d24",
+            "@type": "CreateAction",
+            "instrument": {
+                "@id": "https://github.com/inab/WfExS-backend"
+            },
+            "name": "Workflow consolidation",
+            "object": {
+                "@id": "b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+            },
+            "result": {
+                "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl"
+            }
+        },
+        {
+            "@id": "#30494e22-a2fd-4d3c-945b-35f1b458eda9",
+            "@type": "CreateAction",
+            "endTime": "2023-05-03T13:53:53.715480+00:00",
+            "instrument": {
+                "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl"
+            },
+            "name": "outputs/_1683122029",
+            "object": [
+                {
+                    "@id": "#efa73ce8-89c6-47f4-9636-74c80542cbe5"
+                },
+                {
+                    "@id": "#385cf4bb-9134-4d93-a06a-ad38a4c5c425"
+                },
+                {
+                    "@id": "#96f16d6e-ddc3-4ba3-a25d-2148f0e88230"
+                },
+                {
+                    "@id": "#04846901-ff1d-424f-8c5a-1ee1642f6100"
+                },
+                {
+                    "@id": "#c9289584-68ce-4567-8dab-c55cc16ff927"
+                },
+                {
+                    "@id": "#bb996239-473a-4618-9546-3d5a6efcc345"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "outputs/_1683122029/output.json"
+                }
+            ],
+            "startTime": "2023-05-03T13:53:49.012349+00:00"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:body",
+            "@type": "FormalParameter",
+            "additionalType": "String",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "body",
+            "workExample": [
+                {
+                    "@id": "#efa73ce8-89c6-47f4-9636-74c80542cbe5"
+                }
+            ]
+        },
+        {
+            "@id": "#efa73ce8-89c6-47f4-9636-74c80542cbe5",
+            "@type": "PropertyValue",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:body"
+                }
+            ],
+            "name": "body",
+            "value": "{ \"task_id\" : \"job-2023-01-13-14:20:38-RQ-b5ed5af8-68de-4460-9713-a59fed62a175\", \"project\" : \"RQ-b5ed5af8-68de-4460-9713-a59fed62a175\", \"owner\" : \"user1\", \"cohort\" : { \"groups\" : [ { \"rules\" : [ { \"varname\" : \"OMOP\", \"varcat\" : \"Person\", \"type\" : \"TEXT\", \"oper\" : \"=\", \"value\" : \"8507\" } ], \"rules_oper\" : \"AND\" } ], \"groups_oper\" : \"OR\" }, \"collection\" : \"RQ-CC-d3d61136-05bb-4388-8aa6-31c54e0c5735\", \"protocol_version\" : \"v2\", \"char_salt\" : \"91492851-93d8-401f-b50c-d7e17b2a0c46\", \"uuid\" : \"bf413750-21c5-4382-95f5-45c616b25013\" }"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:is_availability",
+            "@type": "FormalParameter",
+            "additionalType": "Integer",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "is_availability",
+            "workExample": [
+                {
+                    "@id": "#385cf4bb-9134-4d93-a06a-ad38a4c5c425"
+                }
+            ]
+        },
+        {
+            "@id": "#385cf4bb-9134-4d93-a06a-ad38a4c5c425",
+            "@type": "PropertyValue",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:is_availability"
+                }
+            ],
+            "name": "is_availability",
+            "value": true
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_host",
+            "@type": "FormalParameter",
+            "additionalType": "String",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "db_host",
+            "workExample": [
+                {
+                    "@id": "#96f16d6e-ddc3-4ba3-a25d-2148f0e88230"
+                }
+            ]
+        },
+        {
+            "@id": "#96f16d6e-ddc3-4ba3-a25d-2148f0e88230",
+            "@type": "PropertyValue",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_host"
+                }
+            ],
+            "name": "db_host",
+            "value": "172.17.0.1"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_name",
+            "@type": "FormalParameter",
+            "additionalType": "String",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "db_name",
+            "workExample": [
+                {
+                    "@id": "#04846901-ff1d-424f-8c5a-1ee1642f6100"
+                }
+            ]
+        },
+        {
+            "@id": "#04846901-ff1d-424f-8c5a-1ee1642f6100",
+            "@type": "PropertyValue",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_name"
+                }
+            ],
+            "name": "db_name",
+            "value": "hutch"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_user",
+            "@type": "FormalParameter",
+            "additionalType": "String",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "db_user",
+            "workExample": [
+                {
+                    "@id": "#c9289584-68ce-4567-8dab-c55cc16ff927"
+                }
+            ]
+        },
+        {
+            "@id": "#c9289584-68ce-4567-8dab-c55cc16ff927",
+            "@type": "PropertyValue",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_user"
+                }
+            ],
+            "name": "db_user",
+            "value": "postgres"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_password",
+            "@type": "FormalParameter",
+            "additionalType": "String",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "db_password",
+            "workExample": [
+                {
+                    "@id": "#bb996239-473a-4618-9546-3d5a6efcc345"
+                }
+            ]
+        },
+        {
+            "@id": "#bb996239-473a-4618-9546-3d5a6efcc345",
+            "@type": "PropertyValue",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#param:db_password"
+                }
+            ],
+            "name": "db_password",
+            "value": "example"
+        },
+        {
+            "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#output:output_file",
+            "@type": "FormalParameter",
+            "additionalType": "File",
+            "conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/",
+            "name": "output_file",
+            "workExample": [
+                {
+                    "@id": "outputs/_1683122029/output.json"
+                }
+            ]
+        },
+        {
+            "@id": "outputs/_1683122029/output.json",
+            "@type": "File",
+            "contentSize": 233,
+            "encodingFormat": "application/json",
+            "exampleOfWork": [
+                {
+                    "@id": "b5b59d4f-9797-5179-a131-e7089e943988/2ef7f736-623e-492c-a135-8f247395d1df_workflow.cwl#output:output_file"
+                }
+            ],
+            "identifier": "nih:sha-256;4f9e-a729-df98-daf3-e216-b24b-13ad-ebd8-3c47-73c8-dbbe-4d15-a5f1-b57e-bb90-0ad7;e",
+            "sha256": "4f9ea729df98daf3e216b24b13adebd83c4773c8dbbe4d15a5f1b57ebb900ad7"
+        }
+    ]
+}

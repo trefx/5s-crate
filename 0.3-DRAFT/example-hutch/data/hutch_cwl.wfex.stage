@@ -1,0 +1,24 @@
+workflow_id: https://raw.githubusercontent.com/HDRUK/hutch/main/workflows/sec-hutchx86.cwl
+workflow_config:
+  container: 'docker'
+  secure: false
+nickname: 'vas-workflow'
+cacheDir: /tmp/wfexszn6siq2jtmpcache
+crypt4gh:
+  key: cosifer_test1_cwl.wfex.stage.key
+  passphrase: mpel nite ified g
+  pub: cosifer_test1_cwl.wfex.stage.pub
+outputs:
+  output_file:
+    c-l-a-s-s: File
+    glob: "output.json"
+params:
+  body:
+    c-l-a-s-s: File
+    url:
+      - https://raw.githubusercontent.com/HDRUK/hutch/main/workflows/inputs/rquest-query.json
+  is_availability: true
+  db_host: "localhost"
+  db_name: "hutch"
+  db_user: "postgres"
+  db_password: "example"
