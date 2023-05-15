@@ -15,6 +15,10 @@ permissions:
   id-token: write
 
 jobs:
+  checkout:
+    name: Checkout
+    uses: actions/checkout@v3
+
   deploy:
     name: Deploy using Jekyll
     uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
