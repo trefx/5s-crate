@@ -229,6 +229,7 @@
         },
         {
             "@id": "#usesSHP",
+            "name": "uses vocabulary SHP",
             "@type": "ResourceDescriptor",
             "hasRole": {
                 "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
@@ -240,6 +241,7 @@
         {
             "@id": "#hasSpecification",
             "@type": "ResourceDescriptor",
+            "name": "has specification",
             "hasRole": {
                 "@id": "http://www.w3.org/ns/dx/prof/role/specification"
             },
@@ -250,6 +252,7 @@
         {
             "@id": "#hasExampleRequest",
             "@type": "ResourceDescriptor",
+            "name": "has example: Request",
             "hasRole": {
                 "@id": "http://www.w3.org/ns/dx/prof/role/example"
             },
@@ -306,7 +309,7 @@
             "name": "DARE-FX: Delivering a federated network of TREs to enable safe analytics",
             "description": "",
             "funder": {
-                "@id": "https://www.ukri.org/"
+                "@id": "https://ror.org/001aqnf71"
             },
             "sponsor": {
                 "@id": "https://dareuk.org.uk/"
@@ -317,7 +320,7 @@
             "@type": "FundingScheme",
             "name": "DARE UK",
             "funder": {
-                "@id": "https://www.ukri.org/"
+                "@id": "https://ror.org/001aqnf71"
             }
         },
         {
@@ -336,10 +339,11 @@
             }
         },
         {
-            "@id": "https://www.ukri.org/",
+            "@id": "https://ror.org/001aqnf71",
             "@type": "FundingAgency",
             "name": "UK Research and Innovation",
-            "alternateName": "UKRI"
+            "alternateName": "UKRI",
+            "url": "https://www.ukri.org/"
         },
         {
             "@id": "https://orcid.org/0000-0001-9842-9718",
