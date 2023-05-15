@@ -24,7 +24,14 @@
       "conformsTo": {
         "@id": "https://w3id.org/trusted-wfrun-crate/0.3-DRAFT"
       },
-      "hasPart": [],
+      "hasPart": [
+        {
+          "@id": "https://workflowhub.eu/workflows/289?version=1"
+        },
+        {
+          "@id": "input1.txt"
+        }
+      ],
       "mainEntity": {
         "@id": "https://workflowhub.eu/workflows/289?version=1"
       },
@@ -52,6 +59,14 @@
       }
     },
     {
+      "@id": "input1.txt",
+      "@type": "File",
+      "name": "input1",
+      "exampleOfWork": {
+        "@id": "#sequence"
+      }
+    },
+    {
       "@id": "#query-37252371-c937-43bd-a0a7-3680b48c0538",
       "@type": "CreateAction",
       "actionStatus": "http://schema.org/PotentialActionStatus",
@@ -62,9 +77,14 @@
         "@id": "https://workflowhub.eu/workflows/289?version=1"
       },
       "name": "Execute query 12389 on workflow ",
-      "object": {
-        "@id": "input1.txt"
-      }
+      "object": [
+        {
+          "@id": "input1.txt"
+        },
+        {
+          "@id": "#enableFastMode"
+        }
+      ]
     },
     {
       "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70",
@@ -105,11 +125,12 @@
       }
     },
     {
-      "@id": "input1.txt",
-      "@type": "File",
-      "name": "input1",
+      "@id": "#enableFastMode",
+      "@type": "PropertyValue",
+      "name": "--fast-mode",
+      "value": "True",
       "exampleOfWork": {
-        "@id": "#sequence"
+        "@id": "#fast"
       }
     },
     {
@@ -132,15 +153,6 @@
       "@id": "#sequence",
       "@type": "FormalParameter",
       "name": "input-sequence"
-    },
-    {
-      "@id": "#enableFastMode",
-      "@type": "PropertyValue",
-      "name": "--fast-mode",
-      "value": "True",
-      "exampleOfWork": {
-        "@id": "#fast"
-      }
     },
     {
       "@id": "#fast",
@@ -216,7 +228,11 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3-DRAFT">Trusted Workflow Run Crate profile</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
-            <td style='text-align:left'></td>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//workflowhub.eu/workflows/289%3Fversion%3D1">CWL Protein MD Setup tutorial with mutations</a></li>
+                        
+                        <li><a href="#input1.txt">input1</a></li>
+                        </ul></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/289%3Fversion%3D1">CWL Protein MD Setup tutorial with mutations</a></td>
@@ -287,10 +303,46 @@ table.table {
             <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/289/ro_crate%3Fversion%3D1">https://workflowhub.eu/workflows/289/ro_crate?version=1</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
             <td style='text-align:left'><a href="#./">./</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#%23query-37252371-c937-43bd-a0a7-3680b48c0538">Execute query 12389 on workflow </a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="input1.txt">⬇️ Download: </a> input1</h3>
+            
+            <iframe src='input1.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="input1.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input1.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>input1</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#%23sequence">input-sequence</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
             <td style='text-align:left'><a href="#%23query-37252371-c937-43bd-a0a7-3680b48c0538">Execute query 12389 on workflow </a></td>
             </tr></tbody>
             </table>
@@ -327,7 +379,11 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/289%3Fversion%3D1">CWL Protein MD Setup tutorial with mutations</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
-            <td style='text-align:left'><a href="#input1.txt">input1</a></td>
+            <td style='text-align:left'><ul>
+                        <li><a href="#input1.txt">input1</a></li>
+                        
+                        <li>--fast-mode: True</li>
+                        </ul></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
             <td style='text-align:left'><a href="#./">./</a></td>
