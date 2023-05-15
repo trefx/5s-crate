@@ -1,11 +1,13 @@
 name: Regenerate BagIt checksums
 
 on:
-  push:
-    paths:
-      - '**/example*/**'
-    branches:
-      - main
+  workflow_call:
+
+  workflow_dispatch:
+
+concurrency:
+  group: "commits"
+  cancel-in-progress: false    
 
 permissions:
   contents: write
@@ -62,6 +64,3 @@ jobs:
           commit-message: |
             Updated BagIt manifests
       
-  deploy:            
-      uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
-      secrets: inherit

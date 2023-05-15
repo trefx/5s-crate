@@ -1,0 +1,23 @@
+name: Trigger all builds
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  rocrate:
+    name: RO-Crate previews
+    uses: ./.github/workflows/20-ro-crate-preview.yml
+  bagit:
+    name: BagIt checksums
+    uses: ./.github/workflows/80-bagit.yml      
+    secrets: inherit
+  jekyll:
+    name: Deploy using Jekyll
+    uses: ./.github/workflows/90-jekyll.yml
+    secrets: inherit

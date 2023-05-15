@@ -1,12 +1,14 @@
 name: Generate RO-Crate preview
 
 on:
-  push:
-    paths:
-      - '**/ro-crate-metadata.json'
-    branches:
-      - main
-      
+  workflow_call:
+
+  workflow_dispatch:
+
+concurrency:
+  group: "commits"
+  cancel-in-progress: false    
+    
 permissions:
   contents: write
   pages: write
@@ -51,7 +53,13 @@ jobs:
             0.3-DRAFT/example-result/data/ro-crate-preview.html
           commit-message: |
             Updated RO-Crate preview
+      - name: Get new git commit
+        id: sha
+        run: |
+              sha_new=$(git rev-parse HEAD)
+              echo $sha_new
+              echo "::set-output name=SHA::$sha_new"
+      - name: New commit
+        run:
+          echo ${{ steps.sha.outputs.SHA }}
             
-  deploy:            
-      uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
-      secrets: inherit
