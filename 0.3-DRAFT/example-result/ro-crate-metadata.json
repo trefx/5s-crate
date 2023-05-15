@@ -147,6 +147,12 @@
             ]
         },
         {
+            "@id": "_:localid:tre72:project81",
+            "@type": "PropertyValue",
+            "name": "tre72",
+            "value": "project81"
+        },        
+        {
             "@id": "input1.txt",
             "@type": "File",
             "name": "input1",
@@ -332,12 +338,6 @@
             "grantee": {
                 "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"
             }
-        },
-        {
-            "@id": "_:localid:tre72:project81",
-            "@type": "PropertyValue",
-            "name": "tre72",
-            "value": "project81"
         },
         {
             "@id": "https://orcid.org/0000-0001-9842-9718",
