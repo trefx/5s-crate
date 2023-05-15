@@ -16,12 +16,14 @@ jobs:
       - name: Create BagIt manifest for Example Request
         working-directory: 0.3-DRAFT/example-request 
         run: |
+          rm manifest*txt tagmanifest*txt
           sha512sum data/* > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest=sha512.txt
 
       - name: Create BagIt manifest for Example Response
         working-directory: 0.3-DRAFT/example-response 
         run: |
+          rm manifest*txt tagmanifest*txt
           sha512sum data/* > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest=sha512.txt
   
