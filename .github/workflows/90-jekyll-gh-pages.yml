@@ -1,4 +1,4 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Trigger Jekyll build
 
 on:
   # Runs on pushes targeting the default branch

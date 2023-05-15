@@ -13,7 +13,7 @@ permissions:
   id-token: write      
 
 jobs:
-  build-and-deploy:
+  generate:
     runs-on: ubuntu-22.04
     concurrency: ci-${{github.ref}}
     steps:
@@ -46,6 +46,7 @@ jobs:
             0.3-DRAFT/example-result/data/ro-crate-preview.html
           commit-message: |
             Updated RO-Crate preview
-
-      - name: Deploy using Jekyll
-        uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
+            
+  deploy:            
+      uses: ./.github/workflows/jekyll-gh-pages-workflow-call.yml
+      secrets: inherit
