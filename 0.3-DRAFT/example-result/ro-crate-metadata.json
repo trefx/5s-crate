@@ -70,6 +70,12 @@
             "name": "Trusted Workflow Run Crate profile"
         },
         {
+            "@id": "https://spdx.org/licenses/CC-BY-4.0",
+            "@type": "CreativeWork",
+            "name": "Creative Commons Attribution 4.0 International",
+            "identifier": "CC-BY-4.0"
+        },
+        {
             "@id": "https://workflowhub.eu/workflows/289?version=1",
             "@type": "Dataset",
             "name": "CWL Protein MD Setup tutorial with mutations",
@@ -120,24 +126,6 @@
             ]
         },
         {
-            "@id": "https://orcid.org/0000-0001-9842-9718",
-            "@type": "Person",
-            "name": "Stian Soiland-Reyes",
-            "affiliation": {
-                "@id": "https://ror.org/027m9bs27"
-            },
-            "memberOf": [
-                {
-                    "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"
-                }
-            ]
-        },
-        {
-            "@id": "https://ror.org/027m9bs27",
-            "@type": "Organization",
-            "name": "The University of Manchester"
-        },
-        {
             "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70",
             "@type": "Project",
             "name": "Investigation of cancer (TRE72 project 81)",
@@ -157,17 +145,6 @@
                     "@id": "https://ror.org/01ee9ar58"
                 }
             ]
-        },
-        {
-            "@id": "_:localid:tre72:project81",
-            "@type": "PropertyValue",
-            "name": "tre72",
-            "value": "project81"
-        },
-        {
-            "@id": "https://gtr.ukri.org/projects?ref=10038961",
-            "@type": "Grant",
-            "name": "EOSC4Cancer"
         },
         {
             "@id": "input1.txt",
@@ -208,36 +185,17 @@
             "name": "Diagrams of regions of interest"
         },
         {
-            "@id": "urn:uuid:07b81e0f-7ac4-5428-9940-878b241e2397",
-            "@type": "DigitalDocument",
-            "encodingFormat": "text/csv",
-            "name": "Patient measurement 07b81e0f-7ac4-5428-9940-878b241e2397",
-            "hasDigitalDocumentPermission": {
-                "@id": "#permissions-07b81e0f"
-            }
-        },
-        {
-            "@id": "#permissions-07b81e0f",
-            "@type": "DigitalDocumentPermission",
-            "permissionType": "http://schema.org/ReadPermission",
-            "grantee": {
-                "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"
-            }
-        },
-        {
-            "@id": "https://tre72.example.com/#crate-validator",
-            "@type": "SoftwareApplication",
-            "name": "RO-Crate validator at TRE72",
-            "provider": {
-                "@id": "https://tre72.example.com/"
-            }
-        },
-        {
-            "@id": "https://tre72.example.com/",
-            "@type": "Organization",
-            "name": "TRE 72 trusted research environment at The University of Manchester",
-            "parentOrganization": {
-                "@id": "https://ror.org/027m9bs27"
+            "@id": "workflow/289/",
+            "sameAs": {
+                "@id": "https://workflowhub.eu/workflows/289?version=1"
+            },
+            "@type": "Dataset",
+            "name": "CWL Protein MD Setup tutorial with mutations",
+            "conformsTo": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+            },
+            "distribution": {
+                "@id": "https://workflowhub.eu/workflows/289/ro_crate?version=1"
             }
         },
         {
@@ -258,11 +216,6 @@
                 "@id": "#validator-a4a66c63-2fe0-4c57-830d-268a40718313"
             },
             "actionStatus": "http://schema.org/CompletedActionStatus"
-        },
-        {
-            "@id": "https://www.iana.org/assignments/named-information#sha-512",
-            "@type": "DefinedTerm",
-            "name": "sha-512 algorithm"
         },
         {
             "@id": "#validate-1146f640-819e-4c86-b029-b763a0040896",
@@ -302,20 +255,6 @@
             "actionStatus": "http://schema.org/CompletedActionStatus"
         },
         {
-            "@id": "workflow/289/",
-            "sameAs": {
-                "@id": "https://workflowhub.eu/workflows/289?version=1"
-            },
-            "@type": "Dataset",
-            "name": "CWL Protein MD Setup tutorial with mutations",
-            "conformsTo": {
-                "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
-            },
-            "distribution": {
-                "@id": "https://workflowhub.eu/workflows/289/ro_crate?version=1"
-            }
-        },
-        {
             "@id": "#signoff-3b741265-cfef-49ea-8138-a2fa149bf2f0",
             "type": "AssessAction",
             "additionalType": {
@@ -343,11 +282,6 @@
             "actionStatus": "http://schema.org/CompletedActionStatus"
         },
         {
-            "@id": "https://tre72.example.com/agreement-policy/81",
-            "@type": "CreativeWork",
-            "name": "Agreement policy for TRE72 for project 81"
-        },
-        {
             "@id": "#disclosure-b16c1f0a-ae7f-4582-9b28-7d9df3313e27",
             "type": "AssessAction",
             "additionalType": {
@@ -362,12 +296,6 @@
                 "@id": "https://orcid.org/0000-0002-1825-0097"
             },
             "actionStatus": "http://schema.org/PotentialActionStatus"
-        },
-        {
-            "@id": "https://spdx.org/licenses/CC-BY-4.0",
-            "@type": "CreativeWork",
-            "name": "Creative Commons Attribution 4.0 International",
-            "identifier": "CC-BY-4.0"
         },
         {
             "@id": "#bagit-ce785c0b-c988-4043-8cbd-1489dcebc14f",
@@ -387,6 +315,78 @@
                 "@id": "#validator-a4a66c63-2fe0-4c57-830d-268a40718313"
             },
             "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "urn:uuid:07b81e0f-7ac4-5428-9940-878b241e2397",
+            "@type": "DigitalDocument",
+            "encodingFormat": "text/csv",
+            "name": "Patient measurement 07b81e0f-7ac4-5428-9940-878b241e2397",
+            "hasDigitalDocumentPermission": {
+                "@id": "#permissions-07b81e0f"
+            }
+        },
+        {
+            "@id": "#permissions-07b81e0f",
+            "@type": "DigitalDocumentPermission",
+            "permissionType": "http://schema.org/ReadPermission",
+            "grantee": {
+                "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"
+            }
+        },
+        {
+            "@id": "_:localid:tre72:project81",
+            "@type": "PropertyValue",
+            "name": "tre72",
+            "value": "project81"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-9842-9718",
+            "@type": "Person",
+            "name": "Stian Soiland-Reyes",
+            "affiliation": {
+                "@id": "https://ror.org/027m9bs27"
+            },
+            "memberOf": [
+                {
+                    "@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"
+                }
+            ]
+        },
+        {
+            "@id": "https://ror.org/027m9bs27",
+            "@type": "Organization",
+            "name": "The University of Manchester"
+        },
+        {
+            "@id": "https://gtr.ukri.org/projects?ref=10038961",
+            "@type": "Grant",
+            "name": "EOSC4Cancer"
+        },
+        {
+            "@id": "https://tre72.example.com/",
+            "@type": "Organization",
+            "name": "TRE 72 trusted research environment at The University of Manchester",
+            "parentOrganization": {
+                "@id": "https://ror.org/027m9bs27"
+            }
+        },
+        {
+            "@id": "https://tre72.example.com/#crate-validator",
+            "@type": "SoftwareApplication",
+            "name": "RO-Crate validator at TRE72",
+            "provider": {
+                "@id": "https://tre72.example.com/"
+            }
+        },
+        {
+            "@id": "https://tre72.example.com/agreement-policy/81",
+            "@type": "CreativeWork",
+            "name": "Agreement policy for TRE72 for project 81"
+        },
+        {
+            "@id": "https://www.iana.org/assignments/named-information#sha-512",
+            "@type": "DefinedTerm",
+            "name": "sha-512 algorithm"
         }
     ]
 }
