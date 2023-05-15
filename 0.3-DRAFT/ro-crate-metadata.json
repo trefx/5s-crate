@@ -36,7 +36,13 @@
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/index.html"
                 },
                 {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request.bagit.zip"
+                },
+                {
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/"
+                },
+                {
+                    "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result.bagit.zip"
                 },
                 {
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/"
@@ -107,6 +113,9 @@
                     "@id": "#hasExampleRequest"
                 },
                 {
+                    "@id": "#hasExampleResult"
+                },                
+                {
                     "@id": "#usesSHP"
                 }
             ],
@@ -144,7 +153,10 @@
                 {
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/ro-crate-preview.html"
                 }
-            ]
+            ],
+            "distribution": {
+                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request.bagit.zip"
+            }            
         },
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/",
@@ -160,8 +172,31 @@
                 {
                     "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/ro-crate-preview.html"
                 }
-            ]
+            ],
+            "distribution": {
+                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result.bagit.zip"
+            }
         },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result.bagit.zip",
+            "@type": "DataDownload",
+            "name": "example-result.bagit.zip",
+            "description": "Example Result following the trusted-wfrun-crate profile, archived as BagIt ZIP",
+            "encodingFormat": "application/zip",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate"
+            }
+        },
+        {
+            "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request.bagit.zip",
+            "@type": "DataDownload",
+            "name": "example-request.bagit.zip",
+            "description": "Example Request following the trusted-wfrun-crate profile, archived as BagIt ZIP",
+            "encodingFormat": "application/zip",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate"
+            }
+        },        
         {
             "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/ro-crate-metadata.json",
             "@type": "CreativeWork",
@@ -300,6 +335,18 @@
                 "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-request/data/"
             }
         },
+        {
+            "@id": "#hasExampleResult",
+            "@type": "ResourceDescriptor",
+            "name": "has example: Result",
+            "hasRole": {
+                "@id": "http://www.w3.org/ns/dx/prof/role/example"
+            },
+            "hasArtifact": {
+                "@id": "https://trefx.uk/trusted-wfrun-crate/0.3-DRAFT/example-result/data/"
+            }
+        },
+
         {
             "@id": "http://www.w3.org/ns/dx/prof/role/example",
             "@type": [
