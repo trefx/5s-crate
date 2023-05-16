@@ -24,23 +24,23 @@ jobs:
       - name: RO Crate Preview for Profile Crate
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
-          crate_path: 0.3-DRAFT
+          crate_path: 0.3
         
       - name: RO Crate Preview for Example Request
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
-          crate_path: 0.3-DRAFT/example-request/data
+          crate_path: 0.3/example-request/data
 
       - name: RO Crate Preview for Example Result
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
-          crate_path: 0.3-DRAFT/example-result/data
+          crate_path: 0.3/example-result/data
 
           
       - name: RO Crate Preview for Example Hutch
         uses: ResearchObject/ro-crate-preview-action@v1.3.0
         with:
-          crate_path: 0.3-DRAFT/example-hutch/data
+          crate_path: 0.3/example-hutch/data
           
       - name: Commit RO Crate Preview
         uses: swinton/commit@v2.0.0
@@ -48,10 +48,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         with:
           files: |
-            0.3-DRAFT/ro-crate-preview.html
-            0.3-DRAFT/example-request/data/ro-crate-preview.html
-            0.3-DRAFT/example-result/data/ro-crate-preview.html
-            0.3-DRAFT/example-hutch/data/ro-crate-preview.html
+            0.3/ro-crate-preview.html
+            0.3/example-request/data/ro-crate-preview.html
+            0.3/example-result/data/ro-crate-preview.html
+            0.3/example-hutch/data/ro-crate-preview.html
           commit-message: |
             Updated RO-Crate preview
       - name: Get new git commit

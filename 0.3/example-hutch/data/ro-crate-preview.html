@@ -1,0 +1,1158 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "conformsTo": {
+        "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
+      },
+      "datePublished": "2023-04-24T09:56:15+00:00",
+      "hasPart": [
+        {
+          "@id": "https://workflowhub.eu/workflows/471?version=1"
+        },
+        {
+          "@id": "rqeuest-query.json"
+        },
+        {
+          "@id": "hutch_cwl.wfex.stage"
+        },
+        {
+          "@id": "results/"
+        },
+        {
+          "@id": "results/outputs/_1683122029/output.json"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://workflowhub.eu/workflows/471?version=1"
+      },
+      "mentions": [
+        {
+          "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc"
+        },
+        {
+          "@id": "#check-4445b5a3-38f0-47e1-b3bd-a2693743b071"
+        },
+        {
+          "@id": "#validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f"
+        },
+        {
+          "@id": "#signoff-00863632-4a12-45ab-be86-f896a670db39"
+        },
+        {
+          "@id": "#disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af"
+        },
+        {
+          "@id": "#bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8"
+        }
+      ],
+      "sourceOrganization": {
+        "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de"
+      },
+      "publisher": {
+        "@id": "https://trefx.example.com/"
+      },
+      "licence": {
+        "@id": "http://spdx.org/licenses/MIT"
+      }
+    },
+    {
+      "@id": "https://w3id.org/trusted-wfrun-crate/0.3",
+      "@type": "Profile",
+      "name": "Trusted Workflow Run Crate profile"
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/471?version=1",
+      "@type": "Dataset",
+      "name": "hutch-workflow (x86)",
+      "conformsTo": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+      },
+      "distribution": {
+        "@id": "https://workflowhub.eu/workflows/471/ro_crate?version=1"
+      },
+      "sameAs": {
+        "@id": "results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+      }
+    },
+    {
+      "@id": "hutch_cwl.wfex.stage",
+      "@type": "File",
+      "name": "Generated WfExS Staging file"
+    },
+    {
+      "@id": "results/",
+      "@type": "Dataset",
+      "name": "Workflow Run Results",
+      "about": [
+        {
+          "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc"
+        },
+        {
+          "@id": "https://workflowhub.eu/workflows/471?version=1"
+        }
+      ],
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/wfrun/process/0.1"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ]
+    },
+    {
+      "@id": "results/outputs/_1683122029/output.json",
+      "@type": "File",
+      "encodingFormat": "application/json",
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-outputs-output_file"
+      }
+    },
+    {
+      "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc",
+      "@type": "CreateAction",
+      "actionStatus": "http://schema.org/CompleteActionStatus",
+      "startTime": "2023-05-03T13:53:49.012349+00:00",
+      "endTime": "2023-05-03T13:53:53.715480+00:00",
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4206-4024"
+      },
+      "instrument": {
+        "@id": "https://workflowhub.eu/workflows/471?version=1"
+      },
+      "name": "Execute rquest query",
+      "object": [
+        {
+          "@id": "rquest-query.json"
+        },
+        {
+          "@id": "#input_is_availability"
+        },
+        {
+          "@id": "#input_db_host"
+        },
+        {
+          "@id": "#input_db_name"
+        },
+        {
+          "@id": "#input_db_user"
+        },
+        {
+          "@id": "#input_db_password"
+        }
+      ],
+      "result": {
+        "@id": "results/outputs/_1683122029/output.json"
+      },
+      "sameAs": {
+        "@id": "results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9"
+      }
+    },
+    {
+      "@id": "#check-4445b5a3-38f0-47e1-b3bd-a2693743b071",
+      "type": "AssessAction",
+      "additionalType": {
+        "@id": "https://w3id.org/shp#CheckValue"
+      },
+      "name": "BagIt checksum of Crate: FAILED (missing)",
+      "endTime": "2023-05-1518:00:00+01:00",
+      "object": {
+        "@id": "./"
+      },
+      "instrument": {
+        "@id": "https://www.iana.org/assignments/named-information#sha-512"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0001-9842-9718"
+      },
+      "actionStatus": "http://schema.org/FailedActionStatus",
+      "@type": "Thing"
+    },
+    {
+      "@id": "#validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f",
+      "type": "AssessAction",
+      "additionalType": {
+        "@id": "https://w3id.org/shp#ValidationCheck"
+      },
+      "name": "Validation against Trusted Workflow Run Crate profile: pending",
+      "object": {
+        "@id": "./"
+      },
+      "instrument": {
+        "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
+      },
+      "actionStatus": "http://schema.org/PotentialActionStatus",
+      "@type": "Thing"
+    },
+    {
+      "@id": "#signoff-00863632-4a12-45ab-be86-f896a670db39",
+      "type": "AssessAction",
+      "additionalType": {
+        "@id": "https://w3id.org/shp#SignOff"
+      },
+      "name": "Sign-off of execution: approved",
+      "endTime": "2023-04-19T17:15:12+01:00",
+      "object": [
+        {
+          "@id": "./"
+        },
+        {
+          "@id": "https://workflowhub.eu/workflows/471?version=1"
+        },
+        {
+          "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de"
+        }
+      ],
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4206-4024"
+      },
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "@type": "Thing"
+    },
+    {
+      "@id": "#disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af",
+      "type": "AssessAction",
+      "additionalType": {
+        "@id": "https://w3id.org/shp#DisclosureCheck"
+      },
+      "name": "Disclosure check of workflow results: OK",
+      "startTime": "2023-04-25T16:00:00+01:00",
+      "object": {
+        "@id": "./"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0002-4206-4024"
+      },
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "@type": "Thing"
+    },
+    {
+      "@id": "#bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8",
+      "type": "UpdateAction",
+      "startTime": "2023-05-15T17:40:25+01:00",
+      "additionalType": {
+        "@id": "https://w3id.org/shp#GenerateCheckValue"
+      },
+      "name": "BagIt manifests of Crate updated",
+      "object": {
+        "@id": "./"
+      },
+      "instrument": {
+        "@id": "https://www.iana.org/assignments/named-information#sha-512"
+      },
+      "agent": {
+        "@id": "https://orcid.org/0000-0001-9842-9718"
+      },
+      "actionStatus": "http://schema.org/CompletedActionStatus",
+      "@type": "Thing"
+    },
+    {
+      "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de",
+      "@type": "Project",
+      "name": "vas-workflow",
+      "identifier": {
+        "@id": "_:localid:trefx:vas-workflow"
+      },
+      "member": {
+        "@id": "https://ror.org/01ee9ar58"
+      }
+    },
+    {
+      "@id": "https://trefx.example.com/",
+      "@type": "Organization",
+      "name": "TRE-FX's pod in some TRE",
+      "parentOrganization": {
+        "@id": "https://ror.org/01ee9ar58"
+      }
+    },
+    {
+      "@id": "https://spdx.org/licenses/MIT",
+      "@type": "CreativeWork",
+      "name": "MIT Licence",
+      "identifier": "MIT"
+    },
+    {
+      "@id": "https://workflowhub.eu/workflows/471/ro_crate?version=1",
+      "@type": "DataDownload",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate"
+      },
+      "encodingFormat": "application/zip"
+    },
+    {
+      "@id": "results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl",
+      "@type": "File",
+      "isPartOf": {
+        "@id": "results/"
+      }
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-4206-4024",
+      "@type": "Person",
+      "name": "Vasiliki Panagi",
+      "affiliation": {
+        "@id": "https://ror.org/01ee9ar58"
+      },
+      "memberOf": {
+        "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de"
+      }
+    },
+    {
+      "@id": "rquest-query.json",
+      "@type": "File",
+      "name": "rquest-query",
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-inputs-body"
+      }
+    },
+    {
+      "@id": "#input_is_availability",
+      "@type": "PropertyValue",
+      "name": "is_availability",
+      "value": true,
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-inputs-is_availability"
+      }
+    },
+    {
+      "@id": "#input_db_host",
+      "@type": "PropertyValue",
+      "name": "db_host",
+      "value": "localhost",
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-inputs-db_host"
+      }
+    },
+    {
+      "@id": "#input_db_name",
+      "@type": "PropertyValue",
+      "name": "db_name",
+      "value": "hutch",
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-inputs-db_name"
+      }
+    },
+    {
+      "@id": "#input_db_user",
+      "@type": "PropertyValue",
+      "name": "db_user",
+      "value": "postgres",
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-inputs-db_user"
+      }
+    },
+    {
+      "@id": "#input_db_password",
+      "@type": "PropertyValue",
+      "name": "db_password",
+      "value": "example",
+      "exampleOfWork": {
+        "@id": "#hutch_workflow__x86_-inputs-db_password"
+      }
+    },
+    {
+      "@id": "results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9",
+      "@type": "CreateAction",
+      "subjectOf": {
+        "@id": "results/"
+      }
+    },
+    {
+      "@id": "_:localid:trefx:vas-workflow",
+      "@type": "PropertyValue",
+      "name": "trefx",
+      "value": "vas-workflow"
+    },
+    {
+      "@id": "https://ror.org/01ee9ar58",
+      "@type": "Organization",
+      "name": "University of Nottingham"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-inputs-body",
+      "@type": "FormalParameter",
+      "name": "body",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-inputs-is_availability",
+      "@type": "FormalParameter",
+      "name": "is_availability",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-inputs-db_host",
+      "@type": "FormalParameter",
+      "name": "db_host",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-inputs-db_name",
+      "@type": "FormalParameter",
+      "name": "db_name",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-inputs-db_user",
+      "@type": "FormalParameter",
+      "name": "db_user",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-inputs-db_password",
+      "@type": "FormalParameter",
+      "name": "db_password",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#hutch_workflow__x86_-outputs-output_file",
+      "@type": "FormalParameter",
+      "name": "output_file",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "https://www.iana.org/assignments/named-information#sha-512",
+      "@type": "DefinedTerm",
+      "name": "sha-512 algorithm"
+    },
+    {
+      "@id": "https://orcid.org/0000-0001-9842-9718",
+      "@type": "Person",
+      "name": "Stian Soiland-Reyes",
+      "affiliation": {
+        "@id": "https://ror.org/027m9bs27"
+      },
+      "memberOf": {
+        "@id": "https://trefx.uk/"
+      }
+    },
+    {
+      "@id": "https://ror.org/027m9bs27",
+      "@type": "CollegeOrUniversity",
+      "name": "The University of Manchester",
+      "url": "https://www.manchester.ac.uk/"
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html@0.1/dist/ro-crate-dynamic.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h3>
+<h3 class="item_name"></h4>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'></span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+           <div>
+            <h3> ./</h3>
+            
+            
+            
+            
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2023-04-24T09:56:15+00:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//workflowhub.eu/workflows/471%3Fversion%3D1">hutch-workflow (x86)</a></li>
+                        
+                        <li>rqeuest-query.json</li>
+                        
+                        <li><a href="#hutch_cwl.wfex.stage">Generated WfExS Staging file</a></li>
+                        
+                        <li><a href="#results/">Workflow Run Results</a></li>
+                        
+                        <li><a href="#results/outputs/_1683122029/output.json">results/outputs/_1683122029/output.json</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/471%3Fversion%3D1">hutch-workflow (x86)</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc">Execute rquest query</a></li>
+                        
+                        <li><a href="#%23check-4445b5a3-38f0-47e1-b3bd-a2693743b071">BagIt checksum of Crate: FAILED (missing)</a></li>
+                        
+                        <li><a href="#%23validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f">Validation against Trusted Workflow Run Crate profile: pending</a></li>
+                        
+                        <li><a href="#%23signoff-00863632-4a12-45ab-be86-f896a670db39">Sign-off of execution: approved</a></li>
+                        
+                        <li><a href="#%23disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af">Disclosure check of workflow results: OK</a></li>
+                        
+                        <li><a href="#%23bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8">BagIt manifests of Crate updated</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">sourceOrganization<span>&nbsp;</span><a href="http://schema.org/sourceOrganization">[?]</a></th>
+            <td style='text-align:left'><a href="#%23project-065c9577-dd40-4cb2-bbc7-354e34ef37de">vas-workflow</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//trefx.example.com/">TRE-FX's pod in some TRE</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">licence</th>
+            <td style='text-align:left'><a href="http://spdx.org/licenses/MIT">http://spdx.org/licenses/MIT</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23check-4445b5a3-38f0-47e1-b3bd-a2693743b071">BagIt checksum of Crate: FAILED (missing)</a></li>
+                        
+                        <li><a href="#%23validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f">Validation against Trusted Workflow Run Crate profile: pending</a></li>
+                        
+                        <li><a href="#%23signoff-00863632-4a12-45ab-be86-f896a670db39">Sign-off of execution: approved</a></li>
+                        
+                        <li><a href="#%23disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af">Disclosure check of workflow results: OK</a></li>
+                        
+                        <li><a href="#%23bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8">BagIt manifests of Crate updated</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://w3id.org/trusted-wfrun-crate/0.3">Go to: </a> Trusted Workflow Run Crate profile</h3>
+            
+            
+            
+            
+        <div id="https://w3id.org/trusted-wfrun-crate/0.3">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/trusted-wfrun-crate/0.3">https://w3id.org/trusted-wfrun-crate/0.3</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Trusted Workflow Run Crate profile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Profile</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#%23validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f">Validation against Trusted Workflow Run Crate profile: pending</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://workflowhub.eu/workflows/471?version=1">Go to: </a> hutch-workflow (x86)</h3>
+            
+            
+            
+            
+        <div id="https://workflowhub.eu/workflows/471?version=1">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://workflowhub.eu/workflows/471?version=1">https://workflowhub.eu/workflows/471?version=1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>hutch-workflow (x86)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.0">https://w3id.org/workflowhub/workflow-ro-crate/1.0</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/471/ro_crate%3Fversion%3D1">https://workflowhub.eu/workflows/471/ro_crate?version=1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">sameAs<span>&nbsp;</span><a href="http://schema.org/sameAs">[?]</a></th>
+            <td style='text-align:left'><a href="#results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl">results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#%23execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc">Execute rquest query</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#results/">Workflow Run Results</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%23signoff-00863632-4a12-45ab-be86-f896a670db39">Sign-off of execution: approved</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/><hr/><br/><br/>
+           <div>
+            <h3><a href="hutch_cwl.wfex.stage">⬇️ Download: </a> Generated WfExS Staging file</h3>
+            
+            
+            
+            
+        <div id="hutch_cwl.wfex.stage">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>hutch_cwl.wfex.stage</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Generated WfExS Staging file</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> Workflow Run Results</h3>
+            
+            
+            
+            
+        <div id="results/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>results/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow Run Results</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#%23execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc">Execute rquest query</a></li>
+                        
+                        <li><a href="#https%3A//workflowhub.eu/workflows/471%3Fversion%3D1">hutch-workflow (x86)</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="https://w3id.org/ro/wfrun/process/0.1">https://w3id.org/ro/wfrun/process/0.1</a></li>
+                        
+                        <li><a href="https://w3id.org/ro/wfrun/workflow/0.1">https://w3id.org/ro/wfrun/workflow/0.1</a></li>
+                        
+                        <li><a href="https://w3id.org/ro/wfrun/provenance/0.1">https://w3id.org/ro/wfrun/provenance/0.1</a></li>
+                        
+                        <li><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.0">https://w3id.org/workflowhub/workflow-ro-crate/1.0</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">isPartOf<span>&nbsp;</span><a href="http://schema.org/isPartOf">[?]</a></th>
+            <td style='text-align:left'><a href="#results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl">results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">subjectOf<span>&nbsp;</span><a href="http://schema.org/subjectOf">[?]</a></th>
+            <td style='text-align:left'><a href="#results/ro-crate-metadata.json%2330494e22-a2fd-4d3c-945b-35f1b458eda9">results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="results/outputs/_1683122029/output.json">⬇️ Download: </a> results/outputs/_1683122029/output.json</h3>
+            
+            
+            
+            
+        <div id="results/outputs/_1683122029/output.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>results/outputs/_1683122029/output.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">exampleOfWork<span>&nbsp;</span><a href="http://schema.org/exampleOfWork">[?]</a></th>
+            <td style='text-align:left'><a href="#%23hutch_workflow__x86_-outputs-output_file">output_file</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#%23execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc">Execute rquest query</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> Execute rquest query</h3>
+            
+            
+            
+            
+        <div id="#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Execute rquest query</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreateAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><a href="http://schema.org/CompleteActionStatus">http://schema.org/CompleteActionStatus</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">startTime<span>&nbsp;</span><a href="http://schema.org/startTime">[?]</a></th>
+            <td style='text-align:left'><span>2023-05-03T13:53:49.012349+00:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">endTime<span>&nbsp;</span><a href="http://schema.org/endTime">[?]</a></th>
+            <td style='text-align:left'><span>2023-05-03T13:53:53.715480+00:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-4206-4024">Vasiliki Panagi</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//workflowhub.eu/workflows/471%3Fversion%3D1">hutch-workflow (x86)</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#rquest-query.json">rquest-query</a></li>
+                        
+                        <li>is_availability: true</li>
+                        
+                        <li>db_host: localhost</li>
+                        
+                        <li>db_name: hutch</li>
+                        
+                        <li>db_user: postgres</li>
+                        
+                        <li>db_password: example</li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">result<span>&nbsp;</span><a href="http://schema.org/result">[?]</a></th>
+            <td style='text-align:left'><a href="#results/outputs/_1683122029/output.json">results/outputs/_1683122029/output.json</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">sameAs<span>&nbsp;</span><a href="http://schema.org/sameAs">[?]</a></th>
+            <td style='text-align:left'><a href="#results/ro-crate-metadata.json%2330494e22-a2fd-4d3c-945b-35f1b458eda9">results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#results/">Workflow Run Results</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> BagIt checksum of Crate: FAILED (missing)</h3>
+            
+            
+            
+            
+        <div id="#check-4445b5a3-38f0-47e1-b3bd-a2693743b071">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#check-4445b5a3-38f0-47e1-b3bd-a2693743b071</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>BagIt checksum of Crate: FAILED (missing)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Thing</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">type</th>
+            <td style='text-align:left'><span>AssessAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">additionalType<span>&nbsp;</span><a href="http://schema.org/additionalType">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/shp#CheckValue">https://w3id.org/shp#CheckValue</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">endTime<span>&nbsp;</span><a href="http://schema.org/endTime">[?]</a></th>
+            <td style='text-align:left'><span>2023-05-1518:00:00+01:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//www.iana.org/assignments/named-information%23sha-512">sha-512 algorithm</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><a href="http://schema.org/FailedActionStatus">http://schema.org/FailedActionStatus</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> Validation against Trusted Workflow Run Crate profile: pending</h3>
+            
+            
+            
+            
+        <div id="#validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Validation against Trusted Workflow Run Crate profile: pending</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Thing</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">type</th>
+            <td style='text-align:left'><span>AssessAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">additionalType<span>&nbsp;</span><a href="http://schema.org/additionalType">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/shp#ValidationCheck">https://w3id.org/shp#ValidationCheck</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><a href="http://schema.org/PotentialActionStatus">http://schema.org/PotentialActionStatus</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> Sign-off of execution: approved</h3>
+            
+            
+            
+            
+        <div id="#signoff-00863632-4a12-45ab-be86-f896a670db39">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#signoff-00863632-4a12-45ab-be86-f896a670db39</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Sign-off of execution: approved</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Thing</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">type</th>
+            <td style='text-align:left'><span>AssessAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">additionalType<span>&nbsp;</span><a href="http://schema.org/additionalType">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/shp#SignOff">https://w3id.org/shp#SignOff</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">endTime<span>&nbsp;</span><a href="http://schema.org/endTime">[?]</a></th>
+            <td style='text-align:left'><span>2023-04-19T17:15:12+01:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#https%3A//workflowhub.eu/workflows/471%3Fversion%3D1">hutch-workflow (x86)</a></li>
+                        
+                        <li><a href="#%23project-065c9577-dd40-4cb2-bbc7-354e34ef37de">vas-workflow</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-4206-4024">Vasiliki Panagi</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><a href="http://schema.org/CompletedActionStatus">http://schema.org/CompletedActionStatus</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> Disclosure check of workflow results: OK</h3>
+            
+            
+            
+            
+        <div id="#disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Disclosure check of workflow results: OK</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Thing</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">type</th>
+            <td style='text-align:left'><span>AssessAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">additionalType<span>&nbsp;</span><a href="http://schema.org/additionalType">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/shp#DisclosureCheck">https://w3id.org/shp#DisclosureCheck</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">startTime<span>&nbsp;</span><a href="http://schema.org/startTime">[?]</a></th>
+            <td style='text-align:left'><span>2023-04-25T16:00:00+01:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-4206-4024">Vasiliki Panagi</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><a href="http://schema.org/CompletedActionStatus">http://schema.org/CompletedActionStatus</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> BagIt manifests of Crate updated</h3>
+            
+            
+            
+            
+        <div id="#bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>BagIt manifests of Crate updated</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Thing</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">type</th>
+            <td style='text-align:left'><span>UpdateAction</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">startTime<span>&nbsp;</span><a href="http://schema.org/startTime">[?]</a></th>
+            <td style='text-align:left'><span>2023-05-15T17:40:25+01:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">additionalType<span>&nbsp;</span><a href="http://schema.org/additionalType">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/shp#GenerateCheckValue">https://w3id.org/shp#GenerateCheckValue</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instrument<span>&nbsp;</span><a href="http://schema.org/instrument">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//www.iana.org/assignments/named-information%23sha-512">sha-512 algorithm</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">agent<span>&nbsp;</span><a href="http://schema.org/agent">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">actionStatus<span>&nbsp;</span><a href="http://schema.org/actionStatus">[?]</a></th>
+            <td style='text-align:left'><a href="http://schema.org/CompletedActionStatus">http://schema.org/CompletedActionStatus</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> vas-workflow</h3>
+            
+            
+            
+            
+        <div id="#project-065c9577-dd40-4cb2-bbc7-354e34ef37de">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#project-065c9577-dd40-4cb2-bbc7-354e34ef37de</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>vas-workflow</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Project</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">identifier<span>&nbsp;</span><a href="http://schema.org/identifier">[?]</a></th>
+            <td style='text-align:left'>trefx: vas-workflow</td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">member<span>&nbsp;</span><a href="http://schema.org/member">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/01ee9ar58">University of Nottingham</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">sourceOrganization<span>&nbsp;</span><a href="http://schema.org/sourceOrganization">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">object<span>&nbsp;</span><a href="http://schema.org/object">[?]</a></th>
+            <td style='text-align:left'><a href="#%23signoff-00863632-4a12-45ab-be86-f896a670db39">Sign-off of execution: approved</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">memberOf<span>&nbsp;</span><a href="http://schema.org/memberOf">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0002-4206-4024">Vasiliki Panagi</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://trefx.example.com/">Go to: </a> TRE-FX's pod in some TRE</h3>
+            
+            
+            
+            
+        <div id="https://trefx.example.com/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://trefx.example.com/">https://trefx.example.com/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>TRE-FX's pod in some TRE</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Organization</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">parentOrganization<span>&nbsp;</span><a href="http://schema.org/parentOrganization">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//ror.org/01ee9ar58">University of Nottingham</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/><hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>

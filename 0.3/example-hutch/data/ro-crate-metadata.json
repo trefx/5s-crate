@@ -1,0 +1,456 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+    "@graph": [
+        {
+            "@type": "CreativeWork",
+            "@id": "ro-crate-metadata.json",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+            }
+        },
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "conformsTo": {
+                "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
+            },
+            "datePublished": "2023-04-24T09:56:15+00:00",
+            "hasPart": [
+                {
+                    "@id": "https://workflowhub.eu/workflows/471?version=1"
+                },
+                {
+                    "@id": "rqeuest-query.json"
+                },
+                {
+                    "@id": "hutch_cwl.wfex.stage"
+                },
+                {
+                    "@id": "results/"
+                },
+                {
+                    "@id": "results/outputs/_1683122029/output.json"
+                }
+            ],
+            "mainEntity": {
+                "@id": "https://workflowhub.eu/workflows/471?version=1"
+            },
+            "mentions": [
+                {
+                    "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc"
+                },
+                {
+                    "@id": "#check-4445b5a3-38f0-47e1-b3bd-a2693743b071"
+                },
+                {
+                    "@id": "#validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f"
+                },
+                {
+                    "@id": "#signoff-00863632-4a12-45ab-be86-f896a670db39"
+                },
+                {
+                    "@id": "#disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af"
+                },
+                {
+                    "@id": "#bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8"
+                }
+            ],
+            "sourceOrganization": {
+                "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de"
+            },
+            "publisher": {
+                "@id": "https://trefx.example.com/"
+            },
+            "licence": {
+                "@id": "http://spdx.org/licenses/MIT"
+            }
+        },
+        {
+            "@id": "https://w3id.org/trusted-wfrun-crate/0.3",
+            "@type": "Profile",
+            "name": "Trusted Workflow Run Crate profile"
+        },
+        {
+            "@id": "https://spdx.org/licenses/MIT",
+            "@type": "CreativeWork",
+            "name": "MIT Licence",
+            "identifier": "MIT"
+        },
+        {
+            "@id": "https://workflowhub.eu/workflows/471?version=1",
+            "@type": "Dataset",
+            "name": "hutch-workflow (x86)",
+            "conformsTo": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+            },
+            "distribution": {
+                "@id": "https://workflowhub.eu/workflows/471/ro_crate?version=1"
+            },
+            "sameAs": {
+                "@id": "results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+            }
+        },
+        {
+            "@id": "results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl",
+            "@type": "File",
+            "isPartOf": {
+                "@id": "results/"
+            }
+        },
+        {
+            "@id": "https://workflowhub.eu/workflows/471/ro_crate?version=1",
+            "@type": "DataDownload",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate"
+            },
+            "encodingFormat": "application/zip"
+        },
+        {
+            "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc",
+            "@type": "CreateAction",
+            "actionStatus": "http://schema.org/CompleteActionStatus",
+            "startTime": "2023-05-03T13:53:49.012349+00:00",
+            "endTime": "2023-05-03T13:53:53.715480+00:00",
+            "agent": {
+                "@id": "https://orcid.org/0000-0002-4206-4024"
+            },
+            "instrument": {
+                "@id": "https://workflowhub.eu/workflows/471?version=1"
+            },
+            "name": "Execute rquest query",
+            "object": [
+                {
+                    "@id": "rquest-query.json"
+                },
+                {
+                    "@id": "#input_is_availability"
+                },
+                {
+                    "@id": "#input_db_host"
+                },
+                {
+                    "@id": "#input_db_name"
+                },
+                {
+                    "@id": "#input_db_user"
+                },
+                {
+                    "@id": "#input_db_password"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "results/outputs/_1683122029/output.json"
+                }
+            ],
+            "sameAs": {
+                "@id": "results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9"
+            }
+        },
+        {
+            "@id": "results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9",
+            "@type": "CreateAction",
+            "subjectOf": {"@id": "results/"}
+        },
+        {
+            "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de",
+            "@type": "Project",
+            "name": "vas-workflow",
+            "identifier": [
+                {
+                    "@id": "_:localid:trefx:vas-workflow"
+                }
+            ],
+            "member": [
+                {
+                    "@id": "https://ror.org/01ee9ar58"
+                }
+            ]
+        },
+        {
+            "@id": "_:localid:trefx:vas-workflow",
+            "@type": "PropertyValue",
+            "name": "trefx",
+            "value": "vas-workflow"
+        },
+        {
+            "@id": "rquest-query.json",
+            "@type": "File",
+            "name": "rquest-query",
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-inputs-body"
+            }
+        },
+        {
+            "@id": "hutch_cwl.wfex.stage",
+            "@type": "File",
+            "name": "Generated WfExS Staging file"
+        },
+        {
+            "@id": "#input_is_availability",
+            "@type": "PropertyValue",
+            "name": "is_availability",
+            "value": true,
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-inputs-is_availability"
+            }
+        },
+        {
+            "@id": "#input_db_host",
+            "@type": "PropertyValue",
+            "name": "db_host",
+            "value": "localhost",
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-inputs-db_host"
+            }
+        },
+        {
+            "@id": "#input_db_name",
+            "@type": "PropertyValue",
+            "name": "db_name",
+            "value": "hutch",
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-inputs-db_name"
+            }
+        },
+        {
+            "@id": "#input_db_user",
+            "@type": "PropertyValue",
+            "name": "db_user",
+            "value": "postgres",
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-inputs-db_user"
+            }
+        },
+        {
+            "@id": "#input_db_password",
+            "@type": "PropertyValue",
+            "name": "db_password",
+            "value": "example",
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-inputs-db_password"
+            }
+        },
+        {
+            "@id": "#hutch_workflow__x86_-inputs-body",
+            "@type": "FormalParameter",
+            "name": "body",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "#hutch_workflow__x86_-inputs-is_availability",
+            "@type": "FormalParameter",
+            "name": "is_availability",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "#hutch_workflow__x86_-inputs-db_host",
+            "@type": "FormalParameter",
+            "name": "db_host",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "#hutch_workflow__x86_-inputs-db_name",
+            "@type": "FormalParameter",
+            "name": "db_name",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "#hutch_workflow__x86_-inputs-db_user",
+            "@type": "FormalParameter",
+            "name": "db_user",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "#hutch_workflow__x86_-inputs-db_password",
+            "@type": "FormalParameter",
+            "name": "db_password",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "#hutch_workflow__x86_-outputs-output_file",
+            "@type": "FormalParameter",
+            "name": "output_file",
+            "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+        },
+        {
+            "@id": "results/outputs/_1683122029/output.json",
+            "@type": "File",
+            "encodingFormat": "application/json",
+            "exampleOfWork": {
+                "@id": "#hutch_workflow__x86_-outputs-output_file"
+            }
+        },
+        {
+            "@id": "results/",
+            "@type": "Dataset",
+            "name": "Workflow Run Results",
+            "about": [
+                {
+                    "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc"
+                },
+                {
+                    "@id": "https://workflowhub.eu/workflows/471?version=1"
+                }
+            ],
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "#check-4445b5a3-38f0-47e1-b3bd-a2693743b071",
+            "type": "AssessAction",
+            "additionalType": {
+                "@id": "https://w3id.org/shp#CheckValue"
+            },
+            "name": "BagIt checksum of Crate: FAILED (missing)",
+            "endTime": "2023-05-1518:00:00+01:00",
+            "object": {
+                "@id": "./"
+            },
+            "instrument": {
+                "@id": "https://www.iana.org/assignments/named-information#sha-512"
+            },
+            "agent": {
+                "@id": "https://orcid.org/0000-0001-9842-9718"
+            },
+            "actionStatus": "http://schema.org/FailedActionStatus"
+        },
+        {
+            "@id": "#validate-6e4298fe-a0fe-45f7-ac9a-bec41ec0643f",
+            "type": "AssessAction",
+            "additionalType": {
+                "@id": "https://w3id.org/shp#ValidationCheck"
+            },
+            "name": "Validation against Trusted Workflow Run Crate profile: pending",
+            "object": {
+                "@id": "./"
+            },
+            "instrument": {
+                "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
+            },
+            "actionStatus": "http://schema.org/PotentialActionStatus"
+        },
+        {
+            "@id": "#signoff-00863632-4a12-45ab-be86-f896a670db39",
+            "type": "AssessAction",
+            "additionalType": {
+                "@id": "https://w3id.org/shp#SignOff"
+            },
+            "name": "Sign-off of execution: approved",
+            "endTime": "2023-04-19T17:15:12+01:00",
+            "object": [
+                {
+                    "@id": "./"
+                },
+                {
+                    "@id": "https://workflowhub.eu/workflows/471?version=1"
+                },
+                {
+                    "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de"
+                }
+            ],
+            "agent": {
+                "@id": "https://orcid.org/0000-0002-4206-4024"
+            },
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "#disclosure-7ce35566-28f3-4e8d-aa4e-e1ac7d1344af",
+            "type": "AssessAction",
+            "additionalType": {
+                "@id": "https://w3id.org/shp#DisclosureCheck"
+            },
+            "name": "Disclosure check of workflow results: OK",
+            "startTime": "2023-04-25T16:00:00+01:00",
+            "object": {
+                "@id": "./"
+            },
+            "agent": {
+                "@id": "https://orcid.org/0000-0002-4206-4024"
+            },
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "#bagit-7a89e9e1-ba5c-4fef-96f6-0a4d53aad0d8",
+            "type": "UpdateAction",
+            "startTime": "2023-05-15T17:40:25+01:00",
+            "additionalType": {
+                "@id": "https://w3id.org/shp#GenerateCheckValue"
+            },
+            "name": "BagIt manifests of Crate updated",
+            "object": {
+                "@id": "./"
+            },
+            "instrument": {
+                "@id": "https://www.iana.org/assignments/named-information#sha-512"
+            },
+            "agent": {
+                "@id": "https://orcid.org/0000-0001-9842-9718"
+            },
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-4206-4024",
+            "@type": "Person",
+            "name": "Vasiliki Panagi",
+            "affiliation": {
+                "@id": "https://ror.org/01ee9ar58"
+            },
+            "memberOf": [
+                {
+                    "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de"
+                }
+            ]
+        },
+        {
+            "@id": "https://ror.org/01ee9ar58",
+            "@type": "Organization",
+            "name": "University of Nottingham"
+        },
+        {
+            "@id": "https://trefx.example.com/",
+            "@type": "Organization",
+            "name": "TRE-FX's pod in some TRE",
+            "parentOrganization": {
+                "@id": "https://ror.org/01ee9ar58"
+            }
+        },
+        {
+            "@id": "https://www.iana.org/assignments/named-information#sha-512",
+            "@type": "DefinedTerm",
+            "name": "sha-512 algorithm"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-9842-9718",
+            "@type": "Person",
+            "name": "Stian Soiland-Reyes",
+            "affiliation": {
+                "@id": "https://ror.org/027m9bs27"
+            },
+            "memberOf": {
+                "@id": "https://trefx.uk/"
+            }
+        },
+        {
+            "@id": "https://ror.org/027m9bs27",
+            "@type": "CollegeOrUniversity",
+            "name": "The University of Manchester",
+            "url": "https://www.manchester.ac.uk/"
+        }
+    ]
+}
