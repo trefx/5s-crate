@@ -12,7 +12,7 @@
       "@id": "ro-crate-metadata.json",
       "@type": "CreativeWork",
       "about": {
-        "@id": "./"
+        "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
       },
       "licence": {
         "@id": "http://spdx.org/licenses/CC0-1.0"
@@ -22,13 +22,15 @@
       }
     },
     {
-      "@id": "./",
+      "@id": "https://w3id.org/trusted-wfrun-crate/0.3",
       "@type": [
         "Dataset",
         "Profile"
       ],
       "name": "Trusted Workflow Run Crate profile",
+      "cite-as": "https://w3id.org/trusted-wfrun-crate/0.3",
       "version": "0.3",
+      "datePublished": "2023-05-15T10:32:00Z",
       "licence": {
         "@id": "http://spdx.org/licenses/MIT"
       },
@@ -38,10 +40,19 @@
       "copyrightYear": 2023,
       "hasPart": [
         {
-          "@id": "index.html"
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/index.html"
         },
         {
-          "@id": "example-request/"
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip"
+        },
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/"
+        },
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip"
+        },
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/"
         },
         {
           "@id": "http://schema.org/PotentialActionStatus"
@@ -71,16 +82,16 @@
           "@id": "http://schema.org/grantee"
         },
         {
-          "@id": "https://schema.org/DigitalDocument"
+          "@id": "http://schema.org/DigitalDocument"
         },
         {
-          "@id": "https://schema.org/DigitalDocumentPermission"
+          "@id": "http://schema.org/DigitalDocumentPermission"
         },
         {
           "@id": "http://schema.org/hasDigitalDocumentPermission"
         },
         {
-          "@id": "https://schema.org/ReadPermission"
+          "@id": "http://schema.org/ReadPermission"
         },
         {
           "@id": "https://bioschemas.org/FormalParameter"
@@ -107,6 +118,9 @@
         },
         {
           "@id": "#hasExampleRequest"
+        },
+        {
+          "@id": "#hasExampleResult"
         },
         {
           "@id": "#usesSHP"
@@ -147,6 +161,73 @@
       "url": "https://www.manchester.ac.uk/"
     },
     {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/index.html",
+      "@type": "CreativeWork",
+      "name": "Trusted Workflow Run Crate profile (specification)"
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip",
+      "@type": "DataDownload",
+      "name": "example-request.bagit.zip",
+      "description": "Example Request following the trusted-wfrun-crate profile, archived as BagIt ZIP",
+      "encodingFormat": "application/zip",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate"
+      }
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/",
+      "@type": "Dataset",
+      "name": "Example Crate in Request state",
+      "conformsTo": {
+        "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
+      },
+      "subjectOf": [
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-metadata.json"
+        },
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-preview.html"
+        }
+      ],
+      "distribution": {
+        "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip"
+      }
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip",
+      "@type": "DataDownload",
+      "name": "example-result.bagit.zip",
+      "description": "Example Result following the trusted-wfrun-crate profile, archived as BagIt ZIP",
+      "encodingFormat": "application/zip",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate"
+      }
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/",
+      "@type": "Dataset",
+      "name": "Example Crate in Request state",
+      "conformsTo": {
+        "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
+      },
+      "subjectOf": [
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-metadata.json"
+        },
+        {
+          "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-preview.html"
+        }
+      ],
+      "distribution": {
+        "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip"
+      }
+    },
+    {
+      "@id": "https://bioschemas.org/FormalParameter",
+      "@type": "DefinedTerm"
+    },
+    {
       "@id": "https://w3id.org/shp#CheckValue",
       "@type": "DefinedTerm",
       "inDefinedTermSet": {
@@ -184,25 +265,39 @@
     {
       "@id": "#hasSpecification",
       "@type": "ResourceDescriptor",
+      "name": "has specification",
       "hasRole": {
         "@id": "http://www.w3.org/ns/dx/prof/role/specification"
       },
       "hasArtifact": {
-        "@id": "index.html"
+        "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/index.html"
       }
     },
     {
       "@id": "#hasExampleRequest",
       "@type": "ResourceDescriptor",
+      "name": "has example: Request",
       "hasRole": {
         "@id": "http://www.w3.org/ns/dx/prof/role/example"
       },
       "hasArtifact": {
-        "@id": "example-request/"
+        "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/"
+      }
+    },
+    {
+      "@id": "#hasExampleResult",
+      "@type": "ResourceDescriptor",
+      "name": "has example: Result",
+      "hasRole": {
+        "@id": "http://www.w3.org/ns/dx/prof/role/example"
+      },
+      "hasArtifact": {
+        "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/"
       }
     },
     {
       "@id": "#usesSHP",
+      "name": "uses vocabulary SHP",
       "@type": "ResourceDescriptor",
       "hasRole": {
         "@id": "http://www.w3.org/ns/dx/prof/role/vocabulary"
@@ -214,6 +309,8 @@
     {
       "@id": "https://trefx.uk/",
       "@type": "ResearchProject",
+      "name": "TRE-FX",
+      "description": "Delivering a federated network of TREs to enable safe analytics",
       "funding": {
         "@id": "https://gtr.ukri.org/projects?ref=MC_PC_23007"
       }
@@ -227,7 +324,7 @@
       "name": "DARE-FX: Delivering a federated network of TREs to enable safe analytics",
       "description": "",
       "funder": {
-        "@id": "https://www.ukri.org/"
+        "@id": "https://ror.org/001aqnf71"
       },
       "sponsor": {
         "@id": "https://dareuk.org.uk/"
@@ -251,6 +348,26 @@
       "memberOf": {
         "@id": "https://trefx.uk/"
       }
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "encodingFormat": "application/ld+json"
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-preview.html",
+      "@type": "CreativeWork",
+      "encodingFormat": "text/html"
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "encodingFormat": "application/ld+json"
+    },
+    {
+      "@id": "https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-preview.html",
+      "@type": "CreativeWork",
+      "encodingFormat": "text/html"
     },
     {
       "@id": "https://w3id.org/shp",
@@ -297,17 +414,18 @@
       "value": "MC_PC_23007"
     },
     {
-      "@id": "https://www.ukri.org/",
+      "@id": "https://ror.org/001aqnf71",
       "@type": "FundingAgency",
       "name": "UK Research and Innovation",
-      "alternateName": "UKRI"
+      "alternateName": "UKRI",
+      "url": "https://www.ukri.org/"
     },
     {
       "@id": "https://dareuk.org.uk/",
       "@type": "FundingScheme",
       "name": "DARE UK",
       "funder": {
-        "@id": "https://www.ukri.org/"
+        "@id": "https://ror.org/001aqnf71"
       }
     }
   ]
@@ -360,17 +478,17 @@ table.table {
 <div id="summary">
 <div class='all-meta'>
            <div>
-            <h3> Trusted Workflow Run Crate profile</h3>
+            <h3><a href="https://w3id.org/trusted-wfrun-crate/0.3">Go to: </a> Trusted Workflow Run Crate profile</h3>
             
             
             
             
-        <div id="./">
+        <div id="https://w3id.org/trusted-wfrun-crate/0.3">
             
             <table class="table metadata table-striped" >
                 <tbody><tr>
             <th style="text-align:left;" class="prop">@id</th>
-            <td style='text-align:left'><span>./</span></td>
+            <td style='text-align:left'><a href="https://w3id.org/trusted-wfrun-crate/0.3">https://w3id.org/trusted-wfrun-crate/0.3</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
             <td style='text-align:left'><span>Trusted Workflow Run Crate profile</span></td>
@@ -382,12 +500,18 @@ table.table {
                         <li><span>Profile</span></li>
                         </ul></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2023-05-15T10:32:00Z</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
             <td style='text-align:left'><ul>
                         <li><a href="#https%3A//orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></li>
                         
                         <li><a href="#https%3A//orcid.org/0009-0003-2419-1964">Stuart Wheater</a></li>
                         </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">cite-as<span>&nbsp;</span><a href="http://www.iana.org/assignments/relation/cite-as">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/trusted-wfrun-crate/0.3">https://w3id.org/trusted-wfrun-crate/0.3</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
             <td style='text-align:left'><span>0.3</span></td>
@@ -403,9 +527,15 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
             <td style='text-align:left'><ul>
-                        <li>index.html</li>
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/index.html">Trusted Workflow Run Crate profile (specification)</a></li>
                         
-                        <li>example-request/</li>
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip">example-request.bagit.zip</a></li>
+                        
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">Example Crate in Request state</a></li>
+                        
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip">example-result.bagit.zip</a></li>
+                        
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">Example Crate in Request state</a></li>
                         
                         <li><a href="http://schema.org/PotentialActionStatus">http://schema.org/PotentialActionStatus</a></li>
                         
@@ -425,15 +555,15 @@ table.table {
                         
                         <li><a href="http://schema.org/grantee">http://schema.org/grantee</a></li>
                         
-                        <li><a href="https://schema.org/DigitalDocument">https://schema.org/DigitalDocument</a></li>
+                        <li><a href="http://schema.org/DigitalDocument">http://schema.org/DigitalDocument</a></li>
                         
-                        <li><a href="https://schema.org/DigitalDocumentPermission">https://schema.org/DigitalDocumentPermission</a></li>
+                        <li><a href="http://schema.org/DigitalDocumentPermission">http://schema.org/DigitalDocumentPermission</a></li>
                         
                         <li><a href="http://schema.org/hasDigitalDocumentPermission">http://schema.org/hasDigitalDocumentPermission</a></li>
                         
-                        <li><a href="https://schema.org/ReadPermission">https://schema.org/ReadPermission</a></li>
+                        <li><a href="http://schema.org/ReadPermission">http://schema.org/ReadPermission</a></li>
                         
-                        <li><a href="https://bioschemas.org/FormalParameter">https://bioschemas.org/FormalParameter</a></li>
+                        <li><a href="#https%3A//bioschemas.org/FormalParameter">https://bioschemas.org/FormalParameter</a></li>
                         
                         <li><a href="#https%3A//w3id.org/shp%23CheckValue">https://w3id.org/shp#CheckValue</a></li>
                         
@@ -448,21 +578,30 @@ table.table {
             </tr><tr>
             <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
             <td style='text-align:left'><ul>
-                        <li><a href="#%23hasSpecification">#hasSpecification</a></li>
+                        <li><a href="#%23hasSpecification">has specification</a></li>
                         
-                        <li><a href="#%23hasExampleRequest">#hasExampleRequest</a></li>
+                        <li><a href="#%23hasExampleRequest">has example: Request</a></li>
                         
-                        <li><a href="#%23usesSHP">#usesSHP</a></li>
+                        <li><a href="#%23hasExampleResult">has example: Result</a></li>
+                        
+                        <li><a href="#%23usesSHP">uses vocabulary SHP</a></li>
                         </ul></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
-            <td style='text-align:left'><a href="#https%3A//trefx.uk/">https://trefx.uk/</a></td>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/">TRE-FX</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">funding<span>&nbsp;</span><a href="http://schema.org/funding">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//gtr.ukri.org/projects%3Fref%3DMC_PC_23007">DARE-FX: Delivering a federated network of TREs to enable safe analytics</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
             <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">Example Crate in Request state</a></li>
+                        
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">Example Crate in Request state</a></li>
+                        </ul></td>
             </tr></tbody>
             </table>
         </div>
@@ -489,13 +628,13 @@ table.table {
             <td style='text-align:left'><span>Person</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">memberOf<span>&nbsp;</span><a href="http://schema.org/memberOf">[?]</a></th>
-            <td style='text-align:left'><a href="#https%3A//trefx.uk/">https://trefx.uk/</a></td>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/">TRE-FX</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//ror.org/027m9bs27">The University of Manchester</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -522,10 +661,10 @@ table.table {
             <td style='text-align:left'><span>Person</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">memberOf<span>&nbsp;</span><a href="http://schema.org/memberOf">[?]</a></th>
-            <td style='text-align:left'><a href="#https%3A//trefx.uk/">https://trefx.uk/</a></td>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/">TRE-FX</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">author<span>&nbsp;</span><a href="http://schema.org/author">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -555,7 +694,7 @@ table.table {
             <td style='text-align:left'><span>MIT</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">licence</th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -585,7 +724,7 @@ table.table {
             <td style='text-align:left'><a href="https://www.manchester.ac.uk/">https://www.manchester.ac.uk/</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">copyrightHolder<span>&nbsp;</span><a href="http://schema.org/copyrightHolder">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">affiliation<span>&nbsp;</span><a href="http://schema.org/affiliation">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a></td>
@@ -594,7 +733,225 @@ table.table {
         </div>
 
         </div>
-        <hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://trefx.uk/trusted-wfrun-crate/0.3/index.html">Go to: </a> Trusted Workflow Run Crate profile (specification)</h3>
+            
+            
+            
+            
+        <div id="https://trefx.uk/trusted-wfrun-crate/0.3/index.html">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://trefx.uk/trusted-wfrun-crate/0.3/index.html">https://trefx.uk/trusted-wfrun-crate/0.3/index.html</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Trusted Workflow Run Crate profile (specification)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>CreativeWork</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
+            <td style='text-align:left'><a href="#%23hasSpecification">has specification</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip">Go to: </a> example-request.bagit.zip</h3>
+            
+            
+            
+            
+        <div id="https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip">https://trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>example-request.bagit.zip</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>DataDownload</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Example Request following the trusted-wfrun-crate profile, archived as BagIt ZIP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/zip</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/crate">https://w3id.org/ro/crate</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">Example Crate in Request state</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">Go to: </a> Example Crate in Request state</h3>
+            
+            
+            
+            
+        <div id="https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Example Crate in Request state</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">subjectOf<span>&nbsp;</span><a href="http://schema.org/subjectOf">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-metadata.json">https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-metadata.json</a></li>
+                        
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-preview.html">https://trefx.uk/trusted-wfrun-crate/0.3/example-request/data/ro-crate-preview.html</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request.bagit.zip">example-request.bagit.zip</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
+            <td style='text-align:left'><a href="#%23hasExampleRequest">has example: Request</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip">Go to: </a> example-result.bagit.zip</h3>
+            
+            
+            
+            
+        <div id="https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip">https://trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>example-result.bagit.zip</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>DataDownload</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Example Result following the trusted-wfrun-crate profile, archived as BagIt ZIP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/zip</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/crate">https://w3id.org/ro/crate</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">Example Crate in Request state</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">Go to: </a> Example Crate in Request state</h3>
+            
+            
+            
+            
+        <div id="https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Example Crate in Request state</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">subjectOf<span>&nbsp;</span><a href="http://schema.org/subjectOf">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-metadata.json">https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-metadata.json</a></li>
+                        
+                        <li><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-preview.html">https://trefx.uk/trusted-wfrun-crate/0.3/example-result/data/ro-crate-preview.html</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">distribution<span>&nbsp;</span><a href="http://schema.org/distribution">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result.bagit.zip">example-result.bagit.zip</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
+            <td style='text-align:left'><a href="#%23hasExampleResult">has example: Result</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/>
+           <div>
+            <h3><a href="https://bioschemas.org/FormalParameter">Go to: </a> https://bioschemas.org/FormalParameter</h3>
+            
+            
+            
+            
+        <div id="https://bioschemas.org/FormalParameter">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://bioschemas.org/FormalParameter">https://bioschemas.org/FormalParameter</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>DefinedTerm</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
            <div>
             <h3><a href="https://w3id.org/shp#CheckValue">Go to: </a> https://w3id.org/shp#CheckValue</h3>
             
@@ -615,7 +972,7 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -642,7 +999,7 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -669,7 +1026,7 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -696,7 +1053,7 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -723,7 +1080,7 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -731,7 +1088,7 @@ table.table {
         </div>
         <hr/><br/><br/>
            <div>
-            <h3> #hasSpecification</h3>
+            <h3> has specification</h3>
             
             
             
@@ -743,6 +1100,9 @@ table.table {
             <th style="text-align:left;" class="prop">@id</th>
             <td style='text-align:left'><span>#hasSpecification</span></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>has specification</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
             <td style='text-align:left'><span>ResourceDescriptor</span></td>
             </tr><tr>
@@ -750,10 +1110,10 @@ table.table {
             <td style='text-align:left'><a href="#http%3A//www.w3.org/ns/dx/prof/role/specification">Specification</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
-            <td style='text-align:left'>index.html</td>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/index.html">Trusted Workflow Run Crate profile (specification)</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -761,7 +1121,7 @@ table.table {
         </div>
         <hr/><br/><br/>
            <div>
-            <h3> #hasExampleRequest</h3>
+            <h3> has example: Request</h3>
             
             
             
@@ -773,6 +1133,9 @@ table.table {
             <th style="text-align:left;" class="prop">@id</th>
             <td style='text-align:left'><span>#hasExampleRequest</span></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>has example: Request</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
             <td style='text-align:left'><span>ResourceDescriptor</span></td>
             </tr><tr>
@@ -780,10 +1143,10 @@ table.table {
             <td style='text-align:left'><a href="#http%3A//www.w3.org/ns/dx/prof/role/example">Example</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
-            <td style='text-align:left'>example-request/</td>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-request/data/">Example Crate in Request state</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -791,7 +1154,40 @@ table.table {
         </div>
         <hr/><br/><br/>
            <div>
-            <h3> #usesSHP</h3>
+            <h3> has example: Result</h3>
+            
+            
+            
+            
+        <div id="#hasExampleResult">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#hasExampleResult</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>has example: Result</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>ResourceDescriptor</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasRole<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasRole">[?]</a></th>
+            <td style='text-align:left'><a href="#http%3A//www.w3.org/ns/dx/prof/role/example">Example</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasArtifact<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasArtifact">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//trefx.uk/trusted-wfrun-crate/0.3/example-result/data/">Example Crate in Request state</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> uses vocabulary SHP</h3>
             
             
             
@@ -803,6 +1199,9 @@ table.table {
             <th style="text-align:left;" class="prop">@id</th>
             <td style='text-align:left'><span>#usesSHP</span></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>uses vocabulary SHP</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
             <td style='text-align:left'><span>ResourceDescriptor</span></td>
             </tr><tr>
@@ -813,7 +1212,7 @@ table.table {
             <td style='text-align:left'><a href="#https%3A//w3id.org/shp">The Safe Haven Provenance (SHP) Ontology</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">hasResource<span>&nbsp;</span><a href="http://www.w3.org/ns/dx/prof/hasResource">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
@@ -821,7 +1220,7 @@ table.table {
         </div>
         <hr/><br/><br/>
            <div>
-            <h3><a href="https://trefx.uk/">Go to: </a> https://trefx.uk/</h3>
+            <h3><a href="https://trefx.uk/">Go to: </a> TRE-FX</h3>
             
             
             
@@ -833,14 +1232,20 @@ table.table {
             <th style="text-align:left;" class="prop">@id</th>
             <td style='text-align:left'><a href="https://trefx.uk/">https://trefx.uk/</a></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>TRE-FX</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
             <td style='text-align:left'><span>ResearchProject</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Delivering a federated network of TREs to enable safe analytics</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">funding<span>&nbsp;</span><a href="http://schema.org/funding">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//gtr.ukri.org/projects%3Fref%3DMC_PC_23007">DARE-FX: Delivering a federated network of TREs to enable safe analytics</a></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">publisher<span>&nbsp;</span><a href="http://schema.org/publisher">[?]</a></th>
-            <td style='text-align:left'><a href="#./">Trusted Workflow Run Crate profile</a></td>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">memberOf<span>&nbsp;</span><a href="http://schema.org/memberOf">[?]</a></th>
             <td style='text-align:left'><ul>
@@ -877,7 +1282,7 @@ table.table {
             <td style='text-align:left'></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">funder<span>&nbsp;</span><a href="http://schema.org/funder">[?]</a></th>
-            <td style='text-align:left'><a href="#https%3A//www.ukri.org/">UK Research and Innovation</a></td>
+            <td style='text-align:left'><a href="#https%3A//ror.org/001aqnf71">UK Research and Innovation</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">identifier<span>&nbsp;</span><a href="http://schema.org/identifier">[?]</a></th>
             <td style='text-align:left'>UKRI: MC_PC_23007</td>
@@ -887,9 +1292,9 @@ table.table {
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
             <th style="text-align:left;" class="prop">funding<span>&nbsp;</span><a href="http://schema.org/funding">[?]</a></th>
             <td style='text-align:left'><ul>
-                        <li><a href="#./">Trusted Workflow Run Crate profile</a></li>
+                        <li><a href="#https%3A//w3id.org/trusted-wfrun-crate/0.3">Trusted Workflow Run Crate profile</a></li>
                         
-                        <li><a href="#https%3A//trefx.uk/">https://trefx.uk/</a></li>
+                        <li><a href="#https%3A//trefx.uk/">TRE-FX</a></li>
                         </ul></td>
             </tr></tbody>
             </table>
