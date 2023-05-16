@@ -1,6 +1,6 @@
 # TRE-FX Trusted Workflow Run Crate profile 
 
-_Trusted Workflow_ Run Crate (trusted-wf-runcrate) specifies a profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of workflow execution in a distributed trusted research environment (TRE). 
+_Trusted Workflow Run Crate_ <https://w3id.org/trusted-wfrun-crate/> specifies a profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of workflow execution in a distributed trusted research environment (TRE). 
 
 The profile is being developed by the [TRE-FX](https://trefx.uk/) project.
 
