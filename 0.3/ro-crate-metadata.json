@@ -5,7 +5,7 @@
             "@type": "CreativeWork",
             "@id": "ro-crate-metadata.json",
             "about": {
-                "@id": "./"
+                "@id": "https://w3id.org/trusted-wfrun-crate/0.3"
             },
             "licence": {
                 "@id": "http://spdx.org/licenses/CC0-1.0"
