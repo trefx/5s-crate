@@ -25,6 +25,9 @@ _The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "
 
 **Note**: All references to schema.org types/properties/instances use the prefix `http://schema.org/` (not https) to correspond with their official JSON-LD context.
 
+Table of content:
+
+{:toc}
 
 ## Overview
 
