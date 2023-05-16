@@ -12,7 +12,7 @@ Authors:
 * Version: 0.3
 * Status: TRE-FX Candidate Recommendation 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
-* Permalink: <https://w3id.org/trusted-wfrun-crate/0.3> (TODO)
+* Permalink: <https://w3id.org/trusted-wfrun-crate/0.3>
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
 * Example crate "Request": [example-request.bagit.zip](example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
 * Example crate "Result": [example-result.bagit.zip](example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
