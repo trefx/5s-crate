@@ -9,14 +9,15 @@ Authors:
 1. Stian Soiland-Reyes, The University of Manchester <https://orcid.org/0000-0001-9842-9718>
 2. Stuart Wheater <https://orcid.org/0009-0003-2419-1964>
 
+* Permalink: <https://w3id.org/trusted-wfrun-crate/0.3>
 * Version: 0.3
 * Status: TRE-FX Candidate Recommendation 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
-* Permalink: <https://w3id.org/trusted-wfrun-crate/0.3>
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
-* Example crate "Request": [example-request.bagit.zip](example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
-* Example crate "Result": [example-result.bagit.zip](example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
-* Example crate "Hutch": [GitHub LFS](https://github.com/trefx/trusted-wfrun-crate/tree/main/0.3/example-hutch) [ro-crate-metadata.json](example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](example-hutch/data/ro-crate-preview.html) 
+* Specification: [trusted-wfrun-crate-0.3.0.pdf](https://github.com/trefx/trusted-wfrun-crate/releases/download/0.3.0/trusted-wfrun-crate-0.3.0.pdf)
+* Example crate "Request": [example-request.bagit.zip](https://github.com/trefx/trusted-wfrun-crate/releases/download/0.3.0/example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
+* Example crate "Result": [example-result.bagit.zip](https://github.com/trefx/trusted-wfrun-crate/releases/download/0.3.0/example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
+* Example crate "Hutch": [example-hutch.bagit.zip](https://github.com/trefx/trusted-wfrun-crate/releases/download/0.3.0/example-hutch.bagit.zip) [ro-crate-metadata.json](example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](example-hutch/data/ro-crate-preview.html) 
 
 This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
