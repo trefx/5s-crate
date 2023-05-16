@@ -10,7 +10,7 @@ Authors:
 2. Stuart Wheater <https://orcid.org/0009-0003-2419-1964>
 
 * Version: 0.3
-* Status: TRE-FX draft in development 
+* Status: TRE-FX Candidate Recommendation 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
 * Permalink: <https://w3id.org/trusted-wfrun-crate/0.3> (TODO)
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
