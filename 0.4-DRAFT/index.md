@@ -37,7 +37,7 @@ A Trusted Workflow Run Crate represents a unit of computational access to sensit
 
 ## Archive serialisation
 
-A compliant Trusted Workflow Run Crate SHOULD be stored and transferred as an [ZIP archive](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) containing a single [BagIt directory](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) (_bag_) of an arbitrary name, which payload folder `data/ contains the RO-Crate Metadata File `ro-crate-metadata.json` and any required data files (e.g. inputs). 
+A compliant Trusted Workflow Run Crate SHOULD be stored and transferred as an [ZIP archive](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) containing a single [BagIt directory](https://www.researchobject.org/ro-crate/1.1/appendix/implementation-notes.html#combining-with-other-packaging-schemes) (_bag_) of an arbitrary name, which payload folder `data/` contains the RO-Crate Metadata File `ro-crate-metadata.json` and any required data files (e.g. inputs). 
 
 Internally a processing TRE MAY choose to unpack a ZIP file to a local file store, taking necessary security and performance precautions (see [Security considerations](#security-considerations)).
 
