@@ -293,15 +293,15 @@
             "additionalType": {
                 "@id": "https://w3id.org/shp#DisclosureCheck"
             },
-            "name": "Disclosure check of workflow results: pending (estimate: 1 week)",
-            "startTime": "2023-04-25T16:00:00+01:00",
+            "name": "Disclosure check of workflow results: approved",
+            "endTime": "2023-04-25T16:00:00+01:00",
             "object": {
                 "@id": "./"
             },
             "agent": {
                 "@id": "https://orcid.org/0000-0002-1825-0097"
             },
-            "actionStatus": "http://schema.org/PotentialActionStatus"
+            "actionStatus": "http://schema.org/CompletedActionStatus"
         },
         {
             "@id": "#bagit-ce785c0b-c988-4043-8cbd-1489dcebc14f",
