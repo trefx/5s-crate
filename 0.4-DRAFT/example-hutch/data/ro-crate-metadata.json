@@ -29,10 +29,10 @@
                     "@id": "hutch_cwl.wfex.stage"
                 },
                 {
-                    "@id": "results/"
+                    "@id": "outputs/"
                 },
                 {
-                    "@id": "results/outputs/_1683122029/output.json"
+                    "@id": "outputs/outputs/_1683122029/output.json"
                 }
             ],
             "mainEntity": {
@@ -90,14 +90,14 @@
                 "@id": "https://workflowhub.eu/workflows/471/ro_crate?version=1"
             },
             "sameAs": {
-                "@id": "results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
+                "@id": "outputs/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl"
             }
         },
         {
-            "@id": "results/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl",
+            "@id": "outputs/b5b59d4f-9797-5179-a131-e7089e943988/workflows/sec-hutch.cwl",
             "@type": "File",
             "isPartOf": {
-                "@id": "results/"
+                "@id": "outputs/"
             }
         },
         {
@@ -143,17 +143,17 @@
             ],
             "result": [
                 {
-                    "@id": "results/outputs/_1683122029/output.json"
+                    "@id": "outputs/outputs/_1683122029/output.json"
                 }
             ],
             "sameAs": {
-                "@id": "results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9"
+                "@id": "outputs/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9"
             }
         },
         {
-            "@id": "results/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9",
+            "@id": "outputs/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9",
             "@type": "CreateAction",
-            "subjectOf": {"@id": "results/"}
+            "subjectOf": {"@id": "outputs/"}
         },
         {
             "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de",
@@ -277,7 +277,7 @@
             "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
         },
         {
-            "@id": "results/outputs/_1683122029/output.json",
+            "@id": "outputs/outputs/_1683122029/output.json",
             "@type": "File",
             "encodingFormat": "application/json",
             "exampleOfWork": {
@@ -285,7 +285,7 @@
             }
         },
         {
-            "@id": "results/",
+            "@id": "outputs/",
             "@type": "Dataset",
             "name": "Workflow Run Results",
             "about": [

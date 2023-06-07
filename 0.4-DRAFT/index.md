@@ -571,8 +571,8 @@ The states of the Trusted Workflow Run Crate is indicated by the `actionStatus` 
     {"@id": "input1.txt"}
   ],
   "result": [
-    { "@id": "result/matches.txt"}
-    { "@id": "result/stats.txt"}
+    { "@id": "outputs/matches.txt"}
+    { "@id": "outputs/stats.txt"}
   ]
 }
 ```
