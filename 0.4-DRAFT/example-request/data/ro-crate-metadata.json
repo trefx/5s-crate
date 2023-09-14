@@ -38,7 +38,7 @@
         {
             "@id": "https://w3id.org/5s-crate/0.4-DRAFT",
             "@type": "Profile",
-            "name": "Trusted Workflow Run Crate profile"
+            "name": "Five Safes RO-Crate profile"
         },
         {
             "@id": "https://workflowhub.eu/workflows/289?version=1",

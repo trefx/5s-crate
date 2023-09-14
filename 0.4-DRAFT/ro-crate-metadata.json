@@ -20,7 +20,7 @@
                 "Dataset",
                 "Profile"
             ],
-            "name": "Trusted Workflow Run Crate profile",
+            "name": "Five Safes RO-Crate profile",
             "cite-as": "https://w3id.org/5s-crate/0.4-DRAFT",
             "version": "0.4-DRAFT",
             "datePublished": "2023-05-15T10:32:00Z",
@@ -137,7 +137,7 @@
         {
             "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/index.html",
             "@type": "CreativeWork",
-            "name": "Trusted Workflow Run Crate profile (specification)"
+            "name": "Five Safes RO-Crate profile (specification)"
         },
         {
             "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/",

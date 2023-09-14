@@ -67,7 +67,7 @@
         {
             "@id": "https://w3id.org/5s-crate/0.4-DRAFT",
             "@type": "Profile",
-            "name": "Trusted Workflow Run Crate profile"
+            "name": "Five Safes RO-Crate profile"
         },
         {
             "@id": "https://spdx.org/licenses/CC-BY-4.0",
@@ -229,7 +229,7 @@
             "additionalType": {
                 "@id": "https://w3id.org/shp#ValidationCheck"
             },
-            "name": "Validation against Trusted Workflow Run Crate profile: approved",
+            "name": "Validation against Five Safes RO-Crate profile: approved",
             "startTime": "2023-04-18T12:11:46+01:00",
             "endTime": "2023-04-18T12:11:49+01:00",
             "object": {

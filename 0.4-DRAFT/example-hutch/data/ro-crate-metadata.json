@@ -71,7 +71,7 @@
         {
             "@id": "https://w3id.org/5s-crate/0.4-DRAFT",
             "@type": "Profile",
-            "name": "Trusted Workflow Run Crate profile"
+            "name": "Five Safes RO-Crate profile"
         },
         {
             "@id": "https://spdx.org/licenses/MIT",
@@ -336,7 +336,7 @@
             "additionalType": {
                 "@id": "https://w3id.org/shp#ValidationCheck"
             },
-            "name": "Validation against Trusted Workflow Run Crate profile: pending",
+            "name": "Validation against Five Safes RO-Crate profile: pending",
             "object": {
                 "@id": "./"
             },
