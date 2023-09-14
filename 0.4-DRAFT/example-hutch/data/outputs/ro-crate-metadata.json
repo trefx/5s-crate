@@ -13,13 +13,13 @@
             "@type": "Dataset",
             "conformsTo": [
                 {
-                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                    "@id": "https://w3id.org/ro/wfrun/process/0.2"
                 },
                 {
-                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.2"
                 },
                 {
-                    "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+                    "@id": "https://w3id.org/ro/wfrun/provenance/0.2"
                 },
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
@@ -66,22 +66,22 @@
             ]
         },
         {
-            "@id": "https://w3id.org/ro/wfrun/process/0.1",
+            "@id": "https://w3id.org/ro/wfrun/process/0.2",
             "@type": "CreativeWork",
             "name": "ProcessRun Crate",
-            "version": "0.1"
+            "version": "0.2"
         },
         {
-            "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+            "@id": "https://w3id.org/ro/wfrun/workflow/0.2",
             "@type": "CreativeWork",
             "name": "Workflow Run Crate",
-            "version": "0.1"
+            "version": "0.2"
         },
         {
-            "@id": "https://w3id.org/ro/wfrun/provenance/0.1",
+            "@id": "https://w3id.org/ro/wfrun/provenance/0.2",
             "@type": "CreativeWork",
             "name": "Provenance Run Crate",
-            "version": "0.1"
+            "version": "0.2"
         },
         {
             "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",

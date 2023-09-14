@@ -335,7 +335,7 @@ Each input MUST have a corresponding data entity, which SHOULD have a `exampleOf
 
 If the workflow has successfully executed, that is the `CreateAction` has `actionStatus` set to `http://schema.org/CompletedActionStatus`, the output data entities SHOULD be referenced from the `results` array.
 
-Output entities MUST be described as in the [Workflow Run Crate profile](https://w3id.org/ro/wfrun/workflow/0.1), with type SHOULD be either `File`, `Dataset`, `Collection`, `DigitalDocument` or `PropertyValue`.
+Output entities MUST be described as in the [Workflow Run Crate profile](https://w3id.org/ro/wfrun/workflow/0.2), with type SHOULD be either `File`, `Dataset`, `Collection`, `DigitalDocument` or `PropertyValue`.
 
 Implementations MAY include the outputs within the Crate BagIt archive, in which case it is RECOMMENDED to use the folder `outputs/` to avoid conflict with other files in the crate.
 
@@ -542,7 +542,7 @@ Example:
 
 In this phase, the approved workflow execution is performed within the TRE. The `CreateAction` of the workflow execution will its `actionStatus` and acquire a `startTime` and `endTime`.
 
-When the execution is in `http://schema.org/CompletedActionStatus` or `http://schema.org/FailedActionStatus`, the crate SHOULD also follow the [Provenance Crate](https://w3id.org/ro/wfrun/provenance/0.1) profile, e.g. the workflow outputs data entities will be listed as `result`.
+When the execution is in `http://schema.org/CompletedActionStatus` or `http://schema.org/FailedActionStatus`, the crate SHOULD also follow the [Provenance Crate](https://w3id.org/ro/wfrun/provenance/0.2) profile, e.g. the workflow outputs data entities will be listed as `result`.
 
 
 ##### Execution states
@@ -724,7 +724,7 @@ Implementations MAY also provide direct public access to the RO-Crate metadata f
 
 [FIPS 180-4] Secure Hash Standard (SHS) [https://doi.org/10.6028/NIST.FIPS.180-4](https://doi.org/10.6028/NIST.FIPS.180-4) 
 
-[Provenance Run Crate] Provenance Run Crate profile [https://w3id.org/ro/wfrun/provenance/0.1](https://w3id.org/ro/wfrun/provenance/0.1) 
+[Provenance Run Crate] Provenance Run Crate profile [https://w3id.org/ro/wfrun/provenance/0.2](https://w3id.org/ro/wfrun/provenance/0.2) 
 
 [RFC2119] Key words for use in RFCs to Indicate Requirement Levels [https://doi.org/10.17487/RFC2119](https://doi.org/10.17487/RFC2119) 
 
@@ -752,6 +752,6 @@ Implementations MAY also provide direct public access to the RO-Crate metadata f
 
 [Workflow RO-Crate] Workflow RO-Crate profile [https://w3id.org/workflowhub/workflow-ro-crate/1.0](https://w3id.org/workflowhub/workflow-ro-crate/1.0) 
 
-[Workflow Run Crate] Workflow Run Crate profile [https://w3id.org/ro/wfrun/workflow/0.1](https://w3id.org/ro/wfrun/workflow/0.1) 
+[Workflow Run Crate] Workflow Run Crate profile [https://w3id.org/ro/wfrun/workflow/0.2](https://w3id.org/ro/wfrun/workflow/0.2) 
 
 [ZIP] APPNOTE.TXT - .ZIP File Format Specification 6.3.8 [http://www.pkware.com/documents/casestudies/APPNOTE.TXT](http://www.pkware.com/documents/casestudies/APPNOTE.TXT) 
