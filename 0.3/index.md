@@ -11,6 +11,8 @@ Authors:
 
 * Permalink: <https://w3id.org/trusted-wfrun-crate/0.3>
 * Version: 0.3
+* Release notes: <https://github.com/trefx/5s-crate/releases/tag/0.3.0>
+* Published: 2023-05-16
 * Status: TRE-FX Candidate Recommendation 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
