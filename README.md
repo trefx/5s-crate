@@ -6,12 +6,13 @@ The profile is being developed by the [TRE-FX](https://trefx.uk/) project.
 
 Current release:
 * [Trusted Workflow Run Crate profile 0.3](https://w3id.org/trusted-wfrun-crate/0.3)
+(will be renamed to _Five Safes RO-Crate_)
 
 Next draft in progress:
 * [Five Safes RO-Crate 0.4-DRAFT](0.4-DRAFT/)
 
 Archived drafts:
-* [Five Safes Crate 0.2-DRAFT](0.2-DRAFT/) (now renamed to _Trusted Workflow Run Crate_)
+* [Five Safes Crate 0.2-DRAFT](0.2-DRAFT/) 
 * [Five Safes Crate 0.1-DRAFT](0.1-DRAFT/)
 
 
