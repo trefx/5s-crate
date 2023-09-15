@@ -1,0 +1,800 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://about.workflowhub.eu/Workflow-RO-Crate/"
+        }
+      ]
+    },
+    {
+      "@id": "ro-crate-preview.html",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "mainEntity": {
+        "@id": "workflow.cwl"
+      },
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-8291-8071"
+        },
+        {
+          "@id": "https://orcid.org/0000-0003-0513-0288"
+        }
+      ],
+      "license": "Apache-2.0",
+      "identifier": "https://doi.org/10.48546/workflowhub.workflow.289.1",
+      "url": "https://workflowhub.eu/workflows/289/ro_crate?version=1",
+      "name": "Research Object Crate for CWL Protein MD Setup tutorial with mutations",
+      "description": "# Mutations Protein MD Setup tutorial using BioExcel Building Blocks (biobb)\r\n\r\n**Based on the official [GROMACS tutorial](http://www.mdtutorials.com/gmx/lysozyme/index.html).**\r\n\r\n***\r\n\r\nThis tutorial aims to illustrate the process of **setting up a simulation** system containing a **protein**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **Lysozyme** protein (PDB code 1AKI).\r\n\r\n***\r\n\r\n## Copyright &amp; Licensing\r\nThis software has been developed in the [MMB group](http://mmb.irbbarcelona.org) at the [BSC](http://www.bsc.es/) &amp; [IRB](https://www.irbbarcelona.org/) for the [European BioExcel](http://bioexcel.eu/), funded by the European Commission (EU H2020 [823830](http://cordis.europa.eu/projects/823830), EU H2020 [675728](http://cordis.europa.eu/projects/675728)).\r\n\r\n* (c) 2015-2022 [Barcelona Supercomputing Center](https://www.bsc.es/)\r\n* (c) 2015-2022 [Institute for Research in Biomedicine](https://www.irbbarcelona.org/)\r\n\r\nLicensed under the\r\n[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), see the file LICENSE for details.\r\n\r\n![](https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png \"Bioexcel\")",
+      "isBasedOn": "https://github.com/bioexcel/biobb_workflows/tree/master/biobb_wf_md_setup_mutations/cwl",
+      "sdDatePublished": "2023-05-15 16:40:27 +0100",
+      "creativeWorkStatus": "Stable",
+      "hasPart": [
+        {
+          "@id": "workflow.cwl"
+        },
+        {
+          "@id": "workflow-289-70fda2af9a458dd693bce5aba2f0dd8e1a4ffd7c-diagram.svg"
+        },
+        {
+          "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow_list.cwl"
+        },
+        {
+          "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow_gather.cwl"
+        },
+        {
+          "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/README.md"
+        },
+        {
+          "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow_input_descriptions.yml"
+        },
+        {
+          "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/ions.pdb"
+        },
+        {
+          "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/structure.pdb"
+        }
+      ]
+    },
+    {
+      "@id": "workflow.cwl",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow"
+      ],
+      "url": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow.cwl",
+      "contentSize": 16985,
+      "programmingLanguage": {
+        "@id": "#cwl"
+      },
+      "image": {
+        "@id": "workflow-289-70fda2af9a458dd693bce5aba2f0dd8e1a4ffd7c-diagram.svg"
+      },
+      "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE/",
+      "description": "# Mutations Protein MD Setup tutorial using BioExcel Building Blocks (biobb)\r\n\r\n**Based on the official [GROMACS tutorial](http://www.mdtutorials.com/gmx/lysozyme/index.html).**\r\n\r\n***\r\n\r\nThis tutorial aims to illustrate the process of **setting up a simulation** system containing a **protein**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **Lysozyme** protein (PDB code 1AKI).\r\n\r\n***\r\n\r\n## Copyright &amp; Licensing\r\nThis software has been developed in the [MMB group](http://mmb.irbbarcelona.org) at the [BSC](http://www.bsc.es/) &amp; [IRB](https://www.irbbarcelona.org/) for the [European BioExcel](http://bioexcel.eu/), funded by the European Commission (EU H2020 [823830](http://cordis.europa.eu/projects/823830), EU H2020 [675728](http://cordis.europa.eu/projects/675728)).\r\n\r\n* (c) 2015-2022 [Barcelona Supercomputing Center](https://www.bsc.es/)\r\n* (c) 2015-2022 [Institute for Research in Biomedicine](https://www.irbbarcelona.org/)\r\n\r\nLicensed under the\r\n[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), see the file LICENSE for details.\r\n\r\n![](https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png \"Bioexcel\")",
+      "name": "CWL Protein MD Setup tutorial with mutations",
+      "keywords": "",
+      "version": 1,
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "creator": [
+        {
+          "@id": "https://workflowhub.eu/people/57"
+        },
+        {
+          "@id": "https://workflowhub.eu/people/47"
+        }
+      ],
+      "producer": {
+        "@id": "https://workflowhub.eu/projects/11"
+      },
+      "dateCreated": "2022-03-17T13:22:24Z",
+      "dateModified": "2023-01-16T13:58:33Z",
+      "isPartOf": [
+
+      ],
+      "input": [
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-mutations_list"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step0_reduce_remove_hydrogens_input_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step0_reduce_remove_hydrogens_output_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step1_extract_molecule_output_molecule_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step00_cat_pdb_input_structure2"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step00_cat_pdb_output_structure_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step2_fix_side_chain_output_pdb_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step3_mutate_output_pdb_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step4_pdb2gmx_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step4_pdb2gmx_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step4_pdb2gmx_output_top_zip_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step5_editconf_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step5_editconf_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step6_solvate_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step6_solvate_output_top_zip_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step7_grompp_genion_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step7_grompp_genion_output_tpr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step8_genion_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step8_genion_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step8_genion_output_top_zip_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step9_grompp_min_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step9_grompp_min_output_tpr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_trr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_edr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_log_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step100_make_ndx_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step100_make_ndx_output_ndx_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step11_grompp_nvt_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step11_grompp_nvt_output_tpr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_trr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_edr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_log_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_cpt_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step13_grompp_npt_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step13_grompp_npt_output_tpr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_trr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_edr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_log_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_cpt_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step15_grompp_md_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step15_grompp_md_output_tpr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_trr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_gro_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_edr_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_log_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_cpt_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step17_gmx_image1_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step17_gmx_image1_output_traj_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step18_gmx_image2_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step18_gmx_image2_output_traj_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step19_gmx_trjconv_str_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step19_gmx_trjconv_str_output_str_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step20_gmx_energy_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step20_gmx_energy_output_xvg_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step21_gmx_rgyr_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step21_gmx_rgyr_output_xvg_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step22_rmsd_first_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step22_rmsd_first_output_xvg_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step23_rmsd_exp_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step23_rmsd_exp_output_xvg_path"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step24_grompp_md_config"
+        },
+        {
+          "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step24_grompp_md_output_tpr_path"
+        }
+      ],
+      "output": {
+        "@id": "#cwl_protein_md_setup_tutorial_with_mutations-outputs-top_dir"
+      },
+      "sdPublisher": {
+        "@id": "https://about.workflowhub.eu/"
+      }
+    },
+    {
+      "@id": "workflow-289-70fda2af9a458dd693bce5aba2f0dd8e1a4ffd7c-diagram.svg",
+      "@type": [
+        "File",
+        "ImageObject",
+        "WorkflowSketch"
+      ],
+      "contentSize": 74473
+    },
+    {
+      "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow_list.cwl",
+      "@type": "File"
+    },
+    {
+      "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow_gather.cwl",
+      "@type": "File"
+    },
+    {
+      "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/README.md",
+      "@type": "File"
+    },
+    {
+      "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/workflow_input_descriptions.yml",
+      "@type": "File"
+    },
+    {
+      "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/ions.pdb",
+      "@type": "File"
+    },
+    {
+      "@id": "https://github.com/bioexcel/biobb_workflows/blob/master/biobb_wf_md_setup_mutations/cwl/structure.pdb",
+      "@type": "File"
+    },
+    {
+      "@id": "https://about.workflowhub.eu/Workflow-RO-Crate/",
+      "@type": "CreativeWork",
+      "name": "Workflow RO-Crate Profile",
+      "version": "0.2.0"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-8291-8071",
+      "@type": "Person",
+      "name": "Adam Hospital",
+      "identifier": "https://orcid.org/0000-0002-8291-8071"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-0513-0288",
+      "@type": "Person",
+      "name": "Genís Bayarri",
+      "identifier": "https://orcid.org/0000-0003-0513-0288"
+    },
+    {
+      "@id": "https://workflowhub.eu/people/57",
+      "@type": "Person",
+      "name": "Adam Hospital"
+    },
+    {
+      "@id": "https://workflowhub.eu/people/47",
+      "@type": "Person",
+      "name": "Genís Bayarri"
+    },
+    {
+      "@id": "https://workflowhub.eu/projects/11",
+      "@type": [
+        "Project",
+        "Organization"
+      ],
+      "name": "BioBB Building Blocks"
+    },
+    {
+      "@id": "#cwl",
+      "@type": "ComputerLanguage",
+      "name": "Common Workflow Language",
+      "alternateName": "CWL",
+      "identifier": {
+        "@id": "https://w3id.org/cwl/v1.0/"
+      },
+      "url": {
+        "@id": "https://www.commonwl.org/"
+      }
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-mutations_list",
+      "@type": "FormalParameter",
+      "name": "mutations_list",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step0_reduce_remove_hydrogens_input_path",
+      "@type": "FormalParameter",
+      "name": "step0_reduce_remove_hydrogens_input_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step0_reduce_remove_hydrogens_output_path",
+      "@type": "FormalParameter",
+      "name": "step0_reduce_remove_hydrogens_output_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step1_extract_molecule_output_molecule_path",
+      "@type": "FormalParameter",
+      "name": "step1_extract_molecule_output_molecule_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step00_cat_pdb_input_structure2",
+      "@type": "FormalParameter",
+      "name": "step00_cat_pdb_input_structure2",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step00_cat_pdb_output_structure_path",
+      "@type": "FormalParameter",
+      "name": "step00_cat_pdb_output_structure_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step2_fix_side_chain_output_pdb_path",
+      "@type": "FormalParameter",
+      "name": "step2_fix_side_chain_output_pdb_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step3_mutate_output_pdb_path",
+      "@type": "FormalParameter",
+      "name": "step3_mutate_output_pdb_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step4_pdb2gmx_config",
+      "@type": "FormalParameter",
+      "name": "step4_pdb2gmx_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step4_pdb2gmx_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step4_pdb2gmx_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step4_pdb2gmx_output_top_zip_path",
+      "@type": "FormalParameter",
+      "name": "step4_pdb2gmx_output_top_zip_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step5_editconf_config",
+      "@type": "FormalParameter",
+      "name": "step5_editconf_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step5_editconf_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step5_editconf_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step6_solvate_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step6_solvate_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step6_solvate_output_top_zip_path",
+      "@type": "FormalParameter",
+      "name": "step6_solvate_output_top_zip_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step7_grompp_genion_config",
+      "@type": "FormalParameter",
+      "name": "step7_grompp_genion_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step7_grompp_genion_output_tpr_path",
+      "@type": "FormalParameter",
+      "name": "step7_grompp_genion_output_tpr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step8_genion_config",
+      "@type": "FormalParameter",
+      "name": "step8_genion_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step8_genion_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step8_genion_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step8_genion_output_top_zip_path",
+      "@type": "FormalParameter",
+      "name": "step8_genion_output_top_zip_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step9_grompp_min_config",
+      "@type": "FormalParameter",
+      "name": "step9_grompp_min_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step9_grompp_min_output_tpr_path",
+      "@type": "FormalParameter",
+      "name": "step9_grompp_min_output_tpr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_trr_path",
+      "@type": "FormalParameter",
+      "name": "step10_mdrun_min_output_trr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step10_mdrun_min_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_edr_path",
+      "@type": "FormalParameter",
+      "name": "step10_mdrun_min_output_edr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step10_mdrun_min_output_log_path",
+      "@type": "FormalParameter",
+      "name": "step10_mdrun_min_output_log_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step100_make_ndx_config",
+      "@type": "FormalParameter",
+      "name": "step100_make_ndx_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step100_make_ndx_output_ndx_path",
+      "@type": "FormalParameter",
+      "name": "step100_make_ndx_output_ndx_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step11_grompp_nvt_config",
+      "@type": "FormalParameter",
+      "name": "step11_grompp_nvt_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step11_grompp_nvt_output_tpr_path",
+      "@type": "FormalParameter",
+      "name": "step11_grompp_nvt_output_tpr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_trr_path",
+      "@type": "FormalParameter",
+      "name": "step12_mdrun_nvt_output_trr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step12_mdrun_nvt_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_edr_path",
+      "@type": "FormalParameter",
+      "name": "step12_mdrun_nvt_output_edr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_log_path",
+      "@type": "FormalParameter",
+      "name": "step12_mdrun_nvt_output_log_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step12_mdrun_nvt_output_cpt_path",
+      "@type": "FormalParameter",
+      "name": "step12_mdrun_nvt_output_cpt_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step13_grompp_npt_config",
+      "@type": "FormalParameter",
+      "name": "step13_grompp_npt_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step13_grompp_npt_output_tpr_path",
+      "@type": "FormalParameter",
+      "name": "step13_grompp_npt_output_tpr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_trr_path",
+      "@type": "FormalParameter",
+      "name": "step14_mdrun_npt_output_trr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step14_mdrun_npt_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_edr_path",
+      "@type": "FormalParameter",
+      "name": "step14_mdrun_npt_output_edr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_log_path",
+      "@type": "FormalParameter",
+      "name": "step14_mdrun_npt_output_log_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step14_mdrun_npt_output_cpt_path",
+      "@type": "FormalParameter",
+      "name": "step14_mdrun_npt_output_cpt_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step15_grompp_md_config",
+      "@type": "FormalParameter",
+      "name": "step15_grompp_md_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step15_grompp_md_output_tpr_path",
+      "@type": "FormalParameter",
+      "name": "step15_grompp_md_output_tpr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_trr_path",
+      "@type": "FormalParameter",
+      "name": "step16_mdrun_md_output_trr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_gro_path",
+      "@type": "FormalParameter",
+      "name": "step16_mdrun_md_output_gro_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_edr_path",
+      "@type": "FormalParameter",
+      "name": "step16_mdrun_md_output_edr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_log_path",
+      "@type": "FormalParameter",
+      "name": "step16_mdrun_md_output_log_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step16_mdrun_md_output_cpt_path",
+      "@type": "FormalParameter",
+      "name": "step16_mdrun_md_output_cpt_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step17_gmx_image1_config",
+      "@type": "FormalParameter",
+      "name": "step17_gmx_image1_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step17_gmx_image1_output_traj_path",
+      "@type": "FormalParameter",
+      "name": "step17_gmx_image1_output_traj_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step18_gmx_image2_config",
+      "@type": "FormalParameter",
+      "name": "step18_gmx_image2_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step18_gmx_image2_output_traj_path",
+      "@type": "FormalParameter",
+      "name": "step18_gmx_image2_output_traj_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step19_gmx_trjconv_str_config",
+      "@type": "FormalParameter",
+      "name": "step19_gmx_trjconv_str_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step19_gmx_trjconv_str_output_str_path",
+      "@type": "FormalParameter",
+      "name": "step19_gmx_trjconv_str_output_str_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step20_gmx_energy_config",
+      "@type": "FormalParameter",
+      "name": "step20_gmx_energy_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step20_gmx_energy_output_xvg_path",
+      "@type": "FormalParameter",
+      "name": "step20_gmx_energy_output_xvg_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step21_gmx_rgyr_config",
+      "@type": "FormalParameter",
+      "name": "step21_gmx_rgyr_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step21_gmx_rgyr_output_xvg_path",
+      "@type": "FormalParameter",
+      "name": "step21_gmx_rgyr_output_xvg_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step22_rmsd_first_config",
+      "@type": "FormalParameter",
+      "name": "step22_rmsd_first_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step22_rmsd_first_output_xvg_path",
+      "@type": "FormalParameter",
+      "name": "step22_rmsd_first_output_xvg_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step23_rmsd_exp_config",
+      "@type": "FormalParameter",
+      "name": "step23_rmsd_exp_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step23_rmsd_exp_output_xvg_path",
+      "@type": "FormalParameter",
+      "name": "step23_rmsd_exp_output_xvg_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step24_grompp_md_config",
+      "@type": "FormalParameter",
+      "name": "step24_grompp_md_config",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-inputs-step24_grompp_md_output_tpr_path",
+      "@type": "FormalParameter",
+      "name": "step24_grompp_md_output_tpr_path",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "#cwl_protein_md_setup_tutorial_with_mutations-outputs-top_dir",
+      "@type": "FormalParameter",
+      "name": "Collected Simulation Data",
+      "dct:conformsTo": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE/"
+    },
+    {
+      "@id": "https://about.workflowhub.eu/",
+      "@type": "Organization",
+      "name": "WorkflowHub",
+      "url": "https://about.workflowhub.eu/"
+    }
+  ]
+}

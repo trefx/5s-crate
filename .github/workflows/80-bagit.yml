@@ -22,28 +22,28 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create BagIt manifest for Example Request
-        working-directory: 0.4-DRAFT/example-request 
+        working-directory: 0.4/example-request 
         run: |
           rm -f manifest*txt tagmanifest*txt
           sha512sum `find data -type f` > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest-sha512.txt
 
       - name: Create BagIt manifest for Example Result
-        working-directory: 0.4-DRAFT/example-result 
+        working-directory: 0.4/example-result 
         run: |
           rm -f manifest*txt tagmanifest*txt
           sha512sum `find data -type f` > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest-sha512.txt
 
       - name: Create BagIt manifest for Example Hutch
-        working-directory: 0.4-DRAFT/example-hutch 
+        working-directory: 0.4/example-hutch 
         run: |
           rm -f manifest*txt tagmanifest*txt
           sha512sum `find data -type f` > manifest-sha512.txt
           sha512sum bag-info.txt bagit.txt manifest-sha512.txt > tagmanifest-sha512.txt  
 
       - name: Archive BagIts as ZIP
-        working-directory: 0.4-DRAFT/
+        working-directory: 0.4/
         run: |
           rm -f *.zip
           zip -r example-request.bagit.zip example-request/
@@ -55,12 +55,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
         with:
           files: |
-            0.4-DRAFT/example-request/manifest-sha512.txt
-            0.4-DRAFT/example-request/tagmanifest-sha512.txt
-            0.4-DRAFT/example-result/manifest-sha512.txt
-            0.4-DRAFT/example-result/tagmanifest-sha512.txt
-            0.4-DRAFT/example-request.bagit.zip
-            0.4-DRAFT/example-result.bagit.zip
+            0.4/example-request/manifest-sha512.txt
+            0.4/example-request/tagmanifest-sha512.txt
+            0.4/example-result/manifest-sha512.txt
+            0.4/example-result/tagmanifest-sha512.txt
+            0.4/example-request.bagit.zip
+            0.4/example-result.bagit.zip
           commit-message: |
             Updated BagIt manifests
             
