@@ -9,14 +9,16 @@ Authors:
 1. Stian Soiland-Reyes, The University of Manchester <https://orcid.org/0000-0001-9842-9718>
 2. Stuart Wheater <https://orcid.org/0009-0003-2419-1964>
 
-* Version: 0.4-DRAFT
+* Permalink: <https://w3id.org/5s-crate/0.5-DRAFT> (TODO)
+* Version: 0.5-DRAFT
+* Release notes: 
+* Published: 
 * Status: TRE-FX draft in development 
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
-* Permalink: <https://w3id.org/5s-crate/0.4-DRAFT> (TODO)
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
 * Example crate "Request": [example-request.bagit.zip](example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
 * Example crate "Result": [example-result.bagit.zip](example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
-* Example crate "Hutch": [GitHub LFS](https://github.com/trefx/5s-crate/tree/main/0.4-DRAFT/example-hutch) [ro-crate-metadata.json](example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](example-hutch/data/ro-crate-preview.html) 
+* Example crate "Hutch": [GitHub LFS](https://github.com/trefx/5s-crate/tree/main/0.5-DRAFT/example-hutch) [ro-crate-metadata.json](example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](example-hutch/data/ro-crate-preview.html) 
 
 This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
@@ -111,7 +113,7 @@ Crates conforming to this profile specification SHOULD indicate this on the Root
 {
   "@id": "./",
   "@type": "Dataset",
-  "conformsTo": {"@id": "https://w3id.org/5s-crate/0.4-DRAFT"},
+  "conformsTo": {"@id": "https://w3id.org/5s-crate/0.5-DRAFT"},
   "hasPart": [
   ],
   "mainEntity": {"@id": "https://workflowhub.eu/workflows/289?version=1"},
@@ -120,7 +122,7 @@ Crates conforming to this profile specification SHOULD indicate this on the Root
     {"@id": "#project-be6ffb55-4f5a-4c14-b60e-47e0951090c70"}
 },
 {
-  "@id": "https://w3id.org/5s-crate/0.4-DRAFT",
+  "@id": "https://w3id.org/5s-crate/0.5-DRAFT",
   "@type": "Profile",
   "name": "Five Safes RO-Crate profile"
 }
@@ -466,7 +468,7 @@ Example:
   "startTime": "2023-04-18T12:11:46+01:00",
   "endTime": "2023-04-18T12:11:49+01:00",
   "object": {"@id": "./"},
-  "instrument": {"@id": "https://w3id.org/5s-crate/0.4-DRAFT"},
+  "instrument": {"@id": "https://w3id.org/5s-crate/0.5-DRAFT"},
   "agent": {"@id": "#validator-a4a66c63-2fe0-4c57-830d-268a40718313"},
   "actionStatus": "http://schema.org/CompletedActionStatus"
 }
@@ -613,7 +615,7 @@ The _[licence](https://www.researchobject.org/ro-crate/1.1/contextual-entities.h
 {
   "@id": "./",
   "@type": "Dataset",
-  "conformsTo": {"@id": "https://w3id.org/5s-crate/0.4-DRAFT"},
+  "conformsTo": {"@id": "https://w3id.org/5s-crate/0.5-DRAFT"},
   "datePublished": "2023-04-29T11:01:04+01:00",
   "publisher": {"@id": "https://tre72.example.com/"},
   "licence": {"@id": "http://spdx.org/licenses/CC-BY-4.0"},

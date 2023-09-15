@@ -15,7 +15,7 @@
             "@id": "./",
             "@type": "Dataset",
             "conformsTo": {
-                "@id": "https://w3id.org/5s-crate/0.4-DRAFT"
+                "@id": "https://w3id.org/5s-crate/0.5-DRAFT"
             },
             "hasPart": [
                 {
@@ -36,7 +36,7 @@
             }
         },
         {
-            "@id": "https://w3id.org/5s-crate/0.4-DRAFT",
+            "@id": "https://w3id.org/5s-crate/0.5-DRAFT",
             "@type": "Profile",
             "name": "Five Safes RO-Crate profile"
         },

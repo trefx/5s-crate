@@ -5,7 +5,7 @@
             "@type": "CreativeWork",
             "@id": "ro-crate-metadata.json",
             "about": {
-                "@id": "https://w3id.org/5s-crate/0.4-DRAFT"
+                "@id": "https://w3id.org/5s-crate/0.5-DRAFT"
             },
             "licence": {
                 "@id": "http://spdx.org/licenses/CC0-1.0"
@@ -15,14 +15,14 @@
             }
         },
         {
-            "@id": "https://w3id.org/5s-crate/0.4-DRAFT",
+            "@id": "https://w3id.org/5s-crate/0.5-DRAFT",
             "@type": [
                 "Dataset",
                 "Profile"
             ],
             "name": "Five Safes RO-Crate profile",
-            "cite-as": "https://w3id.org/5s-crate/0.4-DRAFT",
-            "version": "0.4-DRAFT",
+            "cite-as": "https://w3id.org/5s-crate/0.5-DRAFT",
+            "version": "0.5-DRAFT",
             "datePublished": "2023-05-15T10:32:00Z",
             "licence": {
                 "@id": "http://spdx.org/licenses/MIT"
@@ -33,19 +33,19 @@
             "copyrightYear": 2023,
             "hasPart": [
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/index.html"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/index.html"
                 },
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request.bagit.zip"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request.bagit.zip"
                 },
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/"
                 },
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result.bagit.zip"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result.bagit.zip"
                 },
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/"
                 },
                 {
                     "@id": "http://schema.org/PotentialActionStatus"
@@ -135,50 +135,50 @@
             ]
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/index.html",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/index.html",
             "@type": "CreativeWork",
             "name": "Five Safes RO-Crate profile (specification)"
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/",
             "@type": "Dataset",
             "name": "Example Crate in Request state",
             "conformsTo": {
-                "@id": "https://w3id.org/5s-crate/0.4-DRAFT"
+                "@id": "https://w3id.org/5s-crate/0.5-DRAFT"
             },
             "subjectOf": [
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/ro-crate-metadata.json"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/ro-crate-metadata.json"
                 },
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/ro-crate-preview.html"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/ro-crate-preview.html"
                 }
             ],
             "distribution": {
-                "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request.bagit.zip"
+                "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request.bagit.zip"
             }            
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/",
             "@type": "Dataset",
             "name": "Example Crate in Request state",
             "conformsTo": {
-                "@id": "https://w3id.org/5s-crate/0.4-DRAFT"
+                "@id": "https://w3id.org/5s-crate/0.5-DRAFT"
             },
             "subjectOf": [
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/ro-crate-metadata.json"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/ro-crate-metadata.json"
                 },
                 {
-                    "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/ro-crate-preview.html"
+                    "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/ro-crate-preview.html"
                 }
             ],
             "distribution": {
-                "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result.bagit.zip"
+                "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result.bagit.zip"
             }
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result.bagit.zip",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result.bagit.zip",
             "@type": "DataDownload",
             "name": "example-result.bagit.zip",
             "description": "Example Result following the 5s-crate profile, archived as BagIt ZIP",
@@ -188,7 +188,7 @@
             }
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request.bagit.zip",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request.bagit.zip",
             "@type": "DataDownload",
             "name": "example-request.bagit.zip",
             "description": "Example Request following the 5s-crate profile, archived as BagIt ZIP",
@@ -198,22 +198,22 @@
             }
         },        
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/ro-crate-metadata.json",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/ro-crate-metadata.json",
             "@type": "CreativeWork",
             "encodingFormat": "application/ld+json"
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/ro-crate-preview.html",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/ro-crate-preview.html",
             "@type": "CreativeWork",
             "encodingFormat": "text/html"
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/ro-crate-metadata.json",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/ro-crate-metadata.json",
             "@type": "CreativeWork",
             "encodingFormat": "application/ld+json"
         },
         {
-            "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/ro-crate-preview.html",
+            "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/ro-crate-preview.html",
             "@type": "CreativeWork",
             "encodingFormat": "text/html"
         },
@@ -321,7 +321,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/specification"
             },
             "hasArtifact": {
-                "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/index.html"
+                "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/index.html"
             }
         },
         {
@@ -332,7 +332,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/example"
             },
             "hasArtifact": {
-                "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-request/data/"
+                "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-request/data/"
             }
         },
         {
@@ -343,7 +343,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/example"
             },
             "hasArtifact": {
-                "@id": "https://trefx.uk/5s-crate/0.4-DRAFT/example-result/data/"
+                "@id": "https://trefx.uk/5s-crate/0.5-DRAFT/example-result/data/"
             }
         },
 
