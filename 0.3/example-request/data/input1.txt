@@ -1,3 +1,0 @@
-  A:Gly4Lys
-  A:Leu8Met
-  A:Tyr20Gln
