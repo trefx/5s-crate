@@ -5,13 +5,14 @@ _Five Safes RO-Crate_ <https://w3id.org/5s-crate/> specifies a profile of [RO-Cr
 The profile is being developed by the [TRE-FX](https://trefx.uk/) project.
 
 Current release:
-* [Trusted Workflow Run Crate profile 0.3](https://w3id.org/trusted-wfrun-crate/0.3)
-(will be renamed to _Five Safes RO-Crate_)
+* [Five Safes RO-Crate profile 0.4](https://w3id.org/5s-crate/0.4)
 
 Next draft in progress:
-* [Five Safes RO-Crate 0.4-DRAFT](0.4-DRAFT/)
+* [Five Safes RO-Crate profile 0.4-DRAFT](0.4-DRAFT/)
 
 Archived drafts:
+* [Trusted Workflow Run Crate profile 0.3](https://w3id.org/trusted-wfrun-crate/0.3)
+(now renamed to _Five Safes RO-Crate_)
 * [Five Safes Crate 0.2-DRAFT](0.2-DRAFT/) 
 * [Five Safes Crate 0.1-DRAFT](0.1-DRAFT/)
 
