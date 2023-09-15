@@ -10,15 +10,17 @@ Authors:
 2. Stuart Wheater <https://orcid.org/0009-0003-2419-1964>
 
 * Version: 0.4
-* Status: TRE-FX draft in development 
+* Release notes: <https://github.com/trefx/5s-crate/releases/tag/0.4.0>
+* Published: 2023-09-15
+* Status: TRE-FX Candidate Recommendation
 * Comments and suggestions: <https://github.com/trefx/trefx-crate/issues>
-* Permalink: <https://w3id.org/5s-crate/0.4> (TODO)
+* Permalink: <https://w3id.org/5s-crate/0.4>
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html) 
 * Example crate "Request": [example-request.bagit.zip](example-request.bagit.zip) [ro-crate-metadata.json](example-request/data/ro-crate-metadata.json) [ro-crate-preview.html](example-request/data/ro-crate-preview.html) 
 * Example crate "Result": [example-result.bagit.zip](example-result.bagit.zip) [ro-crate-metadata.json](example-result/data/ro-crate-metadata.json) [ro-crate-preview.html](example-result/data/ro-crate-preview.html) 
 * Example crate "Hutch": [GitHub LFS](https://github.com/trefx/5s-crate/tree/main/0.4/example-hutch) [ro-crate-metadata.json](example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](example-hutch/data/ro-crate-preview.html) 
 
-This document specifies a draft profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
+This document specifies a profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of [TRE-FX implementation](https://trefx.uk/implementation) of workflow execution in a distributed trusted research environment (TRE). 
 
 _The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 [[RFC2119](https://doi.org/10.17487/RFC2119)] [[RFC8174](https://doi.org/10.17487/RFC8174)] when, and only when, they appear in all capitals, as shown here._
 
