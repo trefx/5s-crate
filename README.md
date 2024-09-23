@@ -2,6 +2,8 @@
 
 _Five Safes RO-Crate_ <https://w3id.org/5s-crate/> specifies a profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of workflow execution in a distributed trusted research environment (TRE). 
 
+![Five Safe Crate logo](https://trefx.uk/assets/img/tre-fx-draft-small.png)
+
 The profile is being developed by the [TRE-FX](https://trefx.uk/) project.
 
 ## Cite as
