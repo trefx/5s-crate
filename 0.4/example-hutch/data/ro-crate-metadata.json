@@ -111,7 +111,7 @@
         {
             "@id": "#execute-43a74be3-c175-4fe6-a13d-b9f0dca3c0fc",
             "@type": "CreateAction",
-            "actionStatus": "http://schema.org/CompleteActionStatus",
+            "actionStatus": "http://schema.org/CompletedActionStatus",
             "startTime": "2023-05-03T13:53:49.012349+00:00",
             "endTime": "2023-05-03T13:53:53.715480+00:00",
             "agent": {
@@ -153,7 +153,9 @@
         {
             "@id": "outputs/ro-crate-metadata.json#30494e22-a2fd-4d3c-945b-35f1b458eda9",
             "@type": "CreateAction",
-            "subjectOf": {"@id": "outputs/"}
+            "subjectOf": {
+                "@id": "outputs/"
+            }
         },
         {
             "@id": "#project-065c9577-dd40-4cb2-bbc7-354e34ef37de",
