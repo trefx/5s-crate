@@ -79,30 +79,30 @@ The ZIP archive MUST only contain a single top-level entry for the bag directory
 
 ## Metadata file expectations
 
-The RO-Crate Metadata File MUST conform to [RO-Crate 1.2](https://www.researchobject.org/ro-crate/1.2-DRAFT/) (or later minor version). 
+The RO-Crate Metadata File MUST conform to [RO-Crate 1.2](https://www.researchobject.org/ro-crate/1.2/) (or later minor version). 
 
-For the purpose of this specification, this [Metadata file](https://www.researchobject.org/ro-crate/1.2-DRAFT/structure.html#ro-crate-metadata-file-ro-crate-metadatajson) skeleton is assumed, with all subsequent JSON elements shown added to the `@graph` array:
+For the purpose of this specification, this [Metadata file](https://www.researchobject.org/ro-crate/1.2/structure.html#ro-crate-metadata-file-ro-crate-metadatajson) skeleton is assumed, with all subsequent JSON elements shown added to the `@graph` array:
 
 ```json
-{ "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+{ "@context": "https://w3id.org/ro/crate/1.2/context",
   "@graph": [
 
   ]
 }
 ```
 
-The compliant RO-Crate version MUST be declared in the [metadata file descriptor](https://www.researchobject.org/ro-crate/1.2-DRAFT/root-data-entity.html#ro-crate-metadata-file-descriptor):
+The compliant RO-Crate version MUST be declared in the [metadata file descriptor](https://www.researchobject.org/ro-crate/1.2/root-data-entity.html#ro-crate-metadata-file-descriptor):
 
 ```json
 {
   "@type": "CreativeWork",
   "@id": "ro-crate-metadata.json",
   "about": {"@id": "./"},
-  "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2-DRAFT"}
+  "conformsTo": {"@id": "https://w3id.org/ro/crate/1.2"}
 }
 ```
 
-The [root data entity](https://www.researchobject.org/ro-crate/1.2-DRAFT/root-data-entity.html#direct-properties-of-the-root-data-entity) of a Five Safes RO-Crate MUST have the @id equal `"./"` (as it is stored within the BagIt ZIP archive). It MAY have an additional [`identifier`](https://www.researchobject.org/ro-crate/1.1/metadata.html#recommended-identifiers).
+The [root data entity](https://www.researchobject.org/ro-crate/1.2/root-data-entity.html#direct-properties-of-the-root-data-entity) of a Five Safes RO-Crate MUST have the @id equal `"./"` (as it is stored within the BagIt ZIP archive). It MAY have an additional [`identifier`](https://www.researchobject.org/ro-crate/1.1/metadata.html#recommended-identifiers).
 
 
 ### Profile conformance
@@ -719,7 +719,7 @@ Link: <https://w3id.org/ro/crate>; rel="profile"; type="application/zip";
    anchor="https://example.com/query-12389.zip"
 ```
 
-Implementations MAY also provide direct public access to the RO-Crate metadata file, in which case they SHOULD follow the [RO-Crate media type recommendations](https://www.researchobject.org/ro-crate/1.2-DRAFT/appendix/jsonld.html#ro-crate-json-ld-media-type) for JSON-LD, in which case it is RECOMMENDED to convert the metadata file to [Detached RO-Crate](https://www.researchobject.org/ro-crate/1.2-DRAFT/appendix/relative-uris.html#converting-from-attached-to-detached-ro-crate) by establishing a [base URI](https://www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html#establishing-a-base-uri-inside-a-zip-file) based on the BagIt `External-Identifier` UUID (e.g. `arcp://uuid,9796155a-fe44-4614-89b8-71945f718ffb/`).
+Implementations MAY also provide direct public access to the RO-Crate metadata file, in which case they SHOULD follow the [RO-Crate media type recommendations](https://www.researchobject.org/ro-crate/1.2/appendix/jsonld.html#ro-crate-json-ld-media-type) for JSON-LD, in which case it is RECOMMENDED to convert the metadata file to [Detached RO-Crate](https://www.researchobject.org/ro-crate/1.2/appendix/relative-uris.html#converting-from-attached-to-detached-ro-crate) by establishing a [base URI](https://www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html#establishing-a-base-uri-inside-a-zip-file) based on the BagIt `External-Identifier` UUID (e.g. `arcp://uuid,9796155a-fe44-4614-89b8-71945f718ffb/`).
 
 
 ## References

@@ -6,7 +6,9 @@
 
 <script type="application/ld+json"> 
   {
-  "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+  "@context": [
+    "https://w3id.org/ro/crate/1.2/context"
+  ],
   "@graph": [
     {
       "@id": "ro-crate-metadata.json",
@@ -14,11 +16,11 @@
       "about": {
         "@id": "https://w3id.org/5s-crate/0.4"
       },
-      "licence": {
+      "license": {
         "@id": "http://spdx.org/licenses/CC0-1.0"
       },
       "conformsTo": {
-        "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+        "@id": "https://w3id.org/ro/crate/1.2"
       }
     },
     {
@@ -28,10 +30,22 @@
         "Profile"
       ],
       "name": "Five Safes RO-Crate profile",
+      "description": "A Five Safes RO-Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the Five Safes framework. The aim is to enable trusted workflow execution in a Trusted Research Environment (TRE), from an authenticated workflow run request, through approval and review processes to a completed workflow execution.",
+      "keywords": [
+        "Five Safes",
+        "sensitive data",
+        "trusted research environment",
+        "TRE",
+        "data safe haven",
+        "secure data environment",
+        "SDE",
+        "workflow",
+        "workflow execution"
+      ],
       "cite-as": "https://w3id.org/5s-crate/0.4",
       "version": "0.4",
       "datePublished": "2023-05-15T10:32:00Z",
-      "licence": {
+      "license": {
         "@id": "http://spdx.org/licenses/MIT"
       },
       "copyrightHolder": {
@@ -151,7 +165,7 @@
     {
       "@id": "http://spdx.org/licenses/MIT",
       "@type": "CreativeWork",
-      "name": "MIT Licence",
+      "name": "MIT License",
       "identifier": "MIT"
     },
     {
@@ -308,7 +322,10 @@
     },
     {
       "@id": "https://trefx.uk/",
-      "@type": "ResearchProject",
+      "@type": [
+        "Organization",
+        "ResearchProject"
+      ],
       "name": "TRE-FX",
       "description": "Delivering a federated network of TREs to enable safe analytics",
       "funding": {
@@ -461,8 +478,8 @@ table.table {
   </nav>
 <div class="container">
 <div class="jumbotron">
-<h4 class="citation"></h3>
-<h3 class="item_name">Five Safes RO-Crate profile</h4>
+<h4 class="citation"></h4>
+<h3 class="item_name">Five Safes RO-Crate profile</h3>
 
 
 <a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>Five Safes RO-Crate profile</span> in JSON-LD format</a>
@@ -477,12 +494,12 @@ table.table {
 
 <div id="summary">
 <div class='all-meta'>
-           <div>
-            <h3><a href="https://w3id.org/5s-crate/0.4">Go to: </a> Five Safes RO-Crate profile</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://w3id.org/5s-crate/0.4">Go to: </a> Five Safes RO-Crate profile</h3>
+                
+                
+                
+                
         <div id="https://w3id.org/5s-crate/0.4">
             
             <table class="table metadata table-striped" >
@@ -500,6 +517,9 @@ table.table {
                         <li><span>Profile</span></li>
                         </ul></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>A Five Safes RO-Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the Five Safes framework. The aim is to enable trusted workflow execution in a Trusted Research Environment (TRE), from an authenticated workflow run request, through approval and review processes to a completed workflow execution.</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
             <td style='text-align:left'><span>2023-05-15T10:32:00Z</span></td>
             </tr><tr>
@@ -510,14 +530,35 @@ table.table {
                         <li><a href="#https%3A//orcid.org/0009-0003-2419-1964">Stuart Wheater</a></li>
                         </ul></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">keywords<span>&nbsp;</span><a href="http://schema.org/keywords">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><span>Five Safes</span></li>
+                        
+                        <li><span>sensitive data</span></li>
+                        
+                        <li><span>trusted research environment</span></li>
+                        
+                        <li><span>TRE</span></li>
+                        
+                        <li><span>data safe haven</span></li>
+                        
+                        <li><span>secure data environment</span></li>
+                        
+                        <li><span>SDE</span></li>
+                        
+                        <li><span>workflow</span></li>
+                        
+                        <li><span>workflow execution</span></li>
+                        </ul></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">cite-as<span>&nbsp;</span><a href="http://www.iana.org/assignments/relation/cite-as">[?]</a></th>
             <td style='text-align:left'><a href="https://w3id.org/5s-crate/0.4">https://w3id.org/5s-crate/0.4</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
             <td style='text-align:left'><span>0.4</span></td>
             </tr><tr>
-            <th style="text-align:left;" class="prop">licence</th>
-            <td style='text-align:left'><a href="#http%3A//spdx.org/licenses/MIT">MIT Licence</a></td>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><a href="#http%3A//spdx.org/licenses/MIT">MIT License</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">copyrightHolder<span>&nbsp;</span><a href="http://schema.org/copyrightHolder">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//ror.org/027m9bs27">The University of Manchester</a></td>
@@ -605,15 +646,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://orcid.org/0000-0001-9842-9718">Go to: </a> Stian Soiland-Reyes</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://orcid.org/0000-0001-9842-9718">Go to: </a> Stian Soiland-Reyes</h3>
+                
+                
+                
+                
         <div id="https://orcid.org/0000-0001-9842-9718">
             
             <table class="table metadata table-striped" >
@@ -638,15 +678,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://orcid.org/0009-0003-2419-1964">Go to: </a> Stuart Wheater</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://orcid.org/0009-0003-2419-1964">Go to: </a> Stuart Wheater</h3>
+                
+                
+                
+                
         <div id="https://orcid.org/0009-0003-2419-1964">
             
             <table class="table metadata table-striped" >
@@ -668,15 +707,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="http://spdx.org/licenses/MIT">Go to: </a> MIT Licence</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="http://spdx.org/licenses/MIT">Go to: </a> MIT License</h3>
+                
+                
+                
+                
         <div id="http://spdx.org/licenses/MIT">
             
             <table class="table metadata table-striped" >
@@ -685,7 +723,7 @@ table.table {
             <td style='text-align:left'><a href="http://spdx.org/licenses/MIT">http://spdx.org/licenses/MIT</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
-            <td style='text-align:left'><span>MIT Licence</span></td>
+            <td style='text-align:left'><span>MIT License</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
             <td style='text-align:left'><span>CreativeWork</span></td>
@@ -693,20 +731,19 @@ table.table {
             <th style="text-align:left;" class="prop">identifier<span>&nbsp;</span><a href="http://schema.org/identifier">[?]</a></th>
             <td style='text-align:left'><span>MIT</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
-            <th style="text-align:left;" class="prop">licence</th>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//w3id.org/5s-crate/0.4">Five Safes RO-Crate profile</a></td>
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://ror.org/027m9bs27">Go to: </a> The University of Manchester</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://ror.org/027m9bs27">Go to: </a> The University of Manchester</h3>
+                
+                
+                
+                
         <div id="https://ror.org/027m9bs27">
             
             <table class="table metadata table-striped" >
@@ -731,15 +768,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://trefx.uk/5s-crate/0.4/index.html">Go to: </a> Five Safes RO-Crate profile (specification)</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://trefx.uk/5s-crate/0.4/index.html">Go to: </a> Five Safes RO-Crate profile (specification)</h3>
+                
+                
+                
+                
         <div id="https://trefx.uk/5s-crate/0.4/index.html">
             
             <table class="table metadata table-striped" >
@@ -761,15 +797,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://trefx.uk/5s-crate/0.4/example-request.bagit.zip">Go to: </a> example-request.bagit.zip</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://trefx.uk/5s-crate/0.4/example-request.bagit.zip">Go to: </a> example-request.bagit.zip</h3>
+                
+                
+                
+                
         <div id="https://trefx.uk/5s-crate/0.4/example-request.bagit.zip">
             
             <table class="table metadata table-striped" >
@@ -800,15 +835,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://trefx.uk/5s-crate/0.4/example-request/data/">Go to: </a> Example Crate in Request state</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://trefx.uk/5s-crate/0.4/example-request/data/">Go to: </a> Example Crate in Request state</h3>
+                
+                
+                
+                
         <div id="https://trefx.uk/5s-crate/0.4/example-request/data/">
             
             <table class="table metadata table-striped" >
@@ -843,15 +877,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://trefx.uk/5s-crate/0.4/example-result.bagit.zip">Go to: </a> example-result.bagit.zip</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://trefx.uk/5s-crate/0.4/example-result.bagit.zip">Go to: </a> example-result.bagit.zip</h3>
+                
+                
+                
+                
         <div id="https://trefx.uk/5s-crate/0.4/example-result.bagit.zip">
             
             <table class="table metadata table-striped" >
@@ -882,15 +915,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://trefx.uk/5s-crate/0.4/example-result/data/">Go to: </a> Example Crate in Request state</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://trefx.uk/5s-crate/0.4/example-result/data/">Go to: </a> Example Crate in Request state</h3>
+                
+                
+                
+                
         <div id="https://trefx.uk/5s-crate/0.4/example-result/data/">
             
             <table class="table metadata table-striped" >
@@ -925,15 +957,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/><hr/><br/><br/>
-           <div>
-            <h3><a href="https://bioschemas.org/FormalParameter">Go to: </a> https://bioschemas.org/FormalParameter</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://bioschemas.org/FormalParameter">Go to: </a> https://bioschemas.org/FormalParameter</h3>
+                
+                
+                
+                
         <div id="https://bioschemas.org/FormalParameter">
             
             <table class="table metadata table-striped" >
@@ -949,15 +980,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://w3id.org/shp#CheckValue">Go to: </a> https://w3id.org/shp#CheckValue</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://w3id.org/shp#CheckValue">Go to: </a> https://w3id.org/shp#CheckValue</h3>
+                
+                
+                
+                
         <div id="https://w3id.org/shp#CheckValue">
             
             <table class="table metadata table-striped" >
@@ -976,15 +1006,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://w3id.org/shp#ValidationCheck">Go to: </a> https://w3id.org/shp#ValidationCheck</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://w3id.org/shp#ValidationCheck">Go to: </a> https://w3id.org/shp#ValidationCheck</h3>
+                
+                
+                
+                
         <div id="https://w3id.org/shp#ValidationCheck">
             
             <table class="table metadata table-striped" >
@@ -1003,15 +1032,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://w3id.org/shp#SignOff">Go to: </a> https://w3id.org/shp#SignOff</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://w3id.org/shp#SignOff">Go to: </a> https://w3id.org/shp#SignOff</h3>
+                
+                
+                
+                
         <div id="https://w3id.org/shp#SignOff">
             
             <table class="table metadata table-striped" >
@@ -1030,15 +1058,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://w3id.org/shp#DisclosureCheck">Go to: </a> https://w3id.org/shp#DisclosureCheck</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://w3id.org/shp#DisclosureCheck">Go to: </a> https://w3id.org/shp#DisclosureCheck</h3>
+                
+                
+                
+                
         <div id="https://w3id.org/shp#DisclosureCheck">
             
             <table class="table metadata table-striped" >
@@ -1057,15 +1084,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://w3id.org/shp#GenerateCheckValue">Go to: </a> https://w3id.org/shp#GenerateCheckValue</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://w3id.org/shp#GenerateCheckValue">Go to: </a> https://w3id.org/shp#GenerateCheckValue</h3>
+                
+                
+                
+                
         <div id="https://w3id.org/shp#GenerateCheckValue">
             
             <table class="table metadata table-striped" >
@@ -1084,15 +1110,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3> has specification</h3>
-            
-            
-            
-            
+            <div>
+                <h3> has specification</h3>
+                
+                
+                
+                
         <div id="#hasSpecification">
             
             <table class="table metadata table-striped" >
@@ -1117,15 +1142,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3> has example: Request</h3>
-            
-            
-            
-            
+            <div>
+                <h3> has example: Request</h3>
+                
+                
+                
+                
         <div id="#hasExampleRequest">
             
             <table class="table metadata table-striped" >
@@ -1150,15 +1174,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3> has example: Result</h3>
-            
-            
-            
-            
+            <div>
+                <h3> has example: Result</h3>
+                
+                
+                
+                
         <div id="#hasExampleResult">
             
             <table class="table metadata table-striped" >
@@ -1183,15 +1206,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3> uses vocabulary SHP</h3>
-            
-            
-            
-            
+            <div>
+                <h3> uses vocabulary SHP</h3>
+                
+                
+                
+                
         <div id="#usesSHP">
             
             <table class="table metadata table-striped" >
@@ -1216,15 +1238,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://trefx.uk/">Go to: </a> TRE-FX</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://trefx.uk/">Go to: </a> TRE-FX</h3>
+                
+                
+                
+                
         <div id="https://trefx.uk/">
             
             <table class="table metadata table-striped" >
@@ -1236,7 +1257,11 @@ table.table {
             <td style='text-align:left'><span>TRE-FX</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>ResearchProject</span></td>
+            <td style='text-align:left'><ul>
+                        <li><span>Organization</span></li>
+                        
+                        <li><span>ResearchProject</span></li>
+                        </ul></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
             <td style='text-align:left'><span>Delivering a federated network of TREs to enable safe analytics</span></td>
@@ -1256,15 +1281,14 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/>
-           <div>
-            <h3><a href="https://gtr.ukri.org/projects?ref=MC_PC_23007">Go to: </a> DARE-FX: Delivering a federated network of TREs to enable safe analytics</h3>
-            
-            
-            
-            
+            <div>
+                <h3><a href="https://gtr.ukri.org/projects?ref=MC_PC_23007">Go to: </a> DARE-FX: Delivering a federated network of TREs to enable safe analytics</h3>
+                
+                
+                
+                
         <div id="https://gtr.ukri.org/projects?ref=MC_PC_23007">
             
             <table class="table metadata table-striped" >
@@ -1299,8 +1323,7 @@ table.table {
             </tr></tbody>
             </table>
         </div>
-
-        </div>
+            </div>
         <hr/><br/><br/></div>
 </div>
 
