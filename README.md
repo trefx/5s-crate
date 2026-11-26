@@ -6,7 +6,7 @@ _Five Safes RO-Crate_ <https://w3id.org/5s-crate/> specifies a profile of [RO-Cr
  
 
 <div class="bg-yellow-light border border-yellow rounded-2 p-3 mb-4">
-   <h2 class="h3 mb-1">Five Safes RO-Crate 1.0</h2>
+   <h2 class="h3 mb-1">Development moves to Five Safes RO-Crate 1.0</h2>
   <p class="text-gray-dark">This is a <strong>legacy page</strong> for TRE-FX Five Safes RO-Crate 0.5, provided for archival purposes.</p>
   <p class="text-gray-dark">Current development of this profile is now at <a class="" href="https://esciencelab.org.uk/Five-Safes-RO-Crate/">Five Safes RO-Crate 1.0-DRAFT</a>.</p>
 </div>
