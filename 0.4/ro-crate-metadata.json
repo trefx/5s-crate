@@ -1,5 +1,5 @@
 {
-    "@context": "https://w3id.org/ro/crate/1.2-DRAFT/context",
+    "@context": "https://w3id.org/ro/crate/1.2/context",
     "@graph": [
         {
             "@type": "CreativeWork",
@@ -7,11 +7,11 @@
             "about": {
                 "@id": "https://w3id.org/5s-crate/0.4"
             },
-            "licence": {
+            "license": {
                 "@id": "http://spdx.org/licenses/CC0-1.0"
             },
             "conformsTo": {
-                "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+                "@id": "https://w3id.org/ro/crate/1.2"
             }
         },
         {
@@ -21,10 +21,22 @@
                 "Profile"
             ],
             "name": "Five Safes RO-Crate profile",
+            "description": "A Five Safes RO-Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the Five Safes framework. The aim is to enable trusted workflow execution in a Trusted Research Environment (TRE), from an authenticated workflow run request, through approval and review processes to a completed workflow execution.",
+            "keywords": [
+                "Five Safes",
+                "sensitive data",
+                "trusted research environment",
+                "TRE",
+                "data safe haven",
+                "secure data environment",
+                "SDE",
+                "workflow",
+                "workflow execution"
+            ],
             "cite-as": "https://w3id.org/5s-crate/0.4",
             "version": "0.4",
             "datePublished": "2023-05-15T10:32:00Z",
-            "licence": {
+            "license": {
                 "@id": "http://spdx.org/licenses/MIT"
             },
             "copyrightHolder": {
@@ -114,7 +126,7 @@
                 },
                 {
                     "@id": "#hasExampleResult"
-                },                
+                },
                 {
                     "@id": "#usesSHP"
                 }
@@ -156,7 +168,7 @@
             ],
             "distribution": {
                 "@id": "https://trefx.uk/5s-crate/0.4/example-request.bagit.zip"
-            }            
+            }
         },
         {
             "@id": "https://trefx.uk/5s-crate/0.4/example-result/data/",
@@ -196,7 +208,7 @@
             "conformsTo": {
                 "@id": "https://w3id.org/ro/crate"
             }
-        },        
+        },
         {
             "@id": "https://trefx.uk/5s-crate/0.4/example-request/data/ro-crate-metadata.json",
             "@type": "CreativeWork",
@@ -226,41 +238,6 @@
             "@type": "DefinedTermSet",
             "name": "The Safe Haven Provenance (SHP) Ontology",
             "version": "0.1"
-        },
-        {
-            "@id": "https://w3id.org/shp#CheckValue",
-            "@type": "DefinedTerm",
-            "inDefinedTermSet": {
-                "@id": "https://w3id.org/shp"
-            }
-        },
-        {
-            "@id": "https://w3id.org/shp#ValidationCheck",
-            "@type": "DefinedTerm",
-            "inDefinedTermSet": {
-                "@id": "https://w3id.org/shp"
-            }
-        },
-        {
-            "@id": "https://w3id.org/shp#SignOff",
-            "@type": "DefinedTerm",
-            "inDefinedTermSet": {
-                "@id": "https://w3id.org/shp"
-            }
-        },
-        {
-            "@id": "https://w3id.org/shp#DisclosureCheck",
-            "@type": "DefinedTerm",
-            "inDefinedTermSet": {
-                "@id": "https://w3id.org/shp"
-            }
-        },
-        {
-            "@id": "https://w3id.org/shp#GenerateCheckValue",
-            "@type": "DefinedTerm",
-            "inDefinedTermSet": {
-                "@id": "https://w3id.org/shp"
-            }
         },
         {
             "@id": "https://w3id.org/shp#CheckValue",
@@ -346,7 +323,6 @@
                 "@id": "https://trefx.uk/5s-crate/0.4/example-result/data/"
             }
         },
-
         {
             "@id": "http://www.w3.org/ns/dx/prof/role/example",
             "@type": [
@@ -384,7 +360,7 @@
         {
             "@id": "http://spdx.org/licenses/MIT",
             "@type": "CreativeWork",
-            "name": "MIT Licence",
+            "name": "MIT License",
             "identifier": "MIT"
         },
         {
@@ -418,7 +394,10 @@
         },
         {
             "@id": "https://trefx.uk/",
-            "@type": "ResearchProject",
+            "@type": [
+                "Organization",
+                "ResearchProject"
+            ],
             "name": "TRE-FX",
             "description": "Delivering a federated network of TREs to enable safe analytics",
             "funding": {

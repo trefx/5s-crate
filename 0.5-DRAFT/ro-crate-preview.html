@@ -7,7 +7,7 @@
 <script type="application/ld+json"> 
   {
   "@context": [
-    "https://w3id.org/ro/crate/1.2-DRAFT/context"
+    "https://w3id.org/ro/crate/1.2/context"
   ],
   "@graph": [
     {
@@ -16,11 +16,11 @@
       "about": {
         "@id": "https://w3id.org/5s-crate/0.5-DRAFT"
       },
-      "licence": {
+      "license": {
         "@id": "http://spdx.org/licenses/CC0-1.0"
       },
       "conformsTo": {
-        "@id": "https://w3id.org/ro/crate/1.2-DRAFT"
+        "@id": "https://w3id.org/ro/crate/1.2"
       }
     },
     {
@@ -30,10 +30,22 @@
         "Profile"
       ],
       "name": "Five Safes RO-Crate profile",
+      "description": "A Five Safes RO-Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the Five Safes framework. The aim is to enable trusted workflow execution in a Trusted Research Environment (TRE), from an authenticated workflow run request, through approval and review processes to a completed workflow execution.",
+      "keywords": [
+        "Five Safes",
+        "sensitive data",
+        "trusted research environment",
+        "TRE",
+        "data safe haven",
+        "secure data environment",
+        "SDE",
+        "workflow",
+        "workflow execution"
+      ],
       "cite-as": "https://w3id.org/5s-crate/0.5-DRAFT",
       "version": "0.5-DRAFT",
       "datePublished": "2023-05-15T10:32:00Z",
-      "licence": {
+      "license": {
         "@id": "http://spdx.org/licenses/MIT"
       },
       "copyrightHolder": {
@@ -153,7 +165,7 @@
     {
       "@id": "http://spdx.org/licenses/MIT",
       "@type": "CreativeWork",
-      "name": "MIT Licence",
+      "name": "MIT License",
       "identifier": "MIT"
     },
     {
@@ -310,7 +322,10 @@
     },
     {
       "@id": "https://trefx.uk/",
-      "@type": "ResearchProject",
+      "@type": [
+        "Organization",
+        "ResearchProject"
+      ],
       "name": "TRE-FX",
       "description": "Delivering a federated network of TREs to enable safe analytics",
       "funding": {
@@ -502,6 +517,9 @@ table.table {
                         <li><span>Profile</span></li>
                         </ul></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>A Five Safes RO-Crate represents a unit of computational access to sensitive information which is managed in accordance with a set of principles conforming to the Five Safes framework. The aim is to enable trusted workflow execution in a Trusted Research Environment (TRE), from an authenticated workflow run request, through approval and review processes to a completed workflow execution.</span></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
             <td style='text-align:left'><span>2023-05-15T10:32:00Z</span></td>
             </tr><tr>
@@ -512,14 +530,35 @@ table.table {
                         <li><a href="#https%3A//orcid.org/0009-0003-2419-1964">Stuart Wheater</a></li>
                         </ul></td>
             </tr><tr>
+            <th style="text-align:left;" class="prop">keywords<span>&nbsp;</span><a href="http://schema.org/keywords">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><span>Five Safes</span></li>
+                        
+                        <li><span>sensitive data</span></li>
+                        
+                        <li><span>trusted research environment</span></li>
+                        
+                        <li><span>TRE</span></li>
+                        
+                        <li><span>data safe haven</span></li>
+                        
+                        <li><span>secure data environment</span></li>
+                        
+                        <li><span>SDE</span></li>
+                        
+                        <li><span>workflow</span></li>
+                        
+                        <li><span>workflow execution</span></li>
+                        </ul></td>
+            </tr><tr>
             <th style="text-align:left;" class="prop">cite-as<span>&nbsp;</span><a href="http://www.iana.org/assignments/relation/cite-as">[?]</a></th>
             <td style='text-align:left'><a href="https://w3id.org/5s-crate/0.5-DRAFT">https://w3id.org/5s-crate/0.5-DRAFT</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
             <td style='text-align:left'><span>0.5-DRAFT</span></td>
             </tr><tr>
-            <th style="text-align:left;" class="prop">licence</th>
-            <td style='text-align:left'><a href="#http%3A//spdx.org/licenses/MIT">MIT Licence</a></td>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><a href="#http%3A//spdx.org/licenses/MIT">MIT License</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">copyrightHolder<span>&nbsp;</span><a href="http://schema.org/copyrightHolder">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//ror.org/027m9bs27">The University of Manchester</a></td>
@@ -671,7 +710,7 @@ table.table {
             </div>
         <hr/><br/><br/>
             <div>
-                <h3><a href="http://spdx.org/licenses/MIT">Go to: </a> MIT Licence</h3>
+                <h3><a href="http://spdx.org/licenses/MIT">Go to: </a> MIT License</h3>
                 
                 
                 
@@ -684,7 +723,7 @@ table.table {
             <td style='text-align:left'><a href="http://spdx.org/licenses/MIT">http://spdx.org/licenses/MIT</a></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
-            <td style='text-align:left'><span>MIT Licence</span></td>
+            <td style='text-align:left'><span>MIT License</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
             <td style='text-align:left'><span>CreativeWork</span></td>
@@ -692,7 +731,7 @@ table.table {
             <th style="text-align:left;" class="prop">identifier<span>&nbsp;</span><a href="http://schema.org/identifier">[?]</a></th>
             <td style='text-align:left'><span>MIT</span></td>
             </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
-            <th style="text-align:left;" class="prop">licence</th>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
             <td style='text-align:left'><a href="#https%3A//w3id.org/5s-crate/0.5-DRAFT">Five Safes RO-Crate profile</a></td>
             </tr></tbody>
             </table>
@@ -1218,7 +1257,11 @@ table.table {
             <td style='text-align:left'><span>TRE-FX</span></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">@type</th>
-            <td style='text-align:left'><span>ResearchProject</span></td>
+            <td style='text-align:left'><ul>
+                        <li><span>Organization</span></li>
+                        
+                        <li><span>ResearchProject</span></li>
+                        </ul></td>
             </tr><tr>
             <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
             <td style='text-align:left'><span>Delivering a federated network of TREs to enable safe analytics</span></td>
