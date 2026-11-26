@@ -3,8 +3,17 @@
 _Five Safes RO-Crate_ <https://w3id.org/5s-crate/> specifies a profile of [RO-Crate](https://w3id.org/ro/crate) for the purpose of workflow execution in a distributed trusted research environment (TRE). 
 
 ![Five Safe Crate logo](https://trefx.uk/assets/img/tre-fx-draft-small.png)
+ 
 
-The profile is being developed by the [TRE-FX](https://trefx.uk/) project.
+<div class="bg-yellow-light border border-yellow rounded-2 p-3 mb-4">
+   <h2 class="h3 mb-1">Five Safes RO-Crate 1.0</h2>
+  <p class="text-gray-dark">This is a <strong>legacy page</strong> for TRE-FX Five Safes RO-Crate 0.5, provided for archival purposes.</p>
+  <p class="text-gray-dark">Current development of this profile is now at <a class="" href="https://esciencelab.org.uk/Five-Safes-RO-Crate/">Five Safes RO-Crate 1.0-DRAFT</a>.</p>
+</div>
+
+This profile was previously developed by the [TRE-FX](https://trefx.uk/) project.
+
+The [next version of Five Safes RO-Crate profile](https://esciencelab.org.uk/Five-Safes-RO-Crate/) is being developed within the [DARE TREvolution](https://dareuk.org.uk/trevolution/five-safes-ro-crate/) project by the [eScience Lab](https://esciencelab.org.uk/) at The University of Manchester.
 
 ## Cite as
 
@@ -19,9 +28,10 @@ Current release:
 * [Five Safes RO-Crate profile 0.4](https://w3id.org/5s-crate/0.4)
 
 Next draft in progress:
-* [Five Safes RO-Crate profile 0.5-DRAFT](0.5-DRAFT/)
+* [Five Safes RO-Crate profile 1.0-DRAFT](https://esciencelab.org.uk/Five-Safes-RO-Crate/) ([GitHub eScienceLab/Five-Safes-RO-Crate](https://github.com/eScienceLab/Five-Safes-RO-Crate)) 
 
 Archived drafts:
+* [Five Safes RO-Crate profile 0.5-DRAFT](0.5-DRAFT/)
 * [Five Safes RO-Crate profile 0.4-DRAFT](0.4-DRAFT/)
 * [Trusted Workflow Run Crate profile 0.3](https://w3id.org/trusted-wfrun-crate/0.3)
 (now renamed to _Five Safes RO-Crate_)
@@ -63,10 +73,10 @@ Each phase is recorded within the Crate with timestamps and responsible agents, 
 
 ## Licence
 
-* © Copyright 2023 The University of Manchester and contributors
+* © Copyright 2023-2026 The University of Manchester and contributors
 * Licence: [MIT Licence](https://spdx.org/licenses/MIT)
 
 ## Feedback
 
 For feedback or suggested changes, feel free to raise a GitHub Issue or Pull Request:
-<https://github.com/trefx/5s-crate/>
+<https://github.com/eScienceLab/Five-Safes-RO-Crate>  ~~<https://github.com/trefx/5s-crate/>~~
